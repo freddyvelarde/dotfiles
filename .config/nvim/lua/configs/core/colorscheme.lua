@@ -1,6 +1,7 @@
 -- local status, _ = pcall(vim.cmd, "colorscheme nightfly")
 -- local status, _ = pcall(vim.cmd, "colorscheme material")
-local status, _ = pcall(vim.cmd, "colorscheme ayu")
+-- local status, _ = pcall(vim.cmd, "colorscheme ayu")
+local status, _ = pcall(vim.cmd, "colorscheme nightfly")
 -- vim.g.material_style = "deep ocean"
 
 if not status then

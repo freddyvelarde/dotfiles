@@ -163,10 +163,11 @@ keys = [
     Key([mod, "control"], "s", lazy.spawn("flameshot gui")),
 
 # Open firefox 
-    Key([mod], "f", lazy.spawn('firefox')),
+    # Key([mod], "fi", lazy.spawn('firefox')),
 
-# open kitty kitty termina;
+# open kitty kitty terminal
     Key([mod, "shift"], "t", lazy.spawn('kitty')),
+    # Key([mod], "m", lazy.spawn('kitty')),
 # brightnessctl control
     Key([mod, "control"], "d", lazy.spawn('brightnessctl set 5%-')),
     Key([mod, "control"], "u", lazy.spawn(" brightnessctl set +5%") ),
@@ -235,9 +236,9 @@ for i in groups:
 
 
 def init_layout_theme():
-    return {"margin":5,
-            "border_width":2,
-            "border_focus": "#5e81ac",
+    return {"margin":4,
+            "border_width":0,
+            "border_focus": "#5481ac",
             "border_normal": "#4c566a"
             }
 

@@ -11,7 +11,7 @@ require("configs.plugins.lsp.lspsaga")
 require("configs.plugins.lsp.lspconfig")
 require("configs.plugins.lsp.null-ls")
 require("configs.plugins.autopairs")
-require("configs.plugins.treesitter")
+-- require("configs.plugins.treesitter")
 require("configs.plugins.gitsigns")
 -- material configs
 -- require("configs.core.themes-configs.material")

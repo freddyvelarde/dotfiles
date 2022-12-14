@@ -216,6 +216,11 @@ _G.packer_plugins = {
     path = "/home/fredvel/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
+  ["vCoolor.vim"] = {
+    loaded = true,
+    path = "/home/fredvel/.local/share/nvim/site/pack/packer/start/vCoolor.vim",
+    url = "https://github.com/KabbAmine/vCoolor.vim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/fredvel/.local/share/nvim/site/pack/packer/start/vim-airline",

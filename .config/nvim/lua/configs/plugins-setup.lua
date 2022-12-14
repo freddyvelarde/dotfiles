@@ -13,7 +13,8 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.g.material_style = "deep ocean"
+-- vim.g.material_style = "deep ocean"
+vim.ayucolor = "dark"
 vim.cmd([[ 
   augroup packer_user_config
     autocmd!
@@ -31,6 +32,9 @@ end
 return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
+
+	-- color vim css
+	use("KabbAmine/vCoolor.vim")
 
 	use("nvim-tree/nvim-web-devicons") -- optional, for file icons
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use

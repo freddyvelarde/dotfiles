@@ -46,7 +46,8 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-tree.lua") -- file explorer
 
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-	-- use("whatyouhide/vim-gotham")
+	use("whatyouhide/vim-gotham")
+
 	use("marko-cerovac/material.nvim")
 	use("Luxed/ayu-vim")
 

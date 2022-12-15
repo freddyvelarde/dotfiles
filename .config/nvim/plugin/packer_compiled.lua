@@ -236,6 +236,11 @@ _G.packer_plugins = {
     path = "/home/fredvel/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-gotham"] = {
+    loaded = true,
+    path = "/home/fredvel/.local/share/nvim/site/pack/packer/start/vim-gotham",
+    url = "https://github.com/whatyouhide/vim-gotham"
+  },
   ["vim-nightfly-guicolors"] = {
     loaded = true,
     path = "/home/fredvel/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",

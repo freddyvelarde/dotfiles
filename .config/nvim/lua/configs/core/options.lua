@@ -26,6 +26,7 @@ opt.smartcase = true
 -- cursor line
 opt.cursorline = true
 
+opt.cursorcolumn = true
 -- appearence
 opt.termguicolors = true
 opt.background = "dark"

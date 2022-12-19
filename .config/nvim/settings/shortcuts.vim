@@ -25,3 +25,5 @@ nnoremap <c-z> :u<CR>      " Avoid using this**
 inoremap <c-z> <c-o>:u<CR>
 
 nnoremap <C-A> ggVG
+
+noremap <leader>nh :nohl <CR>

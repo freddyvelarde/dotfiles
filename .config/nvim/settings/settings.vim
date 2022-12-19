@@ -9,7 +9,9 @@ let g:indentLine_char = '¦'
 filetype plugin on
 set tabstop=2 softtabstop=2 shiftwidth=2 
 set modifiable
-set buftype=
+" set buftype=
+set smartcase
+set ignorecase
 
 " set number relativenumber
 " " set colorcolumn=81

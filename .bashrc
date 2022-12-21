@@ -224,7 +224,8 @@ alias nhostname="sudo $EDITOR /etc/hostname"
 alias nb="$EDITOR ~/.bashrc"
 alias nz="$EDITOR ~/.zshrc"
 alias nf="$EDITOR ~/.config/fish/config.fish"
-alias nneofetch="$EDITOR ~/.config/neofetch/config.conf"
+# alias nneofetch="$EDITOR ~/.config/neofetch/config.conf"
+alias neofetch="neofetch --ascii ~/.config/neofetch/arts/freddy"
 
 #reading logs with bat
 alias lcalamares="bat /var/log/Calamares.log"

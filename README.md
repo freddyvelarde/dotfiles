@@ -1,5 +1,9 @@
 # My linux settings
 
+## I use VIM btw
+
+![Drag Racing](./.screenshots/vim-screen.png)
+
 ## VSCODE SNIPPETS:
 
 - Error Lens
@@ -58,3 +62,9 @@
   "window.zoomLevel": 2
 }
 ```
+
+# My tools
+
+- Qtile window manager
+- Snap ( package manager like pacman )
+-

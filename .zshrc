@@ -486,3 +486,6 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="/home/fredvel/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

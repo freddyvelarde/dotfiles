@@ -1,10 +1,10 @@
 # My linux settings
 
-![main screen](~/.screenshots/main-screen.png)
+![main screen](.screenshots/main-screen.png)
 
 ## I use VIM btw
 
-![Drag Racing](~/.screenshots/vim-screen.png)
+![Drag Racing](.screenshots/vim-screen.png)
 
 ## VSCODE SNIPPETS:
 

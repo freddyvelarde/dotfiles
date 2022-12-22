@@ -1,6 +1,6 @@
 # My linux settings
 
-![main screen](.screenshots/terminal-screen.png)
+![main screen](.screenshots/main-screen.png)
 
 ## I use VIM btw
 

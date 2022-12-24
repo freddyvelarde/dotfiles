@@ -47,5 +47,4 @@ require('rose-pine').setup({
 	}
 })
 
--- set colorscheme after options
-vim.cmd('let g:airline_theme = "ayu"')
+pcall(vim.cmd, "let g:airline_theme='base16'")

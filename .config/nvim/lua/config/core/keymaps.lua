@@ -1,5 +1,5 @@
 -- vim leader key
-vim.g.mapleader = " " 
+vim.g.mapleader = " "
 local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>")
@@ -29,6 +29,21 @@ keymap.set("n", "<C-S>", ":w!<CR>")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-
 keymap.set("n", "<C-/>", ":Commentary<CR>")
 keymap.set("v", "<C-/>", ":Commentary<CR>")
+
+-- move tabs
+keymap.set("n", "<leader>w", ":bnext <CR>==")
+keymap.set("n", "<leader>q", ":bprevious <CR>==")
+keymap.set("n", "<leader>x", ":bdelete <CR>==")
+
+keymap.set("n", "<leader>t", ":AirlineToggle <CR>==")
+
+vim.cmd([[
+inoremap ' ''<left>
+inoremap ` ``<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap < <><left>
+inoremap { {}<left>
+]])

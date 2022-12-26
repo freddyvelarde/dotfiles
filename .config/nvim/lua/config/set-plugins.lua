@@ -42,6 +42,7 @@ return packer.startup(function(use)
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	-- use 'thedenisnikulin/vim-cyberpunk'
 	use("olimorris/onedarkpro.nvim")
+	use("morhetz/gruvbox")
 
 	-- file explorer
 	use({

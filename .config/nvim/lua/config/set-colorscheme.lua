@@ -1,1 +1,1 @@
-require("config/colorschemes/nightfly")
+require("config/colorschemes/tokyo")

@@ -23,3 +23,7 @@ As you can see my poor machine only supports linux, but I can do everything I ne
 - rofi
 - nvim (PDE)
 - Kitty terminal
+
+# LINKS
+
+- [install bat](https://www.linode.com/docs/guides/how-to-install-and-use-the-bat-command-on-linux/)

@@ -27,3 +27,13 @@ As you can see my poor machine only supports linux, but I can do everything I ne
 # LINKS
 
 - [install bat](https://www.linode.com/docs/guides/how-to-install-and-use-the-bat-command-on-linux/)
+
+# TIPS
+
+use the next command to git terminal
+
+```shell
+git config --global credential.helper store
+```
+
+

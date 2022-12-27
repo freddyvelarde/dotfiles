@@ -1,5 +1,10 @@
-export PATH=$PATH:$HOME/dev/projects/CLI/theme-switcher
+export PATH=$PATH:$HOME/.config/pykitty/
+
+
 alias bat="/usr/local/bat/bat"
+
+
+export PATH=$PATH:/usr/local/go/bin
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -7,6 +12,7 @@ alias bat="/usr/local/bat/bat"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
 
 ###
 # If you come from bash you might have to change your $PATH.
@@ -486,10 +492,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# pnpm
-export PNPM_HOME="/home/fredvel/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)

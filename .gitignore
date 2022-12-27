@@ -1,0 +1,16 @@
+# ignore everything
+*
+
+# except
+
+!.config
+!.wallpaper
+!.screenshots
+!.zshrc
+!.gitignore
+!.bashrc
+!.p10k.zsh
+!.vimrc
+!README.md
+!.p10k.zsh
+

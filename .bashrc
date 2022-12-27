@@ -1,9 +1,10 @@
 ### EXPORT ###
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+#
 export EDITOR='nano'
 export VISUAL='nano'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
-
 
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
@@ -37,6 +38,12 @@ alias la='ls -a'
 alias ll='ls -alFh'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
+
+#list
+alias sps='sudo pacman -S'
+alias spr='sudo pacman -R'
+alias sprs='sudo pacman -Rs'
+alias sprdd='sudo pacman -Rdd'
 
 #fix obvious typo's
 alias cd..='cd ..'
@@ -101,6 +108,8 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 #grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+#grub issue 08/2022
+alias install-grub-efi="sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi"
 
 #add new fonts
 alias update-fc='sudo fc-cache -fv'
@@ -225,8 +234,7 @@ alias nhostname="sudo $EDITOR /etc/hostname"
 alias nb="$EDITOR ~/.bashrc"
 alias nz="$EDITOR ~/.zshrc"
 alias nf="$EDITOR ~/.config/fish/config.fish"
-# alias nneofetch="$EDITOR ~/.config/neofetch/config.conf"
-alias neofetch="neofetch --ascii ~/.config/neofetch/arts/freddy"
+alias nneofetch="$EDITOR ~/.config/neofetch/config.conf"
 
 #reading logs with bat
 alias lcalamares="bat /var/log/Calamares.log"
@@ -278,6 +286,7 @@ alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
+alias xdw="ls /usr/share/wayland-sessions"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -305,6 +314,9 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+#wayland aliases
+alias wsimplescreenrecorder="wf-recorder -a"
 
 #btrfs aliases
 alias btrfsfs="sudo btrfs filesystem df /"
@@ -363,4 +375,4 @@ neofetch
 #sysinfo-retro
 #cpufetch
 #colorscript random
-. "$HOME/.cargo/env"
+ alias config='/usr/bin/git --git-dir=/home/freddy/.cfg/ --work-tree=/home/freddy'

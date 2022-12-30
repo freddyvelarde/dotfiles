@@ -8,7 +8,6 @@ require("config.plugins.treesitter")
 require("config.plugins.colors")
 require("config.plugins.indent")
 require("config.plugins.git")
-require("config.plugins.neoformat")
 
 -- lsp
 require("config.plugins.nvim-cmp")

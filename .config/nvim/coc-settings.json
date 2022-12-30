@@ -5,15 +5,6 @@
     "importShortcut": "Both"
   },
   "suggest.noselect": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "graphql"
-  ],
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "prettier.enable": true,
   "prettier.formatterPriority": 1

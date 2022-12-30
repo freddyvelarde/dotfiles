@@ -41,6 +41,7 @@ keymap.set("n", "<leader>t", ":AirlineToggle <CR>==")
 
 vim.cmd([[
 inoremap ' ''<left>
+inoremap " ""<left>
 inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>

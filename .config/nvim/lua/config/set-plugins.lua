@@ -42,7 +42,7 @@ return packer.startup(function(use)
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	-- use 'thedenisnikulin/vim-cyberpunk'
 	use("olimorris/onedarkpro.nvim")
-	use("morhetz/gruvbox")
+	use({ "decaycs/decay.nvim", as = "decay" })
 
 	-- file explorer
 	use({
@@ -75,19 +75,12 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- coc xd
-	-- use {'neoclide/coc.nvim', branch = 'release'}
+	-- coc
+	-- use({ "neoclide/coc.nvim", branch = "release" })
 
 	-- basic plugins
 	use("tpope/vim-surround")
-	-- use 'jiangmiao/auto-pairs'
 
-	-- colors detect
-	-- use({
-	-- "rrethy/vim-hexokinase",
-	-- run = "cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase",
-	-- run = "make",
-	-- })
 	use({
 		"RRethy/vim-hexokinase",
 		run = "cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase",
@@ -119,8 +112,6 @@ return packer.startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-	use("sbdchd/neoformat")
-
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 

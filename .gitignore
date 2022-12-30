@@ -4,6 +4,7 @@
 # except
 
 .config/*
+!.config/awesome/
 !.config/nvim
 !.config/nvim-vim-script/
 !.config/qtile/
@@ -16,7 +17,6 @@
 !.screenshots/
 !.zshrc
 !.gitignore
-!.bashrc
 !.p10k.zsh
 !.vimrc
 !README.md

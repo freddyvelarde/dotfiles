@@ -1,4 +1,6 @@
 -- import lspconfig plugin safely
+--
+-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jedi_language_server
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status then
 	return
@@ -64,10 +66,10 @@ lspconfig["cssls"].setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "go" },
+  filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
 })
 
-require("lspconfig")["pyright"].setup({
+require("lspconfig").jedi_language_server.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	flags = lsp_flags,
@@ -103,7 +105,7 @@ lspconfig["sumneko_lua"].setup({
 lspconfig = require("lspconfig")
 util = require("lspconfig/util")
 
-lspconfig.gopls.setup({
+lspconfig["gopls"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,

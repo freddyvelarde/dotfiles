@@ -1,4 +1,6 @@
 export PATH=$PATH:$HOME/.config/pykitty/
+export PATH=$PATH:$HOME/code/projects/pycopy/
+
 
 
 alias bat="/usr/local/bat/bat"

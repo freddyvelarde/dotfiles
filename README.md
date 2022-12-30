@@ -27,6 +27,7 @@ As you can see my poor machine only supports linux, but I can do everything I ne
 # LINKS
 
 - [install bat](https://www.linode.com/docs/guides/how-to-install-and-use-the-bat-command-on-linux/)
+- [Install docker](https://www.linuxfordevices.com/tutorials/linux/install-docker-on-arch)
 
 # TIPS
 

@@ -66,7 +66,7 @@ lspconfig["cssls"].setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
+	filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
 })
 
 require("lspconfig").jedi_language_server.setup({
@@ -120,4 +120,16 @@ lspconfig["gopls"].setup({
 			staticcheck = true,
 		},
 	},
+})
+
+require("lspconfig").dockerls.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+})
+
+require("lspconfig").rust_analyzer.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
 })

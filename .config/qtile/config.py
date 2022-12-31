@@ -132,18 +132,15 @@ keys = [
     # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "space", lazy.window.toggle_floating()),
     # rofi run app
-    Key([mod], "n", lazy.spawn("rofi -show run")),
+    Key([mod], "n", lazy.spawn("rofi -show drun")),
     Key([mod, "shift"], "n", lazy.spawn("rofi -show")),
     # flameshoot - screenshot
-    Key([mod, "control"], "s", lazy.spawn("flameshot gui")),
-    # Open firefox
-    # Key([mod], "fi", lazy.spawn('firefox')),
-    # open kitty kitty terminal
     Key([mod, "shift"], "t", lazy.spawn("kitty")),
-    # Key([mod], "m", lazy.spawn('kitty')),
     # brightnessctl control
-    Key([mod, "control"], "d", lazy.spawn("brightnessctl set 5%-")),
-    Key([mod, "control"], "u", lazy.spawn(" brightnessctl set +5%")),
+    Key([mod, "control"], "down", lazy.spawn("light -U 5")),
+    Key([mod, "control"], "up", lazy.spawn("light -A 5")),
+    # firefox
+    Key([mod, "shift"], "f", lazy.spawn("firefox")),
 ]
 
 
@@ -243,7 +240,7 @@ for i in groups:
 
 def init_layout_theme():
     return {
-        "margin": 4,
+        "margin": 1,
         "border_width": 0,
         "border_focus": "#5481ac",
         "border_normal": "#4c566a",

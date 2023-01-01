@@ -3,7 +3,7 @@ local opt = vim.opt
 -- line numbers
 opt.number = true
 opt.relativenumber = true
-vim.api.nvim_set_hl(0, "Normal", { guibg = NONE, ctermbg = NONE })
+-- vim.api.nvim_set_hl(0, "Normal", { guibg = NONE, ctermbg = NONE })
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)

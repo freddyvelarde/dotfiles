@@ -7,6 +7,12 @@ keymap.set("i", "jk", "<ESC>")
 -- nvim tree toggle
 keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>")
 
+-- clear search highlights
+keymap.set("n", "<leader>nh", ":nohl<CR>")
+
+-- delete single character without copying into register
+keymap.set("n", "x", '"_x')
+
 -- tmux vim moves
 keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>")
 keymap.set("n", "<leader>h", ":<C-U>TmuxNavigateLeft<cr>")
@@ -39,6 +45,8 @@ keymap.set("n", "<leader>x", ":bdelete <CR>==")
 
 keymap.set("n", "<leader>t", ":AirlineToggle <CR>==")
 
+-- restart lsp server (not on youtube nvim video)
+keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 vim.cmd([[
 inoremap ' ''<left>
 inoremap " ""<left>
@@ -48,6 +56,5 @@ inoremap [ []<left>
 inoremap < <><left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
-inoremap <Return> <CR><CR><C-o>k<Tab>
-
+inoremap <C-Return> <CR><CR><C-o>k<Tab>
 ]])

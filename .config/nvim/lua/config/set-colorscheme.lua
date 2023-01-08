@@ -1,1 +1,1 @@
-require("config/colorschemes/decay")
+require("config/colorschemes/tokyo")

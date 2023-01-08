@@ -20,6 +20,7 @@ null_ls.setup({
 		formatting.gofumpt, -- go formatter
 		formatting.black, -- python formatter
 		formatting.rustfmt, -- rust formatter
+		formatting.phpcsfixer,
 
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)

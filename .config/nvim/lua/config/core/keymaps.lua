@@ -13,6 +13,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- delete word
+keymap.set("n", "<C-w>", "daw")
+
 -- tmux vim moves
 keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>")
 keymap.set("n", "<leader>h", ":<C-U>TmuxNavigateLeft<cr>")
@@ -42,6 +45,10 @@ keymap.set("v", "<C-/>", ":Commentary<CR>")
 keymap.set("n", "<leader>w", ":bnext <CR>==")
 keymap.set("n", "<leader>q", ":bprevious <CR>==")
 keymap.set("n", "<leader>x", ":bdelete <CR>==")
+
+keymap.set("n", "<C-.>", ":bnext <CR>==")
+keymap.set("n", "<C-,>", ":bprevious <CR>==")
+keymap.set("n", "<C-x>", ":bdelete <CR>==")
 
 keymap.set("n", "<leader>t", ":AirlineToggle <CR>==")
 

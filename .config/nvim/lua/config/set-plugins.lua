@@ -112,8 +112,10 @@ return packer.startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
 
 	if packer_bootstrap then
 		require("packer").sync()

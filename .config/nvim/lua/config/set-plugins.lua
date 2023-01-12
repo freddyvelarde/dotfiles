@@ -60,7 +60,8 @@ return packer.startup(function(use)
 	use("vim-airline/vim-airline-themes")
 
 	-- commentary
-	use("chrisbra/vim-commentary")
+	use("preservim/nerdcommenter")
+	-- use("chrisbra/vim-commentary")
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
@@ -116,6 +117,8 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- lualine use this instead of airline
+	use("nvim-lualine/lualine.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

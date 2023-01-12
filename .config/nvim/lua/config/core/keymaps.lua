@@ -38,8 +38,11 @@ keymap.set("n", "<C-S>", ":w!<CR>")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-keymap.set("n", "<C-/>", ":Commentary<CR>")
-keymap.set("v", "<C-/>", ":Commentary<CR>")
+-- nerd commenter
+keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
+keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle")
+keymap.set("n", "gc", "<Plug>NERDCommenterToggle")
+keymap.set("v", "gcc", "<Plug>NERDCommenterToggle")
 
 -- move tabs
 keymap.set("n", "<leader>w", ":bnext <CR>==")

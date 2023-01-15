@@ -1,4 +1,4 @@
--- plugins
+--plugins
 require("config.set-plugins")
 require("config.plugins.nvim-tree")
 require("config.plugins.lualine")
@@ -7,8 +7,6 @@ require("config.plugins.treesitter")
 require("config.plugins.commenter")
 require("config.plugins.colors")
 require("config.plugins.git")
-require("config.plugins.vim-illuminate")
--- require("config.plugins.bufferline")
 
 -- my config
 require("config.core.keymaps")

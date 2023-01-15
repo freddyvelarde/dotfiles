@@ -127,9 +127,6 @@ return packer.startup(function(use)
 	-- bufferline
 	-- use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
-	-- word hightlighting
-	use("RRethy/vim-illuminate")
-
 	if packer_bootstrap then
 		require("packer").sync()
 	end

@@ -16,7 +16,7 @@ require("config.core.options")
 require("config.plugins.nvim-cmp")
 require("config.plugins.lsp.mason")
 require("config.plugins.lsp.lspsaga")
-require("config.plugins.lsp.lspconfig")
+require("config.plugins.lsp.lspconfig.init")
 require("config.plugins.lsp.null-ls")
 
 -- colorscheme

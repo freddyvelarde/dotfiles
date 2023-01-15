@@ -19,6 +19,9 @@ keymap.set("n", "dw", 'vb"_d')
 -- delete word
 keymap.set("n", "<C-w>", "daw")
 
+-- find word
+keymap.set("n", "<leader>fw", "#")
+
 -- tmux vim moves
 keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>")
 keymap.set("n", "<leader>h", ":<C-U>TmuxNavigateLeft<cr>")

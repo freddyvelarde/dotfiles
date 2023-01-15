@@ -13,6 +13,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- Delete a word backwards
+keymap.set("n", "dw", 'vb"_d')
+
 -- delete word
 keymap.set("n", "<C-w>", "daw")
 

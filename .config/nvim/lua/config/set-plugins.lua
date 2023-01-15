@@ -88,7 +88,8 @@ return packer.startup(function(use)
 	})
 
 	-- indent lines
-	use("Yggdroot/indentLine")
+	-- use("Yggdroot/indentLine")
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -118,7 +119,16 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	-- lualine use this instead of airline
-	use("nvim-lualine/lualine.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+
+	-- bufferline
+	-- use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+
+	-- word hightlighting
+	use("RRethy/vim-illuminate")
 
 	if packer_bootstrap then
 		require("packer").sync()

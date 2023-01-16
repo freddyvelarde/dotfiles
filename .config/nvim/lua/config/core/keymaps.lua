@@ -55,9 +55,9 @@ keymap.set("n", "<leader>w", ":bnext <CR>==")
 keymap.set("n", "<leader>q", ":bprevious <CR>==")
 keymap.set("n", "<leader>x", ":bdelete <CR>==")
 
-keymap.set("n", "<C-.>", ":bnext <CR>==")
-keymap.set("n", "<C-,>", ":bprevious <CR>==")
-keymap.set("n", "<C-x>", ":bdelete <CR>==")
+keymap.set("n", "<a-.>", ":bnext <CR>==")
+keymap.set("n", "<a-,>", ":bprevious <CR>==")
+keymap.set("n", "<a-x>", ":bdelete <CR>==")
 
 keymap.set("n", "<leader>t", ":AirlineToggle <CR>==")
 

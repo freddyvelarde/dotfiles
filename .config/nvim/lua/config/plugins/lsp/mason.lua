@@ -26,13 +26,14 @@ mason_lspconfig.setup({
 		"cssls",
 		"emmet_ls",
 		"tsserver",
-		"jedi_language_server",
+		"pyright",
 		"intelephense",
 		"rust_analyzer",
 		"jdtls",
 		"gopls",
 		"dockerls",
 		"tailwindcss",
+		"marksman",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed

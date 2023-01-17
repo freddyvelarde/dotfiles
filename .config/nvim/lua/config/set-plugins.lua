@@ -1,4 +1,4 @@
--- auto install packer if not installed
+-- auto install packer if not installedsetset
 local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -32,17 +32,13 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- colorschemes
-	use("whatyouhide/vim-gotham")
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-	})
 	use("folke/tokyonight.nvim")
-	-- use 'ajmwagar/vim-deus'
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-	-- use 'thedenisnikulin/vim-cyberpunk'
 	use("olimorris/onedarkpro.nvim")
-	use({ "decaycs/decay.nvim", as = "decay" })
+	use("mhartington/oceanic-next")
+	use("matsuuu/pinkmare")
+	use("shaunsingh/moonlight.nvim")
+	use("nekonako/xresources-nvim")
 
 	-- file explorer
 	use({
@@ -126,6 +122,14 @@ return packer.startup(function(use)
 
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+
+	-- dashboard
+	use({
+		"goolord/alpha-nvim",
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

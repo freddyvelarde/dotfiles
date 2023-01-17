@@ -6,4 +6,4 @@ if not status then
   return
 end
 
-pcall(vim.cmd, "let g:airline_theme='night_owl'")
+vim.cmd("let g:lightline = { 'colorscheme': 'nightfly' }")

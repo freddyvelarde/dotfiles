@@ -18,6 +18,7 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 nvimtree.setup({
 	-- change folder arrow icons
 	renderer = {
+		highlight_git = false,
 		icons = {
 			glyphs = {
 				folder = {
@@ -29,6 +30,7 @@ nvimtree.setup({
 	},
 	view = {
 		side = "right",
+		adaptive_size = true,
 	},
 	-- disable window_picker for
 	-- explorer to work well with
@@ -40,7 +42,7 @@ nvimtree.setup({
 			},
 		},
 	},
-	-- 	git = {
-	-- 		ignore = false,
-	-- 	},
+	git = {
+		ignore = false,
+	},
 })

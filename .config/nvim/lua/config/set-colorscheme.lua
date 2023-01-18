@@ -1,1 +1,1 @@
-require("config/colorschemes/pinkmare")
+require("config/colorschemes/material")

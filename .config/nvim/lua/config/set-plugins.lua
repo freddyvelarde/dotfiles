@@ -38,7 +38,9 @@ return packer.startup(function(use)
 	use("mhartington/oceanic-next")
 	use("matsuuu/pinkmare")
 	use("shaunsingh/moonlight.nvim")
-	use("nekonako/xresources-nvim")
+	-- use("nekonako/xresources-nvim")
+	use("yonlu/omni.vim")
+	use("marko-cerovac/material.nvim")
 
 	-- file explorer
 	use({
@@ -128,6 +130,19 @@ return packer.startup(function(use)
 		"goolord/alpha-nvim",
 		config = function()
 			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	})
+
+	-- notification
+	use("rcarriga/nvim-notify")
+
+	-- session manager project
+	use({
+		"olimorris/persisted.nvim",
+		--module = "persisted", -- For lazy loading
+		config = function()
+			require("persisted").setup()
+			require("telescope").load_extension("persisted") -- To load the telescope extension
 		end,
 	})
 

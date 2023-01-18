@@ -1,7 +1,8 @@
---plugins
+-- plugins
 require("config.set-plugins")
 require("config.plugins.nvim-tree")
 require("config.plugins.lualine")
+require("config.plugins.session")
 require("config.plugins.telescope")
 require("config.plugins.treesitter")
 require("config.plugins.commenter")
@@ -9,11 +10,11 @@ require("config.plugins.colors")
 require("config.plugins.git")
 require("config.plugins.bufferline")
 
--- my config
+-- my personal config
 require("config.core.keymaps")
 require("config.core.options")
 
--- lsp
+-- language server protocol config
 require("config.plugins.nvim-cmp")
 require("config.plugins.lsp.mason")
 require("config.plugins.lsp.lspsaga")

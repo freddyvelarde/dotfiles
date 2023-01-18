@@ -33,6 +33,7 @@ cmp.setup({
 		nvim_lsp = 0,
 		luasnip = 1,
 	},
+	duplicates_default = 0,
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)

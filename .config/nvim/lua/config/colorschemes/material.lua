@@ -15,8 +15,7 @@ require("material").setup({
 		comments = { italic = true },
 		strings = { italic = true },
 		keywords = { bold = true },
-		functions = { --[[ bold = true, undercurl = true ]]
-		},
+		functions = {},
 		variables = {},
 		operators = { italic = true },
 		types = {},

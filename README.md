@@ -8,7 +8,7 @@ As you can see my poor machine only supports linux, but I can do everything I ne
 
 ## I use VIM btw
 
-![Drag Racing](.screenshots/vim-screen.png)
+![vim view](./.screenshots/nvim-main.png)
 
 > My config is not pretty amazing, but I recommend you
 > use vim (neovim) if you're a linux user and even if you're not

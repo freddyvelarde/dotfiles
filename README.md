@@ -37,4 +37,8 @@ use the next command to git terminal
 git config --global credential.helper store
 ```
 
+# My fonts
 
+- [Cascadia Code](https://www.nerdfonts.com/font-downloads)
+- [JetBrain Mono](https://www.nerdfonts.com/font-downloads)
+- [Caskaydia Code](https://www.nerdfonts.com/font-downloads)

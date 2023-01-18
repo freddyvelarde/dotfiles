@@ -20,7 +20,7 @@ keymap.set("n", "dw", 'vb"_d')
 keymap.set("n", "<C-w>", "daw")
 
 -- find word
-keymap.set("n", "<leader>fw", "#")
+keymap.set("n", "<leader>fw", "*")
 
 -- tmux vim moves
 keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>")

@@ -139,10 +139,18 @@ return packer.startup(function(use)
 	-- session manager project
 	use({
 		"olimorris/persisted.nvim",
-		--module = "persisted", -- For lazy loading
+		module = "persisted", -- For lazy loading
 		config = function()
 			require("persisted").setup()
 			require("telescope").load_extension("persisted") -- To load the telescope extension
+		end,
+	})
+
+	-- markdown live server
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
 		end,
 	})
 

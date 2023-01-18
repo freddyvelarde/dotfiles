@@ -19,13 +19,14 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 require("luasnip/loaders/from_vscode").lazy_load()
 
+-- vim.opt.completeopt = "menu,menuone"
 vim.opt.completeopt = "menu,menuone,noselect"
--- vim.opt.completeopt = "menu,menuone,noselect"
 
 cmp.setup({
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
-		select = false,
+		-- preselect = cmp.PreselectMode.None,
+		select = true,
 	},
 	diplicates = {
 		buffer = 1,
@@ -33,6 +34,7 @@ cmp.setup({
 		nvim_lsp = 0,
 		luasnip = 1,
 	},
+
 	duplicates_default = 0,
 	snippet = {
 		expand = function(args)
@@ -51,11 +53,11 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 		["<C-e>"] = cmp.mapping.abort(), -- close completion window
-		["<CR>"] = cmp.mapping.confirm({ select = false }),
+		-- ["<CR>"] = cmp.mapping.confirm({ select = false }),
 		["<C-o>"] = cmp.mapping.confirm({ select = false }),
 
-		-- ["<CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
-		["<Tab>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+		["<CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
+		-- ["<Tab>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
 	}),
 	-- sources for autocompletion
 	sources = cmp.config.sources({

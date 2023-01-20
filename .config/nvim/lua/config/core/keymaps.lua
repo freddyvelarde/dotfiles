@@ -1,63 +1,71 @@
+----------------------
+-- My Neovim Keybinds
+----------------------
+
 -- vim leader key
 vim.g.mapleader = " "
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "jk", "<ESC>", { silent = true })
 
 -- nvim tree toggle
-keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { silent = true })
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true })
 
 -- delete single character without copying into register
-keymap.set("n", "x", '"_x')
+keymap.set("n", "x", '"_x', { silent = true })
 
--- Delete a word backwards
-keymap.set("n", "dw", 'vb"_d')
+-- Delete
+keymap.set("n", "dw", 'vb"_d', { silent = true })
 
--- delete word
-keymap.set("n", "<C-w>", "daw")
+-- delete a single word
+keymap.set("n", "<C-w>", "diwb", { silent = true })
 
 -- find word
-keymap.set("n", "<leader>fw", "*")
+keymap.set("n", "<leader>fw", "*", { silent = true })
 
 -- tmux vim moves
-keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>")
-keymap.set("n", "<leader>h", ":<C-U>TmuxNavigateLeft<cr>")
-keymap.set("n", "<leader>j", ":<C-U>TmuxNavigateDown<cr>")
-keymap.set("n", "<leader>k", ":<C-U>TmuxNavigateUp<cr>")
+keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>", { silent = true })
+keymap.set("n", "<leader>h", ":<C-U>TmuxNavigateLeft<cr>", { silent = true })
+keymap.set("n", "<leader>j", ":<C-U>TmuxNavigateDown<cr>", { silent = true })
+keymap.set("n", "<leader>k", ":<C-U>TmuxNavigateUp<cr>", { silent = true })
 
 -- telescope
-keymap.set("n", "<leader>ff", ":Telescope find_files <CR>")
-keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>")
-keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
+keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
+keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
+keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
 
 -- my own keymaps
-keymap.set("n", "<C-a>", "ggVG") -- to select all file
+keymap.set("n", "<C-a>", "ggVG", { silent = true }) -- to select all file
 
-keymap.set("n", "<A-k>", ":m-2<CR>==")
-keymap.set("n", "<A-j>", ":m+<CR>==")
-keymap.set("n", "<C-S>", ":w!<CR>")
+keymap.set("n", "<A-k>", ":m-2<CR>==", { silent = true })
+keymap.set("n", "<A-j>", ":m+<CR>==", { silent = true })
+keymap.set("n", "<C-S>", ":w!<CR>", { silent = true })
 
 -- move entire lines of code
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
 -- nerd commenter
-keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
-keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle")
-keymap.set("n", "gc", "<Plug>NERDCommenterToggle")
-keymap.set("v", "gcc", "<Plug>NERDCommenterToggle")
+keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
+keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
+keymap.set("n", "gc", "<Plug>NERDCommenterToggle", { silent = true })
+keymap.set("v", "gcc", "<Plug>NERDCommenterToggle", { silent = true })
 
 -- move tabs
-keymap.set("n", "<leader>w", ":bnext <CR>==")
-keymap.set("n", "<leader>q", ":bprevious <CR>==")
-keymap.set("n", "<leader>x", ":bdelete <CR>==")
+keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<leader>x", ":bdelete <CR>==", { silent = true })
 
-keymap.set("n", "<a-.>", ":bnext <CR>==")
-keymap.set("n", "<a-,>", ":bprevious <CR>==")
-keymap.set("n", "<a-x>", ":bdelete <CR>==")
+keymap.set("n", "<a-.>", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<a-,>", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<a-x>", ":bdelete <CR>==", { silent = true })
+
+keymap.set("v", "fff", 'da"<ESC>pa"<ESC>', { silent = true })
+keymap.set("v", "ffg", "da[<ESC>pa]<ESC>", { silent = true })
+keymap.set("v", "ffd", "da{<ESC>pa}<ESC>", { silent = true })
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
@@ -73,20 +81,16 @@ inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
 ]])
 
--- window management
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+--  window management
+keymap.set("n", "<leader>sv", "<C-w>v", { silent = true }) -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { silent = true }) -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { silent = true }) -- make split windows equal width & height
+keymap.set("n", "<leader>sx", ":close<CR>", { silent = true }) -- close current split window
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-
-----------------------
--- Plugin Keybinds
-----------------------
+keymap.set("n", "<leader>to", ":tabnew<CR>", { silent = true }) -- open new tab
+keymap.set("n", "<leader>tx", ":tabclose<CR>", { silent = true }) -- close current tab
+keymap.set("n", "<leader>tn", ":tabn<CR>", { silent = true }) --  go to next tab
+keymap.set("n", "<leader>tp", ":tabp<CR>", { silent = true }) --  go to previous tab
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization

@@ -74,10 +74,7 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- coc
-	-- use({ "neoclide/coc.nvim", branch = "release" })
-
-	-- basic plugins
+	-- use to make quotes ""
 	use("tpope/vim-surround")
 
 	use({
@@ -139,7 +136,7 @@ return packer.startup(function(use)
 	-- session manager project
 	use({
 		"olimorris/persisted.nvim",
-		module = "persisted", -- For lazy loading
+		-- module = "persisted", -- For lazy loading
 		config = function()
 			require("persisted").setup()
 			require("telescope").load_extension("persisted") -- To load the telescope extension
@@ -153,6 +150,8 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+
+	use("szw/vim-maximizer") -- maximizes and restores current window
 
 	if packer_bootstrap then
 		require("packer").sync()

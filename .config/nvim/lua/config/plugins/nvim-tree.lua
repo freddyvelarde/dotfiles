@@ -19,14 +19,25 @@ nvimtree.setup({
 	respect_buf_cwd = false,
 	-- change folder arrow icons
 	renderer = {
-		highlight_git = false,
+		highlight_git = true,
 		icons = {
 			glyphs = {
 				folder = {
 					arrow_closed = "", -- arrow when folder is closed
 					arrow_open = "", -- arrow when folder is open
 				},
+				git = {
+					unstaged = "✗",
+					-- unstaged = "",
+					staged = "✓",
+					unmerged = "",
+					renamed = "➜",
+					untracked = "★",
+					deleted = "",
+					ignored = "",
+				},
 			},
+			webdev_colors = true,
 		},
 	},
 	view = {

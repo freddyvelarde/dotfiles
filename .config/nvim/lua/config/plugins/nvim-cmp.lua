@@ -25,14 +25,7 @@ vim.opt.completeopt = "menu,menuone,noselect"
 cmp.setup({
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
-		-- preselect = cmp.PreselectMode.None,
 		select = true,
-	},
-	diplicates = {
-		buffer = 1,
-		path = 1,
-		nvim_lsp = 0,
-		luasnip = 1,
 	},
 
 	duplicates_default = 0,

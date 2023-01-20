@@ -1,6 +1,6 @@
-----------------------
--- My Neovim Keybinds
-----------------------
+--------------------------
+--- My Neovim Keybinds ---
+--------------------------
 
 -- vim leader key
 vim.g.mapleader = " "
@@ -16,9 +16,6 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x', { silent = true })
-
--- Delete
-keymap.set("n", "dw", 'vb"_d', { silent = true })
 
 -- delete a single word
 keymap.set("n", "<C-w>", "diwb", { silent = true })
@@ -59,16 +56,20 @@ keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
 keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })
 keymap.set("n", "<leader>x", ":bdelete <CR>==", { silent = true })
 
-keymap.set("n", "<a-.>", ":bnext <CR>==", { silent = true })
-keymap.set("n", "<a-,>", ":bprevious <CR>==", { silent = true })
-keymap.set("n", "<a-x>", ":bdelete <CR>==", { silent = true })
+keymap.set("n", "<A-.>", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<A-,>", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<A-x>", ":bdelete <CR>==", { silent = true })
 
-keymap.set("v", "fff", 'da"<ESC>pa"<ESC>', { silent = true })
-keymap.set("v", "ffg", "da[<ESC>pa]<ESC>", { silent = true })
-keymap.set("v", "ffd", "da{<ESC>pa}<ESC>", { silent = true })
+keymap.set("v", '"', 'da"<ESC>pa" <ESC>', { silent = true })
+keymap.set("v", "`", "da`<ESC>pa` <ESC>", { silent = true })
+keymap.set("v", "'", "da'<ESC>pa' <ESC>", { silent = true })
+keymap.set("v", "(", "da(<ESC>pa) <ESC>", { silent = true })
+keymap.set("v", "fff", "da[<ESC>pa] <ESC>", { silent = true })
+keymap.set("v", "{", "da{<ESC>pa} <ESC>", { silent = true })
 
--- restart lsp server (not on youtube nvim video)
+--  restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
 vim.cmd([[
 inoremap ' ''<left>
 inoremap " ""<left>
@@ -86,11 +87,6 @@ keymap.set("n", "<leader>sv", "<C-w>v", { silent = true }) -- split window verti
 keymap.set("n", "<leader>sh", "<C-w>s", { silent = true }) -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { silent = true }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>", { silent = true }) -- close current split window
-
-keymap.set("n", "<leader>to", ":tabnew<CR>", { silent = true }) -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>", { silent = true }) -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>", { silent = true }) --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>", { silent = true }) --  go to previous tab
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization

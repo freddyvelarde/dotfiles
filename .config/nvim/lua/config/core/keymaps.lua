@@ -34,6 +34,10 @@ keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
 keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
 
+keymap.set("n", "lhs", function()
+	print("real lua function")
+end)
+
 -- my own keymaps
 keymap.set("n", "<C-a>", "ggVG", { silent = true }) -- to select all file
 
@@ -45,11 +49,11 @@ keymap.set("n", "<C-S>", ":w!<CR>", { silent = true })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
+keymap.set("n", "mm", ":put 1 <CR>", { silent = true })
+
 -- nerd commenter
-keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
-keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
-keymap.set("n", "gc", "<Plug>NERDCommenterToggle", { silent = true })
-keymap.set("v", "gcc", "<Plug>NERDCommenterToggle", { silent = true })
+keymap.set({ "n", "v" }, "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
+keymap.set({ "n", "v" }, "gc", "<Plug>NERDCommenterToggle", { silent = true })
 
 -- move tabs
 keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
@@ -60,12 +64,33 @@ keymap.set("n", "<A-.>", ":bnext <CR>==", { silent = true })
 keymap.set("n", "<A-,>", ":bprevious <CR>==", { silent = true })
 keymap.set("n", "<A-x>", ":bdelete <CR>==", { silent = true })
 
-keymap.set("v", '"', 'da"<ESC>pa" <ESC>', { silent = true })
-keymap.set("v", "`", "da`<ESC>pa` <ESC>", { silent = true })
-keymap.set("v", "'", "da'<ESC>pa' <ESC>", { silent = true })
-keymap.set("v", "(", "da(<ESC>pa) <ESC>", { silent = true })
-keymap.set("v", "fff", "da[<ESC>pa] <ESC>", { silent = true })
-keymap.set("v", "{", "da{<ESC>pa} <ESC>", { silent = true })
+-- quotes, square and curly brackets completition
+-- exaple text ->  "example text"
+keymap.set("v", '"', 'di"<ESC>pa" <ESC>', { silent = true })
+keymap.set("v", "fff", 'di"<ESC>pa" <ESC>', { silent = true })
+
+-- exaple text ->  `example text`
+keymap.set("v", "`", "di`<ESC>pa` <ESC>", { silent = true })
+keymap.set("v", "ffh", "di`<ESC>pa` <ESC>", { silent = true })
+
+-- exaple text ->  'example text'
+keymap.set("v", "'", "di'<ESC>pa' <ESC>", { silent = true })
+keymap.set("v", "ffj", "di'<ESC>pa' <ESC>", { silent = true })
+
+-- exaple text ->  (example text)
+keymap.set("v", "(", "di(<ESC>pa) <ESC>", { silent = true })
+keymap.set("v", ")", "di(<ESC>pa) <ESC>", { silent = true })
+keymap.set("v", "ffr", "di(<ESC>pa) <ESC>", { silent = true })
+
+-- exaple text ->  [example text]
+keymap.set("v", "[", "di[<ESC>pa] <ESC>", { silent = true })
+keymap.set("v", "]", "di[<ESC>pa] <ESC>", { silent = true })
+keymap.set("v", "ffd", "di[<ESC>pa] <ESC>", { silent = true })
+
+-- exaple text ->   {example text}
+keymap.set("v", "{", "di{<ESC>pa} <ESC>", { silent = true })
+keymap.set("v", "}", "di{<ESC>pa} <ESC>", { silent = true })
+keymap.set("v", "ffs", "di{<ESC>pa} <ESC>", { silent = true })
 
 --  restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

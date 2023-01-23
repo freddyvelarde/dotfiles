@@ -2,18 +2,16 @@
 
 As you can see my poor machine only supports linux, but I can do everything I need
 
-![main screen](.screenshots/terminal-screen.png)
-
-> if you want to know how I turned my pic into text, please visit [this](https://github.com/TheZoraiz/ascii-image-converter)
+![main screen](.screenshots/main-terminal-screen.png)
 
 ## I use VIM btw
 
-![vim view](./.screenshots/nvim-main.png)
+![vim view](./.screenshots/nvim-screen1.0.png)
 
 > My config is not pretty amazing, but I recommend you
 > use vim (neovim) if you're a linux user and even if you're not
 >
-> If you're interested, all my nvim config is [here](https://github.com/freddyvelarde/dotfiles/tree/master/.config)
+> If you're interested, all my nvim config is [here](https://github.com/freddyvelarde/dotfiles/tree/master/.config/nvim)
 > in lua script and vim script.
 
 # My tools

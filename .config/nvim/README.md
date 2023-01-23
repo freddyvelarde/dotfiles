@@ -1,16 +1,12 @@
 # Neovim config
 
-![neovim view](../../.screenshots/nvim-main.png)
+![neovim view](../../.screenshots/nvim-screen1.0.png)
 
-> colorscheme: material (Deep Ocean)
+> colorscheme: moonlight, font: JetBrains Mono
 
-I used to code in VSCode but I discovered neovim and immediately fell in love.
+I used to code in VSCode but I discovered neovim and immediately fell in love. VSCode is a such a good editor, but I felt something was not right, because when I installed some plugins, VSCode was very slow
 
-VSCode is a such a good editor, but I felt something was not right, because when I installed some plugins,
-VSCode was very slow
-
-I'm trying to set up my neovim editor like an editor very powerfull, something
-like VSCode.
+I'm trying to set up my neovim editor like an editor very powerfull, something like VSCode.
 
 I'm using
 [packer.nvim](https://github.com/wbthomason/packer.nvim)

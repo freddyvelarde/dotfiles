@@ -1,1 +1,1 @@
-require("config/colorschemes/onedarkpro")
+require("config/colorschemes/moonlight")

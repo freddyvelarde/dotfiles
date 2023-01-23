@@ -8,6 +8,9 @@ local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { silent = true })
 
+-- save file
+keymap.set("n", "<leader>s", ":w <CR>")
+
 -- nvim tree toggle
 keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { silent = true })
 
@@ -33,10 +36,6 @@ keymap.set("n", "<leader>k", ":<C-U>TmuxNavigateUp<cr>", { silent = true })
 keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
 keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
-
-keymap.set("n", "lhs", function()
-	print("real lua function")
-end)
 
 -- my own keymaps
 keymap.set("n", "<C-a>", "ggVG", { silent = true }) -- to select all file
@@ -71,28 +70,28 @@ keymap.set("v", "fff", 'di"<ESC>pa" <ESC>', { silent = true })
 
 -- exaple text ->  `example text`
 keymap.set("v", "`", "di`<ESC>pa` <ESC>", { silent = true })
-keymap.set("v", "ffh", "di`<ESC>pa` <ESC>", { silent = true })
+keymap.set("v", "ffj", "di`<ESC>pa` <ESC>", { silent = true })
 
 -- exaple text ->  'example text'
 keymap.set("v", "'", "di'<ESC>pa' <ESC>", { silent = true })
-keymap.set("v", "ffj", "di'<ESC>pa' <ESC>", { silent = true })
+keymap.set("v", "ffh", "di'<ESC>pa' <ESC>", { silent = true })
 
 -- exaple text ->  (example text)
 keymap.set("v", "(", "di(<ESC>pa) <ESC>", { silent = true })
 keymap.set("v", ")", "di(<ESC>pa) <ESC>", { silent = true })
-keymap.set("v", "ffr", "di(<ESC>pa) <ESC>", { silent = true })
+keymap.set("v", "ffg", "di(<ESC>pa) <ESC>", { silent = true })
 
 -- exaple text ->  [example text]
 keymap.set("v", "[", "di[<ESC>pa] <ESC>", { silent = true })
 keymap.set("v", "]", "di[<ESC>pa] <ESC>", { silent = true })
 keymap.set("v", "ffd", "di[<ESC>pa] <ESC>", { silent = true })
 
--- exaple text ->   {example text}
+-- exaple text ->  {example text}
 keymap.set("v", "{", "di{<ESC>pa} <ESC>", { silent = true })
 keymap.set("v", "}", "di{<ESC>pa} <ESC>", { silent = true })
-keymap.set("v", "ffs", "di{<ESC>pa} <ESC>", { silent = true })
+keymap.set("v", "ffk", "di{<ESC>pa} <ESC>", { silent = true })
 
---  restart lsp server
+-- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 vim.cmd([[
@@ -105,7 +104,17 @@ inoremap < <><left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
+nnoremap q: <nop>
+nnoremap Q <nop>
 ]])
+
+-- toggle bufferline
+keymap.set("n", "<leader>nn", function()
+	vim.opt.showtabline = 0
+end)
+keymap.set("n", "<leader>mm", function()
+	vim.opt.showtabline = 2
+end)
 
 --  window management
 keymap.set("n", "<leader>sv", "<C-w>v", { silent = true }) -- split window vertically

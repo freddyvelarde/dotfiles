@@ -2,11 +2,7 @@ local opt = vim.opt
 
 -- line numbers
 opt.number = true
--- opt.relativenumber = true
-vim.cmd([[
-set noshowmode
-]])
--- vim.api.nvim_set_hl(0, "Normal", { guibg = NONE, ctermbg = NONE })
+vim.cmd("set noshowmode")
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)

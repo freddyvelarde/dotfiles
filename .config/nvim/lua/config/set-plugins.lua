@@ -153,6 +153,9 @@ return packer.startup(function(use)
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
+	-- images preview
+	use("https://github.com/adelarsq/image_preview.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

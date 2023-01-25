@@ -8,6 +8,9 @@ local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { silent = true })
 
+-- enter in normal mode
+keymap.set("n", ";;", "o<ESC>", { silent = true })
+
 -- save file
 keymap.set("n", "<leader>s", ":w <CR>")
 

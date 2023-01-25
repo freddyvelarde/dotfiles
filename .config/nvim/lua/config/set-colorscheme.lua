@@ -1,1 +1,1 @@
-require("config/colorschemes/moonlight")
+require("config/colorschemes/material")

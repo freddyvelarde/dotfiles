@@ -1,7 +1,7 @@
 export PATH=$PATH:$HOME/.config/pykitty/
 export PATH=$PATH:$HOME/code/projects/pycopy/
 
-
+alias httpfred="~/code/projects/http-client-cli/target/debug/http-client-cli"
 
 alias bat="/usr/local/bat/bat"
 

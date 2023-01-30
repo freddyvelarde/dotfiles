@@ -79,8 +79,8 @@ Move lines of code:
 | ----------- | ------ | ----------------------------------- |
 | alt + j | normal | move to down a entire line of code |
 | alt + k | normal | move to up a entire line of code |
-| alt + k | visual | move to up a entire block of code |
-| alt + j | visual | move to down a entire block of code |
+| alt + K | visual | move to up a entire block of code |
+| alt + J | visual | move to down a entire block of code |
 
 Nvim tree:
 

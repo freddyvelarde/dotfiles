@@ -2,7 +2,12 @@ local opt = vim.opt
 
 -- line numbers
 opt.number = true
+opt.relativenumber = false
 vim.cmd("set noshowmode")
+
+opt.undofile = true
+
+opt.spell = false
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)

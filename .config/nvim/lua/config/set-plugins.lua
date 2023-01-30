@@ -130,9 +130,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- notification
-	use("rcarriga/nvim-notify")
-
 	-- session manager project
 	use({
 		"olimorris/persisted.nvim",

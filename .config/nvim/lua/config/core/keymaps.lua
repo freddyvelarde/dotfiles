@@ -1,12 +1,15 @@
 --------------------------
 --- My Neovim Keybinds ---
 --------------------------
-
--- vim leader key
 vim.g.mapleader = " "
+
 local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { silent = true })
+keymap.set("v", "ii", "<ESC>", { silent = true })
+
+-- delete in insert mod
+keymap.set("i", "xx", "<ESC>xa", { silent = true })
 
 -- enter in normal mode
 keymap.set("n", ";;", "o<ESC>", { silent = true })
@@ -68,7 +71,7 @@ keymap.set("n", "<A-x>", ":bdelete <CR>==", { silent = true })
 
 -- quotes, square and curly brackets completition
 -- exaple text ->  "example text"
-keymap.set("v", '"', 'di"<ESC>pa" <ESC>', { silent = true })
+keymap.set("v", '"', 's"<ESC>pa" <ESC>', { silent = true })
 keymap.set("v", "fff", 'di"<ESC>pa" <ESC>', { silent = true })
 
 -- exaple text ->  `example text`

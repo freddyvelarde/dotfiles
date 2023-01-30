@@ -13,11 +13,11 @@ require("material").setup({
 
 	styles = { -- Give comments style such as bold, italic, underline etc.
 		comments = { italic = true },
-		strings = { bold = true },
+		strings = {},
 		keywords = { bold = true },
 		functions = {},
 		variables = {},
-		operators = { italic = true },
+		operators = { bold = true },
 		types = {},
 	},
 

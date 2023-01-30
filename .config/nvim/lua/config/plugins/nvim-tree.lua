@@ -42,8 +42,9 @@ nvimtree.setup({
 	},
 	view = {
 		side = "right",
-		adaptive_size = true,
+		adaptive_size = false,
 		hide_root_folder = true,
+		width = 25,
 	},
 	-- disable window_picker for
 	-- explorer to work well with

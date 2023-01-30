@@ -6,10 +6,10 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { silent = true })
-keymap.set("v", "ii", "<ESC>", { silent = true })
 
--- delete in insert mod
-keymap.set("i", "xx", "<ESC>xa", { silent = true })
+-- select a entire line of code
+keymap.set("n", "rr", "V", { silent = true })
+keymap.set("v", "ii", "<ESC>", { silent = true })
 
 -- enter in normal mode
 keymap.set("n", ";;", "o<ESC>", { silent = true })
@@ -26,10 +26,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true })
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x', { silent = true })
 
--- delete a single word
-keymap.set("n", "<C-w>", "diwb", { silent = true })
-
--- find word
+-- find a hovered word
 keymap.set("n", "<leader>fw", "*", { silent = true })
 
 -- tmux vim moves
@@ -43,16 +40,15 @@ keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
 keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
 
--- my own keymaps
+-- select all
 keymap.set("n", "<C-a>", "ggVG", { silent = true }) -- to select all file
 
 keymap.set("n", "<A-k>", ":m-2<CR>==", { silent = true })
 keymap.set("n", "<A-j>", ":m+<CR>==", { silent = true })
-keymap.set("n", "<C-S>", ":w!<CR>", { silent = true })
 
 -- move entire lines of code
-keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
-keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+keymap.set("v", "<A-J>", ":m '>+1<CR>gv=gv", { silent = true })
+keymap.set("v", "<A-K>", ":m '<-2<CR>gv=gv", { silent = true })
 
 keymap.set("n", "mm", ":put 1 <CR>", { silent = true })
 
@@ -60,14 +56,13 @@ keymap.set("n", "mm", ":put 1 <CR>", { silent = true })
 keymap.set({ "n", "v" }, "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
 keymap.set({ "n", "v" }, "gc", "<Plug>NERDCommenterToggle", { silent = true })
 
--- move tabs
-keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
-keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })
-keymap.set("n", "<leader>x", ":bdelete <CR>==", { silent = true })
-
 keymap.set("n", "<A-.>", ":bnext <CR>==", { silent = true })
 keymap.set("n", "<A-,>", ":bprevious <CR>==", { silent = true })
 keymap.set("n", "<A-x>", ":bdelete <CR>==", { silent = true })
+
+keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<leader>x", ":bdelete <CR>==", { silent = true })
 
 -- quotes, square and curly brackets completition
 -- exaple text ->  "example text"
@@ -112,6 +107,7 @@ inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
 nnoremap q: <nop>
 nnoremap Q <nop>
+map q <Nop>
 ]])
 
 -- toggle bufferline
@@ -127,6 +123,11 @@ keymap.set("n", "<leader>sv", "<C-w>v", { silent = true }) -- split window verti
 keymap.set("n", "<leader>sh", "<C-w>s", { silent = true }) -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { silent = true }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>", { silent = true }) -- close current split window
+-- rezize windows
+keymap.set("n", "<leader>fh", ":vertical resize +10 <CR>==", { silent = true })
+keymap.set("n", "<leader>fl", ":vertical resize -10 <CR>==", { silent = true })
+keymap.set("n", "<leader>fk", ":horizontal resize +3 <CR>==", { silent = true })
+keymap.set("n", "<leader>fj", ":horizontal resize -3 <CR>==", { silent = true })
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization

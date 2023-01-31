@@ -174,7 +174,9 @@ Tabs moves:
 | alt + x | normal | close tab |
 | leader + x | normal | close tab |
 
-### surroundings:
+To preview Markdown run `:MarkdownPreview`
+
+### Surroundings:
 
 It's easiest to explain with examples. Press cs"' inside:
 `"Hello world!"` to change it to `'Hello world!'`
@@ -200,7 +202,7 @@ To switch colorschemes I have a python script that makes that easier called [pyk
 
 > If you going to install a colorscheme make sure that it's compatible with tree-sitter highlights support. [themes](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes)
 
-- [Material Ocean](https://github.com/marko-cerovac/material.nvim)
+- [Material Ocean](https://github.com/marko-cerovac/material.nvim) (by default)
   ![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png)
 - [Moonlight](https://github.com/shaunsingh/moonlight.nvim)
   ![material](../../.screenshots/nvim-gallery/colorschemes/moonlight.png)

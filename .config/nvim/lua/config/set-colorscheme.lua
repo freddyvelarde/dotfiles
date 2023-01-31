@@ -1,1 +1,1 @@
-require("config/colorschemes/material")
+require("config/colorschemes/onedarkpro")

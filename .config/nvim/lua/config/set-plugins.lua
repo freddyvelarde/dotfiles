@@ -39,7 +39,6 @@ return packer.startup(function(use)
 	use("matsuuu/pinkmare")
 	use("shaunsingh/moonlight.nvim")
 	-- use("nekonako/xresources-nvim")
-	use("yonlu/omni.vim")
 	use("marko-cerovac/material.nvim")
 
 	-- file explorer

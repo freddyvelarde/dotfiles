@@ -9,6 +9,8 @@ require("config.plugins.commenter")
 require("config.plugins.colors")
 require("config.plugins.git")
 require("config.plugins.bufferline")
+require("config.plugins.neoscroll")
+require("config.plugins.rainbow")
 
 -- my personal config
 require("config.core.keymaps")

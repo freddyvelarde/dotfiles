@@ -30,6 +30,7 @@ end
 return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
+	use("p00f/nvim-ts-rainbow")
 
 	-- colorschemes
 	use("folke/tokyonight.nvim")
@@ -138,6 +139,9 @@ return packer.startup(function(use)
 			require("telescope").load_extension("persisted") -- To load the telescope extension
 		end,
 	})
+
+	-- smooth scroll
+	use("karb94/neoscroll.nvim")
 
 	-- markdown live server
 	use({

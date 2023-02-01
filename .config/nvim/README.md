@@ -1,26 +1,11 @@
-<div style="display: flex; justify-content: center; align-items: center">
+<div align="center">
   <img src="../../.screenshots/nvim-gallery/nvim-logo.png" width="50" height="50" style="margin-bottom: 15px; margin-right: 10px "  />
   <h1>My Neovim config</h1>
 </div>
 
-<!-- # Neovim config -->
-<!--  -->
-<!-- ![neovim view](../../.screenshots/nvim-screen1.0.png) -->
-<!--  -->
-<!-- > colorscheme: moonlight, font: JetBrains Mono -->
-<!--  -->
-<!-- I used to code in VSCode but I discovered neovim and immediately fell in love. VSCode is a such a good editor, but I felt something was not right, because when I installed some plugins, VSCode was very slow -->
-<!--  -->
-<!-- I'm trying to set up my neovim editor like an editor very powerfull, something like VSCode. -->
-<!--  -->
-<!-- I'm using -->
-<!-- [packer.nvim](https://github.com/wbthomason/packer.nvim) -->
-<!--  -->
-<!-- Themes support with tree-sitter syntax hightlighting: -->
-<!--  -->
 <!-- Extensions for neovim: [Extensions](https://github.com/rockerBOO/awesome-neovim) -->
 
-## I. Introduction
+## Introduction
 
 This is my Neovim configuration based in lua script (lua is better that vim script, trust me :sweat_smile:), I tried to emulate the Visual Studio Code UI (because I really like the VScode UI) but at same time I use all the Neovim performance.
 
@@ -38,7 +23,7 @@ Also you can make your nvim editor as minimal as you can or you can take your ed
 > - You'll need to set up the LSP support and your formatters for all your languages (It's not too hard, don't worry)
 > - If you love to code in JAVA, I don't know why the java LSP doesn't work.
 
-## Installation:
+## INSTALLATION
 
 First of all, please backup your current nvim config file:
 
@@ -46,7 +31,7 @@ First of all, please backup your current nvim config file:
 mv ~/.config/nvim ~/.config/nvim-backup
 ```
 
-1. Clone my entire dotfiles repository.
+Clone my entire dotfiles repository.
 
 ```shell
 git clone https://github.com/freddyvelarde/dotfiles
@@ -65,9 +50,9 @@ Once you're done, you can remove my repository from your machine.
 cd ../ && rm -rf dotfiles
 ```
 
-2. Install all the plugins just with one single vim command run `nvim ~/.config/nvim` and then press `:` in normal mode, run `:PackerSync`
+Install all the plugins just with one single vim command run `nvim ~/.config/nvim` and then press `:` in normal mode, run `:PackerSync`
 
-## II. Features
+## FEATURES
 
 - Session Project Manager
 - Markdown live server
@@ -83,7 +68,7 @@ cd ../ && rm -rf dotfiles
 <!-- E. Cross-platform compatibility -->
 <!--  -->
 
-## III. Plugins
+## Plugins
 
 You can add or remove all plugins you want in the next path `~/.config/nvim/lua/config/set-plugins.lua`.
 
@@ -92,7 +77,7 @@ You can add or remove all plugins you want in the next path `~/.config/nvim/lua/
 <!-- C. How to manage plugins -->
 <!--  -->
 
-## IV. Keymaps
+## Keymaps
 
 I recomend you to learn if you don't know the [Vim Vanilla keybindings](https://gist.github.com/hansrajdas/6520d74ac3251552e66a76f2f32b4bdd).
 
@@ -176,7 +161,7 @@ Tabs moves:
 
 To preview Markdown run `:MarkdownPreview`
 
-### Surroundings:
+### SURROUNDINGS
 
 It's easiest to explain with examples. Press cs"' inside:
 `"Hello world!"` to change it to `'Hello world!'`
@@ -194,7 +179,7 @@ LSP (Languages protocol server) allows us to improve the coding performance, ano
 There's a tool called [Mason](https://github.com/williamboman/mason-lspconfig.nvim) that makes my life easier, Mason install a LSP, formatter, linter for a programming language for you.
 you just need to setup the config for your favorite programming language and that's it.
 
-## Colorschemes gallery
+## COLORSCHEMES
 
 I got installed some colorschemes, you can remove or add your favorite colorscheme.
 

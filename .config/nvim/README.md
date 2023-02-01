@@ -1,18 +1,28 @@
-<div align="center">
-  <img src="../../.screenshots/nvim-gallery/nvim-logo.png" width="50" height="50" style="margin-bottom: 15px; margin-right: 10px "  />
-  <h1>My Neovim config</h1>
-</div>
+<!-- <div align="center"> -->
+<!--   <img src="../../.screenshots/nvim-gallery/nvim-logo.png" width="50" height="50" style="margin-bottom: 15px; margin-right: 10px "  /> -->
+<!--   [> <h1>My Neovim config</h1> <] -->
+<!-- ## </div> -->
 
 <!-- Extensions for neovim: [Extensions](https://github.com/rockerBOO/awesome-neovim) -->
 
-## Introduction
+# MY NEOVIM CONFIG
+
+![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png)
 
 This is my Neovim configuration based in lua script (lua is better that vim script, trust me :sweat_smile:), I tried to emulate the Visual Studio Code UI (because I really like the VScode UI) but at same time I use all the Neovim performance.
 
-### Why choose nvim?
+<!-- ### Why choose nvim? -->
+<!--  -->
+<!-- I choose neovim because I do love the idea to leave behind the mouse and always use the keyboard for everything (I am a big fan of mechanical keyboards :smile:) -->
 
-I choose neovim because I do love the idea to leave behind the mouse and always use the keyboard for everything (I am a big fan of mechanical keyboards :smile:)
-Also you can make your nvim editor as minimal as you can or you can take your editor to the next level of customization and make incredible features with lua script, that's something that in VsCode or another text editor I can't do
+<!-- Also you can make your nvim editor as minimal as you can or you can take your editor to the next level of customization and make incredible features with lua script, that's something that in VsCode or another text editor I can't do -->
+
+## **Table of Contents**
+
+- [:wrench: Installation](#installation)
+- [:pushpin: Keymaps](#keymaps)
+- [:pencil: Colorschemes](#colorschemes)
+  <!-- - [:file_folder: Folder Structure](#folder-structure) -->
 
 ## DISCLAIMER :warning:
 
@@ -52,14 +62,14 @@ cd ../ && rm -rf dotfiles
 
 Install all the plugins just with one single vim command run `nvim ~/.config/nvim` and then press `:` in normal mode, run `:PackerSync`
 
-## FEATURES
-
-- Session Project Manager
-- Markdown live server
-- LSP (support for many languages)
-- Code autocompletation
-- Colorschemes pre-installed with hightlighting support
-- Hexadecimal color hightlighting (very useful for web develpers)
+<!-- ## FEATURES -->
+<!--  -->
+<!-- - Session Project Manager -->
+<!-- - Markdown live server -->
+<!-- - LSP (support for many languages) -->
+<!-- - Code autocompletation -->
+<!-- - Colorschemes pre-installed with hightlighting support -->
+<!-- - Hexadecimal color hightlighting (very useful for web develpers) -->
 
 <!-- A. Built-in packages and commands -->
 <!-- B. Modal interface -->
@@ -68,24 +78,22 @@ Install all the plugins just with one single vim command run `nvim ~/.config/nvi
 <!-- E. Cross-platform compatibility -->
 <!--  -->
 
-## Plugins
-
-You can add or remove all plugins you want in the next path `~/.config/nvim/lua/config/set-plugins.lua`.
+<!-- ## Plugins -->
+<!--  -->
+<!-- You can add or remove all plugins you want in the next path `~/.config/nvim/lua/config/set-plugins.lua`. -->
 
 <!-- A. Popular plugins -->
 <!-- B. How to install plugins -->
 <!-- C. How to manage plugins -->
 <!--  -->
 
-## Keymaps
+## KEYMAPS
 
-I recomend you to learn if you don't know the [Vim Vanilla keybindings](https://gist.github.com/hansrajdas/6520d74ac3251552e66a76f2f32b4bdd).
+I recomend you to learn (if you don't know) about [Vim Vanilla keybindings](https://gist.github.com/hansrajdas/6520d74ac3251552e66a76f2f32b4bdd).
 
-> My leader keymap is the space key, if you want to edit or add your own keymaps you can edit any of these keymap in the next path: `~/.config/nvim/lua/config/core/keymaps.lua`
+My leader keymap is the space key, if you want to edit or add your own keymaps you can edit any of these keymap in the next path: `~/.config/nvim/lua/config/core/keymaps.lua`
 
-### My custom keybindings:
-
-Basic keymaps:
+My basic custom keymaps:
 
 | keymap      | Mode   | Action                              |
 | ----------- | ------ | ----------------------------------- |
@@ -99,7 +107,7 @@ Basic keymaps:
 
 Move lines of code:
 | keymap | Mode | Action |
-| ----------- | ------ | ----------------------------------- |
+| ------- | ------ | ----------------------------------- |
 | alt + j | normal | move to down a entire line of code |
 | alt + k | normal | move to up a entire line of code |
 | alt + K | visual | move to up a entire block of code |
@@ -170,22 +178,24 @@ It's easiest to explain with examples. Press cs"' inside:
 
 Also if you want to surrounding a entire sentence you can select your sentence and press `"`, `'`, `{`, `[`, `(`Example: Select the sentence`hello world`in visual mode press " and you'll get`"hello world"`
 
-## LSP
-
-LSP (Languages protocol server) allows us to improve the coding performance, another tool like this is `nvim-coc` but I prefer to configure it by myself.
-
-### How to install a programming language server?
-
-There's a tool called [Mason](https://github.com/williamboman/mason-lspconfig.nvim) that makes my life easier, Mason install a LSP, formatter, linter for a programming language for you.
-you just need to setup the config for your favorite programming language and that's it.
+<!-- ## LSP -->
+<!--  -->
+<!-- LSP (Languages protocol server) allows us to improve the coding performance, another tool like this is `nvim-coc` but I prefer to configure it by myself. -->
+<!--  -->
+<!-- ### How to install a programming language server? -->
+<!--  -->
+<!-- There's a tool called [Mason](https://github.com/williamboman/mason-lspconfig.nvim) that makes my life easier, Mason install a LSP, formatter, linter for a programming language for you. -->
+<!-- you just need to setup the config for your favorite programming language and that's it. -->
 
 ## COLORSCHEMES
 
-I got installed some colorschemes, you can remove or add your favorite colorscheme.
+<!-- I got installed some colorschemes, you can remove or add your favorite colorscheme. -->
 
-To switch colorschemes I have a python script that makes that easier called [pykitty](https://github.com/freddyvelarde/pykitty)
+<!-- To switch colorschemes I have a python script that makes that easier called [pykitty](https://github.com/freddyvelarde/pykitty) -->
 
-> If you going to install a colorscheme make sure that it's compatible with tree-sitter highlights support. [themes](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes)
+These are my colorschemes installed, if you want, you can add or remove any colorscheme.
+
+> ADVICE: If you going to install a colorscheme make sure that it's compatible with tree-sitter highlight support. [themes](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes)
 
 - [Material Ocean](https://github.com/marko-cerovac/material.nvim) (by default)
   ![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png)
@@ -200,22 +210,22 @@ To switch colorschemes I have a python script that makes that easier called [pyk
 - [Tokyo night](https://github.com/folke/tokyonight.nvim)
   ![material](../../.screenshots/nvim-gallery/colorschemes/tokyo.png)
 
-## Future features:
+## FUTURE FEATURES
 
 - I want to add folding code, like Vscode, if I don't find one, I will code it by myself.
 - I also want to make a auto set-up for LSP.
 
-## Special thanks to:
+## SPECIAL THANKS TO
 
 My config is based in [Josean's youtube tutorial](https://www.youtube.com/watch?v=vdn_pKJUda8&t=3659s)
 
-## Some tips:
+## SOME TIPS
 
 - use `zz` to center your code.
 - watch this [video](https://www.youtube.com/watch?v=o4X8GU7CCSU&t=171s) if you're a beginner users.
 - If you want to edit some options like the _relative numbers_, edit this file `~/.config/nvim/lua/config/core/options.lua`
 
-### Conclusion:
+### CONCLUSION
 
 I hope this helps you to get a cool neovim config, If you have an issue you can contact me through reddit or open a github issue (if it could be do)
 

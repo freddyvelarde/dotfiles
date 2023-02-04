@@ -1,4 +1,5 @@
 require("onedarkpro").setup({
+	style = "darker",
 	colors = {}, -- Override default colors or create your own
 	highlights = {}, -- Override default highlight groups or create your own
 	filetypes = { -- Override which filetype highlight groups are loaded
@@ -33,5 +34,11 @@ require("onedarkpro").setup({
 	},
 })
 
-vim.cmd("colorscheme onedark_dark")
--- vim.cmd("colorscheme onedark")
+-- require("onedarkpro").load()
+
+-- vim.cmd("colorscheme onedark_dark")
+vim.cmd("colorscheme onedark")
+-- require("onedark").setup({
+--   style = "deep",
+-- })
+-- require("onedark").load()

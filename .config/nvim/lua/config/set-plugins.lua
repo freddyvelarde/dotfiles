@@ -30,7 +30,6 @@ end
 return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
-	use("p00f/nvim-ts-rainbow")
 
 	-- colorschemes
 	use("folke/tokyonight.nvim")
@@ -39,7 +38,6 @@ return packer.startup(function(use)
 	use("mhartington/oceanic-next")
 	use("matsuuu/pinkmare")
 	use("shaunsingh/moonlight.nvim")
-	-- use("nekonako/xresources-nvim")
 	use("marko-cerovac/material.nvim")
 
 	-- file explorer

@@ -18,6 +18,31 @@ mod1 = "alt"
 mod2 = "control"
 home = os.path.expanduser("~")
 
+# screens
+
+#  window_name = widget.WindowName()
+
+#  screens = [
+#      Screen(
+#          bottom=bar.Bar(
+#              [
+#                  widget.GroupBox(),
+#                  window_name,
+#              ],
+#              30,
+#          ),
+#      ),
+#      Screen(
+#          bottom=bar.Bar(
+#              [
+#                  widget.GroupBox(),
+#                  window_name,
+#              ],
+#              30,
+#          ),
+#      ),
+#  ]
+
 
 @lazy.function
 def window_to_prev_group(qtile):

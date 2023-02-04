@@ -169,14 +169,14 @@ Tabs moves:
 
 To preview Markdown run `:MarkdownPreview`
 
-### SURROUNDINGS
-
-It's easiest to explain with examples. Press cs"' inside:
-`"Hello world!"` to change it to `'Hello world!'`
-
-> This is an external plugin if you want to know more, visit [this](https://github.com/tpope/vim-surround)
-
-Also if you want to surrounding a entire sentence you can select your sentence and press `"`, `'`, `{`, `[`, `(`Example: Select the sentence`hello world`in visual mode press " and you'll get`"hello world"`
+<!-- ### SURROUNDINGS -->
+<!--  -->
+<!-- It's easiest to explain with examples. Press cs"' inside: -->
+<!-- `"Hello world!"` to change it to `'Hello world!'` -->
+<!--  -->
+<!-- > This is an external plugin if you want to know more, visit [this](https://github.com/tpope/vim-surround) -->
+<!--  -->
+<!-- Also if you want to surrounding a entire sentence you can select your sentence and press `"`, `'`, `{`, `[`, `(`Example: Select the sentence`hello world`in visual mode press " and you'll get`"hello world"` -->
 
 <!-- ## LSP -->
 <!--  -->

@@ -8,8 +8,11 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>", { silent = true })
 
 -- select a entire line of code
-keymap.set("n", "rr", "V", { silent = true })
+-- keymap.set("n", "rr", "V", { silent = true })
 keymap.set("v", "ii", "<ESC>", { silent = true })
+
+-- to write ":"
+keymap.set({ "v", "n" }, "ff", ":")
 
 -- enter in normal mode
 keymap.set("n", ";;", "o<ESC>", { silent = true })
@@ -66,31 +69,31 @@ keymap.set("n", "<leader>x", ":bdelete <CR>==", { silent = true })
 
 -- quotes, square and curly brackets completition
 -- exaple text ->  "example text"
-keymap.set("v", '"', 's"<ESC>pa" <ESC>', { silent = true })
-keymap.set("v", "fff", 'di"<ESC>pa" <ESC>', { silent = true })
+keymap.set("v", '"', 's"<ESC>pa" <ESC>x', { silent = true })
+keymap.set("v", "fff", 'di"<ESC>pa" <ESC>x', { silent = true })
 
 -- exaple text ->  `example text`
-keymap.set("v", "`", "di`<ESC>pa` <ESC>", { silent = true })
-keymap.set("v", "ffj", "di`<ESC>pa` <ESC>", { silent = true })
+keymap.set("v", "`", "di`<ESC>pa` <ESC>x", { silent = true })
+keymap.set("v", "ffj", "di`<ESC>pa` <ESC>x", { silent = true })
 
 -- exaple text ->  'example text'
-keymap.set("v", "'", "di'<ESC>pa' <ESC>", { silent = true })
-keymap.set("v", "ffh", "di'<ESC>pa' <ESC>", { silent = true })
+keymap.set("v", "'", "di'<ESC>pa' <ESC>x", { silent = true })
+keymap.set("v", "ffh", "di'<ESC>pa' <ESC>x", { silent = true })
 
 -- exaple text ->  (example text)
-keymap.set("v", "(", "di(<ESC>pa) <ESC>", { silent = true })
-keymap.set("v", ")", "di(<ESC>pa) <ESC>", { silent = true })
-keymap.set("v", "ffg", "di(<ESC>pa) <ESC>", { silent = true })
+keymap.set("v", "(", "di(<ESC>pa) <ESC>x", { silent = true })
+keymap.set("v", ")", "di(<ESC>pa) <ESC>x", { silent = true })
+keymap.set("v", "ffg", "di(<ESC>pa) <ESC>x", { silent = true })
 
 -- exaple text ->  [example text]
-keymap.set("v", "[", "di[<ESC>pa] <ESC>", { silent = true })
-keymap.set("v", "]", "di[<ESC>pa] <ESC>", { silent = true })
-keymap.set("v", "ffd", "di[<ESC>pa] <ESC>", { silent = true })
+keymap.set("v", "[", "di[<ESC>pa] <ESC>x", { silent = true })
+keymap.set("v", "]", "di[<ESC>pa] <ESC>x", { silent = true })
+keymap.set("v", "ffd", "di[<ESC>pa] <ESC>x", { silent = true })
 
 -- exaple text ->  {example text}
-keymap.set("v", "{", "di{<ESC>pa} <ESC>", { silent = true })
-keymap.set("v", "}", "di{<ESC>pa} <ESC>", { silent = true })
-keymap.set("v", "ffk", "di{<ESC>pa} <ESC>", { silent = true })
+keymap.set("v", "{", "di{<ESC>pa} <ESC>x", { silent = true })
+keymap.set("v", "}", "di{<ESC>pa} <ESC>x", { silent = true })
+keymap.set("v", "ffk", "di{<ESC>pa} <ESC>x", { silent = true })
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
@@ -99,12 +102,10 @@ vim.cmd([[
 inoremap ' ''<left>
 inoremap " ""<left>
 inoremap ` ``<left>
-inoremap ( ()<left>
+inoremap ( ()
 inoremap [ []<left>
-inoremap < <><left>
 inoremap { {}<left>
-inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
-inoremap <C-Return> <CR><CR><C-o>k<Tab>
+
 nnoremap q: <nop>
 nnoremap Q <nop>
 map q <Nop>

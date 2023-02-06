@@ -3,15 +3,17 @@ local opt = vim.opt
 -- line numbers
 opt.number = true
 opt.relativenumber = false
-vim.cmd("set noshowmode")
+-- vim.cmd("set noshowmode")
+opt.showcmd = false
 
 opt.undofile = true
 
 opt.spell = false
+-- vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 

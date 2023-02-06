@@ -212,7 +212,7 @@ These are my colorschemes installed, if you want, you can add or remove any colo
 
 ## FUTURE FEATURES
 
-- I want to add folding code, like Vscode, if I don't find one, I will code it by myself.
+- I want to add folding code, like VScode, if I don't find one, I will code it by myself.
 - I also want to make a auto set-up for LSP.
 
 ## SPECIAL THANKS TO

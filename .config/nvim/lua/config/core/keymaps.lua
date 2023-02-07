@@ -43,6 +43,9 @@ keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
 keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
 
+-- indent code in insert mode while we're coding
+keymap.set("i", "<cr>", "<cr><ESC>O<ESC>S", { silent = true })
+
 -- select all
 keymap.set("n", "<C-a>", "ggVG", { silent = true }) -- to select all file
 
@@ -105,6 +108,8 @@ inoremap ` ``<left>
 inoremap ( ()
 inoremap [ []<left>
 inoremap { {}<left>
+
+filetype plugin indent on
 
 nnoremap q: <nop>
 nnoremap Q <nop>

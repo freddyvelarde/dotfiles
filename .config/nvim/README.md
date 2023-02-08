@@ -76,7 +76,7 @@ Install all the plugins just with one single vim command run `nvim ~/.config/nvi
   > To preview markdown files, you only need to run `:MarkdownPreview` in the vim line command,
   > of course if you don't need this feature, just remove it this plugin in plugins setup file: `~/.config/nvim/lua/config/set-plugins.lua`
 - Quotes enclose:
-  > There is a feature in Vscode really nice that neovim don't has by default: `Hello world` -> `"Hello world"`
+  > There is a feature in Vscode really nice that neovim doesn't have by default: `Hello world` -> `"Hello world"`
   >
   > I code it this feature, in visual mode you just need to select your word or your sentece and just press `"` or `'` or `(`
   > and you have you selected sentece enclosed.

@@ -46,7 +46,7 @@ nvimtree.setup({
 		hide_root_folder = true,
 		width = 25,
 		mappings = {
-			list = {},
+			list = { { key = "d", action = "trash" }, { key = "D", action = "remove" } },
 		},
 	},
 	-- disable window_picker for

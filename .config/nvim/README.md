@@ -63,30 +63,29 @@ cd ../ && rm -rf dotfiles
 
 Install all the plugins just with one single vim command run `nvim ~/.config/nvim` and then press `:` in normal mode, run `:PackerSync`
 
-<!-- ## FEATURES -->
+## RANDOM FEATURES
+
 <!--  -->
 <!-- - Session Project Manager -->
-<!-- - Markdown live server -->
+
+- Markdown live server:
+  > To preview markdown files, you only need to run `:MarkdownPreview` in the vim line command,
+  > of course if you don't need this feature, just remove it this plugin in plugins setup file: `~/.config/nvim/lua/config/set-plugins.lua`
+- Quotes enclose:
+  > There is a feature in Vscode really nice that neovim don't has by default: `Hello world` -> `"Hello world"`
+  >
+  > I code it this feature, in visual mode you just need to select your word or your sentece and just press `"` or `'` or `(`
+  > and you have you selected sentece enclosed.
+  >
+  > This feature is in the keymaps file: `~/.config/nvim/lua/config/core/keymaps.lua`
+
 <!-- - LSP (support for many languages) -->
-<!-- - Code autocompletation -->
-<!-- - Colorschemes pre-installed with hightlighting support -->
-<!-- - Hexadecimal color hightlighting (very useful for web develpers) -->
 
-<!-- A. Built-in packages and commands -->
-<!-- B. Modal interface -->
-<!-- C. Customizable UI -->
-<!-- D. Integration with plugins -->
-<!-- E. Cross-platform compatibility -->
-<!--  -->
+- Code auto-completion
 
-<!-- ## Plugins -->
-<!--  -->
-<!-- You can add or remove all plugins you want in the next path `~/.config/nvim/lua/config/set-plugins.lua`. -->
+  > A pretty auto-completion box with icons and colors, if you want to edit this config just see this file: `~/.config/nvim/lua/config/plugins/nvim-cmp.lua`
 
-<!-- A. Popular plugins -->
-<!-- B. How to install plugins -->
-<!-- C. How to manage plugins -->
-<!--  -->
+- Hexadecimal color hightlighting (very useful for web develpers)
 
 ## KEYMAPS
 
@@ -167,8 +166,6 @@ Tabs moves:
 | leader + q | normal | previous tab |
 | alt + x | normal | close tab |
 | leader + x | normal | close tab |
-
-To preview Markdown run `:MarkdownPreview`
 
 <!-- ### SURROUNDINGS -->
 <!--  -->

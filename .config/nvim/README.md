@@ -65,8 +65,12 @@ Install all the plugins just with one single vim command run `nvim ~/.config/nvi
 
 ## RANDOM FEATURES
 
-<!--  -->
-<!-- - Session Project Manager -->
+- Session Project Manager
+
+  > When we're coding and we just quit vim all the files were closed and it's normal but if you want to keep your last files open yet,
+  > there's a plugin `https://github.com/olimorris/persisted.nvim` to fix this problem.
+  > To use this plugin here are all the commands: `https://github.com/olimorris/persisted.nvim#default-commands`, to make it work you need to be in your current
+  > file path and run only `nvim` to get your last session.
 
 - Markdown live server:
   > To preview markdown files, you only need to run `:MarkdownPreview` in the vim line command,

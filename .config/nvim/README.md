@@ -32,6 +32,7 @@ This is my Neovim configuration based in lua script (lua is better that vim scri
 > - If you want to get a nvim editor exactly as mine, you need to have installed my terminal (kitty) and my fonts (Jetbrains Mono)
 > - You'll need to set up the LSP support and your formatters for all your languages (It's not too hard, don't worry)
 > - If you love to code in JAVA, I don't know why the java LSP doesn't work.
+> - This documentation is not finished yet.
 
 ## INSTALLATION
 

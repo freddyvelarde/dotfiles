@@ -14,6 +14,9 @@ keymap.set("v", "ii", "<ESC>", { silent = true })
 -- to write ":"
 keymap.set({ "v", "n" }, "ff", ":")
 
+-- create a new file
+keymap.set("n", "<leader>jf", ":tabnew | w ")
+
 -- enter in normal mode
 keymap.set("n", ";;", "o<ESC>", { silent = true })
 

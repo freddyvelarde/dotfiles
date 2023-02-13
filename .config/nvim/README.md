@@ -93,7 +93,7 @@ Install all the plugins just with one single vim command run `nvim ~/.config/nvi
 
 ## KEYMAPS
 
-I recomend you to learn (if you don't know) about [Vim Vanilla keybindings](https://gist.github.com/hansrajdas/6520d74ac3251552e66a76f2f32b4bdd).
+I recommend you to learn (if you don't know) about [Vim Vanilla keybindings](https://gist.github.com/hansrajdas/6520d74ac3251552e66a76f2f32b4bdd).
 
 My leader keymap is the space key, if you want to edit or add your own keymaps you can edit any of these keymap in the next path: `~/.config/nvim/lua/config/core/keymaps.lua`
 
@@ -163,13 +163,26 @@ Comments:
 
 Tabs moves:
 | keymap | Mode | Action |
-| ----------- | ------ | --------------------------------------- |
+| ---------- | ------ | ------------ |
 | alt + . | normal | next tab |
 | leader + w | normal | next tab |
 | alt + , | normal | previous tab |
 | leader + q | normal | previous tab |
 | alt + x | normal | close tab |
 | leader + x | normal | close tab |
+
+Nvim-tree files actions
+
+> These actions work only if you're over the nvim-tree section.
+
+| keymap      | Mode   | Action                                |
+| ----------- | ------ | ------------------------------------- |
+| a           | normal | create a new file or directory        |
+| j & k       | normal | to move up and down through the files |
+| o           | normal | open files and directories            |
+| d           | normal | remove a file to trash                |
+| D           | normal | remove a file with no backup          |
+| leader + jf | normal | create a new file                     |
 
 <!-- ### SURROUNDINGS -->
 <!--  -->

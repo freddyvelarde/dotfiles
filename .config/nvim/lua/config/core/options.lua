@@ -5,6 +5,7 @@ opt.number = true
 opt.relativenumber = false
 -- vim.cmd("set noshowmode")
 opt.showcmd = false
+opt.showtabline = 0
 
 opt.undofile = true
 

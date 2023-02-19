@@ -41,6 +41,7 @@ return packer.startup(function(use)
 	use("matsuuu/pinkmare")
 	use("shaunsingh/moonlight.nvim")
 	use("marko-cerovac/material.nvim")
+	-- use("EdenEast/nightfox.nvim")
 
 	-- file explorer
 	use({
@@ -105,6 +106,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use("folke/neodev.nvim")
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters

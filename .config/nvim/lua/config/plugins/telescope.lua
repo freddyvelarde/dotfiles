@@ -5,22 +5,23 @@ if not telescope_setup then
 end
 
 require("telescope").setup({
-	defaults = {
-		layout_strategy = "vertical",
-
-		layout_config = {
-			prompt_position = "bottom",
-		},
-	},
+	defaults = {},
 	pickers = {
 		buffers = {
 			sort_lastused = true,
 			theme = "dropdown",
 			previewer = false,
-			mappings = {},
+			mappings = {
+				n = {
+					-- ["o"] = "open",
+					["q"] = require("telescope.actions").close,
+				},
+			},
 		},
 		find_files = {
 			theme = "dropdown",
+			layout_strategy = "horizontal",
+			layout_config = { width = 0.9, height = 0.9 },
 		},
 	},
 	extensions = {},

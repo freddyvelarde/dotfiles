@@ -3,7 +3,6 @@ local opt = vim.opt
 -- line numbers
 opt.number = true
 opt.relativenumber = false
--- vim.cmd("set noshowmode")
 opt.showcmd = false
 opt.showtabline = 0
 

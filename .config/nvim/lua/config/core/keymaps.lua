@@ -7,13 +7,13 @@ local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { silent = true })
 
--- select a entire line of code
--- keymap.set("n", "rr", "V", { silent = true })
 keymap.set("v", "ii", "<ESC>", { silent = true })
 
 -- create a new file
 keymap.set("n", "<leader>jf", ":tabnew | w ")
 
+-- folding code
+keymap.set("v", "fc", ":fold <CR>")
 
 -- save file
 keymap.set("n", "<leader>s", ":w <CR>")
@@ -112,6 +112,13 @@ filetype plugin indent on
 nnoremap q: <nop>
 nnoremap Q <nop>
 map q <Nop>
+
+augroup remember_folds
+  autocmd!
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1
+augroup END
+
 ]])
 
 -- toggle bufferline

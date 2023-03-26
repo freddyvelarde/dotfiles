@@ -153,10 +153,12 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use("szw/vim-maximizer") -- maximizes and restores current window
+	-- tabnine autocompletion
+	use({ "codota/tabnine-nvim", run = "./dl_binaries.sh" })
+	-- use("hrsh7th/nvim-cmp") --completion
+	-- use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
-	-- images preview
-	use("https://github.com/adelarsq/image_preview.nvim")
+	use("szw/vim-maximizer") -- maximizes and restores current window
 
 	if packer_bootstrap then
 		require("packer").sync()

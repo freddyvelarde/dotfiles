@@ -1,11 +1,20 @@
 -- import telescope plugin safely
-local telescope_setup, telescope = pcall(require, "telescope")
+local telescope_setup, _ = pcall(require, "telescope")
 if not telescope_setup then
 	return
 end
 
 require("telescope").setup({
 	defaults = {},
+	file_ignore_patterns = {
+		"./node_modules/*",
+		"node_modules",
+		"^node_modules/*",
+		"node_modules/*",
+		"venv/*",
+		"venv",
+		"./venv/*",
+	},
 	pickers = {
 		buffers = {
 			sort_lastused = true,
@@ -13,7 +22,6 @@ require("telescope").setup({
 			previewer = false,
 			mappings = {
 				n = {
-					-- ["o"] = "open",
 					["q"] = require("telescope.actions").close,
 				},
 			},

@@ -10,6 +10,8 @@ require("config.plugins.colors")
 require("config.plugins.git")
 require("config.plugins.bufferline")
 require("config.plugins.neoscroll")
+-- require("config.plugins.tabnine")
+-- require("config.plugins.cmp_tabnine")
 
 -- my personal config
 require("config.core.keymaps")

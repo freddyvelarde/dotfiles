@@ -33,6 +33,13 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
+augroup remember_folds
+  autocmd!
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1
+augroup END
+
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -410,4 +417,15 @@ function! VisualSelection(direction, extra_filter) range
 
     let @/ = l:pattern
     let @" = l:saved_reg
+endfunction
+
+inoremap {<Cr> <Esc>:call AutoBracketDrop()<Cr>a
+
+function! AutoBracketDrop()
+  if col('.') == col('$') - 1
+    substitute /\s*$//
+    exec "normal! A\<Cr>{\<Cr>X\<Cr>}\<Esc>k$x"
+  else
+    exec "normal! a{\<Cr>\<Esc>"
+  endif
 endfunction

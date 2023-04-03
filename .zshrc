@@ -1,10 +1,19 @@
 export PATH=$PATH:$HOME/.config/pykitty/
 export PATH=$PATH:$HOME/code/projects/pycopy/
 
-alias httpfred="~/code/projects/http-client-cli/target/debug/http-client-cli"
+alias w3mimgdisplay="/usr/local/bin/w3mimgdisplay"
+
+alias cherrybrown="~/repos/rustyvibes/./target/debug/rustyvibes ~/Downloads/Soundpacks/Soundpacks/cherrymx-brown-abs -v 86 &"
+alias cherryblack="~/repos/rustyvibes/./target/debug/rustyvibes ~/Downloads/Soundpacks/Soundpacks/cherrymx-black-abs -v 100 &"
+alias cherryblue="~/repos/rustyvibes/./target/debug/rustyvibes ~/Downloads/Soundpacks/Soundpacks/cherrymx-blue-abs -v 100 &"
+alias cherryred="~/repos/rustyvibes/./target/debug/rustyvibes ~/Downloads/Soundpacks/Soundpacks/cherrymx-red-abs -v 100 &"
 
 alias bat="/usr/local/bat/bat"
+alias internet="ip route | grep default"
 
+# rusp setup
+# alias rusp="~/.config/rusp/target/debug/rusp"
+alias rusp="~/code/projects/rusp/target/debug/rusp --"
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -102,6 +111,8 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 fi
 
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -140,8 +151,8 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # Make nano the default editor
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 #PS1='[\u@\h \W]\$ '
 
@@ -495,3 +506,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+alias vim=nvim
+alias v=vim

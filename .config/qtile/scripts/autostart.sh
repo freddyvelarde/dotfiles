@@ -68,9 +68,9 @@ run volumeicon &
 #run telegram-desktop &
 
 # multiple monitors config
-xrandr --output VGA1 --brightness 1 
-xrandr --output LVDS1 --brightness 1 
-xrandr --output LVDS1 --mode 1366x768 --output VGA1 --mode 1440x900 --left-of LVDS1 
-nitrogen --restore 
-sleep 10
-nitrogen --restore 
+# xrandr --output VGA1 --brightness 1
+# xrandr --output LVDS1 --brightness 1
+# xrandr --output LVDS1 --mode 1366x768 --output VGA1 --mode 1440x900 --left-of LVDS1
+# nitrogen --restore
+# sleep 10
+# nitrogen --restore

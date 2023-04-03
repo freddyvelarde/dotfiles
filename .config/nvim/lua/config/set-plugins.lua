@@ -31,17 +31,15 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	-- use("jtmkrueger/vim-c-cr")
-
 	-- colorschemes
 	use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("olimorris/onedarkpro.nvim")
 	use("mhartington/oceanic-next")
 	use("matsuuu/pinkmare")
 	use("shaunsingh/moonlight.nvim")
 	use("marko-cerovac/material.nvim")
-	-- use("EdenEast/nightfox.nvim")
 
 	-- file explorer
 	use({
@@ -60,7 +58,6 @@ return packer.startup(function(use)
 
 	-- commentary
 	use("preservim/nerdcommenter")
-	-- use("chrisbra/vim-commentary")
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
@@ -84,7 +81,6 @@ return packer.startup(function(use)
 	})
 
 	-- indent lines
-	-- use("Yggdroot/indentLine")
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- autocompletion
@@ -93,7 +89,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- source for file system paths
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") -- snippet engine
+	-- use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	-- use("rafamadriz/friendly-snippets") -- useful snippets
 
@@ -152,11 +148,6 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-
-	-- tabnine autocompletion
-	use({ "codota/tabnine-nvim", run = "./dl_binaries.sh" })
-	-- use("hrsh7th/nvim-cmp") --completion
-	-- use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
 

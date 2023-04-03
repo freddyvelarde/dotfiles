@@ -41,6 +41,9 @@ return packer.startup(function(use)
 	use("shaunsingh/moonlight.nvim")
 	use("marko-cerovac/material.nvim")
 
+	-- terminal
+	use("voldikss/vim-floaterm")
+
 	-- file explorer
 	use({
 		"nvim-tree/nvim-tree.lua",
@@ -89,9 +92,9 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- source for file system paths
 
 	-- snippets
-	-- use("L3MON4D3/LuaSnip") -- snippet engine
+	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-	-- use("rafamadriz/friendly-snippets") -- useful snippets
+	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters

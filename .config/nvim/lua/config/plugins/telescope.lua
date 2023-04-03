@@ -5,7 +5,11 @@ if not telescope_setup then
 end
 
 require("telescope").setup({
-	defaults = {},
+	defaults = {
+		prompt_prefix = "   ",
+		vimgrep_arguments = {},
+		borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+	},
 	file_ignore_patterns = {
 		"./node_modules/*",
 		"node_modules",

@@ -142,3 +142,13 @@ keymap.set("n", "<leader>fj", ":horizontal resize -3 <CR>==", { silent = true })
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization
+
+-- terminal
+
+keymap.set(
+	"n",
+	"<leader>nrh",
+	"::FloatermNew --height=0.6 --width=0.4 --wintype=float --name=floaterm1 --position=topleft --autoclose=2 ranger --cmd='cd ~' <CR>",
+	{ silent = true }
+) -- create a new terminal
+keymap.set("n", "<leader>nth", ":FloatermNew <CR>", { silent = true }) -- create a new terminal

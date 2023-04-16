@@ -44,9 +44,9 @@ nvimtree.setup({
 	},
 	view = {
 		side = "right",
-		adaptive_size = false,
+		adaptive_size = true,
 		hide_root_folder = true,
-		width = 25,
+		width = 30,
 		mappings = {
 			list = { { key = "d", action = "trash" }, { key = "D", action = "remove" } },
 		},

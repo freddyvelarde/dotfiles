@@ -154,6 +154,8 @@ Telscope keymaps:
 | leader + ff | normal | Open telescope files finder |
 | leader + fb | normal | Open telescope files buffer |
 | leader + fg | normal | Open telescope grep |
+| leader + fc | normal | Open current buffer fuzzy finder |
+| leader + ft | normal | Open entire telescope  |
 
 Comments:
 | keymap | Mode | Action |

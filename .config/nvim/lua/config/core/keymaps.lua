@@ -40,6 +40,8 @@ keymap.set("n", "<leader>k", ":<C-U>TmuxNavigateUp<cr>", { silent = true })
 keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
 keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
+keymap.set("n", "<leader>fc", ":Telescope current_buffer_fuzzy_find<CR>", { silent = true })
+keymap.set("n", "<leader>ft", ":Telescope <CR>", { silent = true })
 
 -- indent code in insert mode while we're coding
 keymap.set("i", "<cr>", "<cr><ESC>O<ESC>S", { silent = true })

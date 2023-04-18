@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+vim.cmd("set background=dark")
+
 -- line numbers
 opt.number = true
 opt.relativenumber = false

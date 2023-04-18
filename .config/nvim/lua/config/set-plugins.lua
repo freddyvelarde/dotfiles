@@ -32,14 +32,19 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- colorschemes
+	use({ "ellisonleao/gruvbox.nvim" })
+	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
 	use("folke/tokyonight.nvim")
-	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("olimorris/onedarkpro.nvim")
-	use("mhartington/oceanic-next")
 	use("matsuuu/pinkmare")
-	use("shaunsingh/moonlight.nvim")
-	use("marko-cerovac/material.nvim")
+	use("nekonako/xresources-nvim")
+
+	-- use("rafamadriz/neon")
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
+	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- use("mhartington/oceanic-next")
+	-- use("shaunsingh/moonlight.nvim")
+	-- use("marko-cerovac/material.nvim")
 
 	-- terminal
 	use("voldikss/vim-floaterm")

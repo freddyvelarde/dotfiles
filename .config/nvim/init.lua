@@ -10,6 +10,7 @@ require("config.plugins.colors")
 require("config.plugins.git")
 require("config.plugins.bufferline")
 require("config.plugins.neoscroll")
+require("config.plugins.toggleterm")
 
 -- my personal config
 require("config.core.keymaps")

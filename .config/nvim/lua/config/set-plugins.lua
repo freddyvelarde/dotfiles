@@ -36,7 +36,13 @@ return packer.startup(function(use)
 	use("folke/tokyonight.nvim")
 
 	-- terminal
-	use("voldikss/vim-floaterm")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 
 	-- file explorer
 	use({

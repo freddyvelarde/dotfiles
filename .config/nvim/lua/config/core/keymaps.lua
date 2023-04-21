@@ -146,11 +146,5 @@ keymap.set("n", "<leader>fj", ":horizontal resize -3 <CR>==", { silent = true })
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization
 
 -- terminal
-
-keymap.set(
-	"n",
-	"<leader>nrh",
-	"::FloatermNew --height=0.6 --width=0.4 --wintype=float --name=floaterm1 --position=topleft --autoclose=2 ranger --cmd='cd ~' <CR>",
-	{ silent = true }
-) -- create a new terminal
-keymap.set("n", "<leader>nth", ":FloatermNew <CR>", { silent = true }) -- create a new terminal
+keymap.set("n", "<leader>nth", ":ToggleTerm size=15 dir=$(pwd) direction=horizontal<CR>", { silent = true }) -- toggle split window maximization
+keymap.set("n", "<leader>ntv", ":ToggleTerm size=70 dir=$(pwd) direction=vertical<CR>", { silent = true }) -- toggle split window maximization

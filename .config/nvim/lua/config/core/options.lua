@@ -1,17 +1,16 @@
 local opt = vim.opt
 
-vim.cmd("set background=dark")
+-- vim.cmd("set background=dark")
 
 -- line numbers
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.showcmd = false
 opt.showtabline = 0
 
 opt.undofile = true
 
 opt.spell = false
--- vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 
 -- tabs & indentation
 opt.shiftwidth = 2 -- 2 spaces for indent width

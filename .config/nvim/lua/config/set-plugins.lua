@@ -35,7 +35,7 @@ return packer.startup(function(use)
 	use({ "ellisonleao/gruvbox.nvim" })
 	use("folke/tokyonight.nvim")
 
-	-- terminal
+	-- terminal - toggleterm
 	use({
 		"akinsho/toggleterm.nvim",
 		tag = "*",
@@ -77,6 +77,13 @@ return packer.startup(function(use)
 
 	-- use to make quotes ""
 	use("tpope/vim-surround")
+
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 
 	use({
 		"RRethy/vim-hexokinase",
@@ -134,7 +141,6 @@ return packer.startup(function(use)
 	-- session manager project
 	use({
 		"olimorris/persisted.nvim",
-		-- module = "persisted", -- For lazy loading
 		config = function()
 			require("persisted").setup()
 			require("telescope").load_extension("persisted") -- To load the telescope extension

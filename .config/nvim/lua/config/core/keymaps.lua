@@ -102,12 +102,12 @@ keymap.set("v", "ffk", "di{<ESC>pa} <ESC>x", { silent = true })
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 vim.cmd([[
-inoremap ' ''<left>
-inoremap " ""<left>
-inoremap ` ``<left>
-inoremap ( ()
-inoremap [ []<left>
-inoremap { {}<left>
+" inoremap ' ''<left>
+" inoremap " ""<left>
+" inoremap ` ``<left>
+" inoremap ( ()
+" inoremap [ []<left>
+" inoremap { {}<left>
 
 filetype plugin indent on
 

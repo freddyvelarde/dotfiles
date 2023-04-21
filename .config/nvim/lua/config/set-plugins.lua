@@ -35,6 +35,9 @@ return packer.startup(function(use)
 	use({ "ellisonleao/gruvbox.nvim" })
 	use("folke/tokyonight.nvim")
 
+	-- auto pairs
+	use("windwp/nvim-autopairs")
+
 	-- terminal - toggleterm
 	use({
 		"akinsho/toggleterm.nvim",
@@ -77,13 +80,6 @@ return packer.startup(function(use)
 
 	-- use to make quotes ""
 	use("tpope/vim-surround")
-
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
 
 	use({
 		"RRethy/vim-hexokinase",

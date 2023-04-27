@@ -25,7 +25,12 @@ keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { silent = true })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true })
 
 -- delete single character without copying into register
-keymap.set("n", "x", '"_x', { silent = true })
+keymap.set({ "n", "v" }, "x", '"_x', { silent = true })
+
+-- copy code into your clipboard
+keymap.set("n", "<leader>mn", ":set clipboard=unnamedplus | echo 'clipboard enabled' <CR>", { silent = true })
+
+keymap.set("n", "<leader>m,", ":set clipboard= | echo 'clipboard disabled' <CR>", { silent = true })
 
 -- find a hovered word
 keymap.set("n", "<leader>fw", "*", { silent = true })
@@ -42,9 +47,6 @@ keymap.set("n", "<leader>fg", ":Telescope live_grep <CR>", { silent = true })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
 keymap.set("n", "<leader>fc", ":Telescope current_buffer_fuzzy_find<CR>", { silent = true })
 keymap.set("n", "<leader>ft", ":Telescope <CR>", { silent = true })
-
--- indent code in insert mode while we're coding
-keymap.set("i", "<cr>", "<cr><ESC>O<ESC>S", { silent = true })
 
 -- select all
 keymap.set("n", "<C-a>", "ggVG", { silent = true }) -- to select all file
@@ -102,18 +104,11 @@ keymap.set("v", "ffk", "di{<ESC>pa} <ESC>x", { silent = true })
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 vim.cmd([[
-" inoremap ' ''<left>
-" inoremap " ""<left>
-" inoremap ` ``<left>
-" inoremap ( ()
-" inoremap [ []<left>
-" inoremap { {}<left>
-
 filetype plugin indent on
 
-nnoremap q: <nop>
-nnoremap Q <nop>
-map q <Nop>
+" nnoremap q: <nop>
+" nnoremap Q <nop>
+" map q <Nop>
 
 augroup remember_folds
   autocmd!

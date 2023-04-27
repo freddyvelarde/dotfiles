@@ -155,7 +155,7 @@ Telscope keymaps:
 | leader + fb | normal | Open telescope files buffer |
 | leader + fg | normal | Open telescope grep |
 | leader + fc | normal | Open current buffer fuzzy finder |
-| leader + ft | normal | Open entire telescope  |
+| leader + ft | normal | Open entire telescope |
 
 Comments:
 | keymap | Mode | Action |
@@ -191,6 +191,13 @@ Nvim-tree files actions
 | d           | normal | remove a file to trash                |
 | D           | normal | remove a file with no backup          |
 | leader + jf | normal | create a new file                     |
+
+Clipboard
+
+| keymap      | Mode   | Action                  |
+| ----------- | ------ | ----------------------- |
+| leader + mn | normal | enable local Clipboard  |
+| leader + m, | normal | disable local Clipboard |
 
 <!-- ### SURROUNDINGS -->
 <!--  -->

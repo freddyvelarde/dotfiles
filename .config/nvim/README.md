@@ -199,24 +199,6 @@ Clipboard
 | leader + mn | normal | enable local Clipboard  |
 | leader + m, | normal | disable local Clipboard |
 
-<!-- ### SURROUNDINGS -->
-<!--  -->
-<!-- It's easiest to explain with examples. Press cs"' inside: -->
-<!-- `"Hello world!"` to change it to `'Hello world!'` -->
-<!--  -->
-<!-- > This is an external plugin if you want to know more, visit [this](https://github.com/tpope/vim-surround) -->
-<!--  -->
-<!-- Also if you want to surrounding a entire sentence you can select your sentence and press `"`, `'`, `{`, `[`, `(`Example: Select the sentence`hello world`in visual mode press " and you'll get`"hello world"` -->
-
-<!-- ## LSP -->
-<!--  -->
-<!-- LSP (Languages protocol server) allows us to improve the coding performance, another tool like this is `nvim-coc` but I prefer to configure it by myself. -->
-<!--  -->
-<!-- ### How to install a programming language server? -->
-<!--  -->
-<!-- There's a tool called [Mason](https://github.com/williamboman/mason-lspconfig.nvim) that makes my life easier, Mason install a LSP, formatter, linter for a programming language for you. -->
-<!-- you just need to setup the config for your favorite programming language and that's it. -->
-
 ## COLORSCHEMES
 
 <!-- I got installed some colorschemes, you can remove or add your favorite colorscheme. -->
@@ -227,16 +209,17 @@ These are my colorschemes installed, if you want, you can add or remove any colo
 
 > ADVICE: If you going to install a colorscheme make sure that it's compatible with tree-sitter highlight support. [themes](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes)
 
-- [Material Ocean](https://github.com/marko-cerovac/material.nvim) (by default)
-  ![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png)
-- [Moonlight](https://github.com/shaunsingh/moonlight.nvim)
-  ![material](../../.screenshots/nvim-gallery/colorschemes/moonlight.png)
-- [Oceanic next](https://github.com/mhartington/oceanic-next)
-  ![material](../../.screenshots/nvim-gallery/colorschemes/oceanic.png)
-- [Onedark DARK](https://github.com/olimorris/onedarkpro.nvim)
-  ![material](../../.screenshots/nvim-gallery/colorschemes/onedark.png)
-- [Pinkmare](https://github.com/Matsuuu/pinkmare)
-  ![material](../../.screenshots/nvim-gallery/colorschemes/pinkmare.png)
+<!-- - [Material Ocean](https://github.com/marko-cerovac/material.nvim) (by default) -->
+<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png) -->
+<!-- - [Moonlight](https://github.com/shaunsingh/moonlight.nvim) -->
+<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/moonlight.png) -->
+<!-- - [Oceanic next](https://github.com/mhartington/oceanic-next) -->
+<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/oceanic.png) -->
+<!-- - [Onedark DARK](https://github.com/olimorris/onedarkpro.nvim) -->
+<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/onedark.png) -->
+<!-- - [Pinkmare](https://github.com/Matsuuu/pinkmare) -->
+<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/pinkmare.png) -->
+
 - [Tokyo night](https://github.com/folke/tokyonight.nvim)
   ![material](../../.screenshots/nvim-gallery/colorschemes/tokyo.png)
 
@@ -260,17 +243,3 @@ My config is based in [Josean's youtube tutorial](https://www.youtube.com/watch?
 I hope this helps you to get a cool neovim config, If you have an issue you can contact me through reddit or open a github issue (if it could be do)
 
 > if you have installed my config and everything went good, please follow me on github, that makes me happy :heart:
-
-<!-- A. Default keybindings -->
-<!-- B. How to customize keybindings -->
-<!-- C. Keymaps for plugins -->
-<!--  -->
-<!-- V. Getting Started -->
-<!-- A. Installation -->
-<!-- B. Basic usage -->
-<!-- C. Configuration -->
-<!--  -->
-<!-- VI. Conclusion -->
-<!-- A. Summary of features -->
-<!-- B. Comparison with other editors -->
-<!-- C. Final thoughts -->

@@ -163,11 +163,11 @@ Comments:
 | gc | normal & visual | to comment a line or a block of code (recommended) |
 | control + / | normal & visual | if you really like vscode's ways to comment code |
 
-Terminal:
-| keymap | Mode | Action |
-| ----------- | ------ | --------------------------------------- |
-| leader + nrh | normal | toggle new floating ranger terminal |
-| leader + nth | normal | toggle new floating blank terminal |
+<!-- Terminal: -->
+<!-- | keymap | Mode | Action | -->
+<!-- | ----------- | ------ | --------------------------------------- | -->
+<!-- | leader + nrh | normal | toggle new floating ranger terminal | -->
+<!-- | leader + nth | normal | toggle new floating blank terminal | -->
 
 Tabs moves:
 | keymap | Mode | Action |

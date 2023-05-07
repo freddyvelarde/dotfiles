@@ -39,13 +39,13 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 
 	-- terminal - toggleterm
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
-		end,
-	})
+	-- use({
+	--   "akinsho/toggleterm.nvim",
+	--   tag = "*",
+	--   config = function()
+	--     require("toggleterm").setup()
+	--   end,
+	-- })
 
 	-- file explorer
 	use({

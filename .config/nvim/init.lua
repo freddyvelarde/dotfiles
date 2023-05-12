@@ -11,6 +11,9 @@ require("config.plugins.git")
 require("config.plugins.bufferline")
 require("config.plugins.neoscroll")
 require("config.plugins.autopairs")
+require("config.plugins.todo-comments")
+
+-- TODO something to do
 
 -- my personal config
 require("config.core.keymaps")

@@ -143,3 +143,6 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- togg
 -- terminal
 -- keymap.set("n", "<leader>nth", ":ToggleTerm size=15 dir=$(pwd) direction=horizontal<CR>", { silent = true }) -- toggle split window maximization
 -- keymap.set("n", "<leader>ntv", ":ToggleTerm size=70 dir=$(pwd) direction=vertical<CR>", { silent = true }) -- toggle split window maximization
+
+--TODO comments
+keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { silent = true }) -- toggle split window maximization

@@ -65,6 +65,16 @@ return packer.startup(function(use)
 	-- commentary
 	use("preservim/nerdcommenter")
 
+	-- todo comments
+	-- Lua
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
+	})
+
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use

@@ -1,6 +1,3 @@
-export PATH=$PATH:$HOME/.config/pykitty/
-export PATH=$PATH:$HOME/code/projects/pycopy/
-
 alias w3mimgdisplay="/usr/local/bin/w3mimgdisplay"
 
 alias cherrybrown="~/repos/rustyvibes/./target/debug/rustyvibes ~/Downloads/Soundpacks/Soundpacks/cherrymx-brown-abs -v 86 &"
@@ -11,9 +8,6 @@ alias cherryred="~/repos/rustyvibes/./target/debug/rustyvibes ~/Downloads/Soundp
 alias bat="/usr/local/bat/bat"
 alias internet="ip route | grep default"
 
-# rusp setup
-# alias rusp="~/.config/rusp/target/debug/rusp"
-alias rusp="~/code/projects/rusp/target/debug/rusp --"
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -508,3 +502,13 @@ export NVM_DIR="$HOME/.nvm"
 
 alias vim=nvim
 alias v=vim
+
+export PATH=$PATH:$HOME/.config/pykitty/
+export PATH=$PATH:$HOME/code/projects/pycopy/
+
+# rusp setup
+alias rusp="~/code/projects/rusp/target/debug/rusp --"
+
+# go 
+export GOPATH="$HOME/go" # set GOPATH (path to where go is installed)
+export PATH=$PATH:$GOPATH/bin # append GOPATH to PATH 

@@ -19,5 +19,6 @@
 !.gitignore
 !.p10k.zsh
 !.vimrc
+!.xprofile
 !README.md
 !.p10k.zsh

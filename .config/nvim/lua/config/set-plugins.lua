@@ -91,10 +91,10 @@ return packer.startup(function(use)
 	-- use to make quotes ""
 	use("tpope/vim-surround")
 
-	use({
-		"RRethy/vim-hexokinase",
-		run = "cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase",
-	})
+	-- use({
+	--   "RRethy/vim-hexokinase",
+	--   run = "cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase",
+	-- })
 
 	-- indent lines
 	use("lukas-reineke/indent-blankline.nvim")

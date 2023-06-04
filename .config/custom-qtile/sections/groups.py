@@ -1,6 +1,6 @@
 from libqtile.lazy import lazy
 from libqtile.config import Group, Key
-from settings.keys import keys  # >> ignore this error
+from sections.keys import keys  # >> ignore this error
 
 groups = [Group(i) for i in "123456789"]
 mod = "control"

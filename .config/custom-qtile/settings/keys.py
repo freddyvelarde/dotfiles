@@ -1,8 +1,7 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
+from global_variables import mod, terminal  # >> ignore the next error
 
-mod = "control"
-terminal = "kitty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found

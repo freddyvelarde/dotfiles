@@ -7,8 +7,6 @@ from global_variables import rofi_applets
 
 def open_rofi():
     qtile.cmd_spawn(rofi_applets + "rofi_launcher")
-    #  qtile.cmd_spawn("~/.config/qtile/scripts/rofi_launcher")
-    #  lazy.spawn("~/.config/qtile/scripts/rofi_launcher")
 
 
 screens = [
@@ -42,9 +40,9 @@ screens = [
                 widget.GroupBox(),
                 widget.WindowName(),
                 widget.Systray(),
-                widget.Volume(
-                    mouse_callbacks={"Button1": open_rofi},
-                ),
+                #  widget.Volume(
+                #      mouse_callbacks={"Button1": open_rofi},
+                #  ),
                 widget.QuickExit(),
             ],
             24,

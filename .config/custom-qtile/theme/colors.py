@@ -1,7 +1,9 @@
 from .colorschemes.marianne import marianne
+from .colorschemes.brisdenka import brisdenka
+
 import os
 
-_colorschemes = {"marianne": marianne}
+_colorschemes = {"marianne": marianne, "brisdenka": brisdenka}
 
 
 def _theme_name():

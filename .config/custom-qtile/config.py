@@ -1,13 +1,12 @@
 from libqtile import hook
-import os
 import subprocess
+from global_variables import qtile_path
 
 
 ## Startup ------------------------------
 @hook.subscribe.startup_once
 def autostart():
-    home = os.path.expanduser("~")
-    subprocess.Popen([home + "/.dotfiles/.config/custom-qtile/scripts/autostart"])
+    subprocess.Popen([qtile_path + "/scripts/autostart"])
 
 
 from sections.screens import screens

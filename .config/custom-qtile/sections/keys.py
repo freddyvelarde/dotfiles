@@ -1,6 +1,6 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from global_variables import mod, terminal  # >> ignore the next error
+from global_variables import mod, terminal, rofi_applets  # >> ignore the next error
 
 
 keys = [
@@ -51,5 +51,5 @@ keys = [
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], "n", lazy.spawn("rofi -show run")),
+    Key([mod], "n", lazy.spawn(rofi_applets + "rofi_launcher")),
 ]

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# setting qtile directory
+qdir="$HOME/.config/custom-qtile"
+
+# setting wallpaper
+"$qdir"/scripts/wallpaper

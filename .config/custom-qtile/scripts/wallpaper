@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# if you want the same wallpaper for each monitor
+#
+output=$(xrandr)
+connected_monitors=$(echo "$output" | grep -E " connected ")
+num_monitors=$(echo "$connected_monitors" | wc -l)
+
+
+for ((i=0; i<$num_monitors; i++))
+do
+    nitrogen --head=$i --set-zoom-fill ~/.config/custom-qtile/wallpapers/marianne.jpg
+    # nitrogen --head=$i --set-zoom-fill ~/.config/qtile/wallpapers/marianne.jpg
+done
+
+# if uou want a wallpaper fill it:
+# nitrogen --set-zoom-fill ~/.dotfiles/.wallpaper/dragon.jpg

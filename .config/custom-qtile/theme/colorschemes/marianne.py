@@ -6,5 +6,5 @@ marianne = {
     "primary": "#C397EC",
     "secondary": "#DE6778",
     "tertiary": "#87ACED",
-    "text": "#CCCFD4",
+    "text": "#808080",
 }

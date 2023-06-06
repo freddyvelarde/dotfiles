@@ -3,6 +3,10 @@ from theme.colors import colors  # import theme.colors couldn't... >>> ignore th
 from global_variables import terminal, rofi_applets
 
 
+def open_network_menu():
+    qtile.cmd_spawn(rofi_applets + "network_menu")
+
+
 def open_rofi():
     qtile.cmd_spawn(rofi_applets + "rofi_launcher")
 
@@ -49,23 +53,40 @@ widgets = [
         foreground=colors["background"],
         background=colors["tertiary"],
         padding=5,
-        mouse_callbacks={"Button1": open_rofi},
     ),
     margin(),
-    icon("󰤨", colors["primary"], colors["background"]),
+    icon("󰤨", colors["primary"], colors["background"], open_network_menu),
     widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
         interface="enp37s0",
         format="{down} ↓↑ {up}",
         foreground=colors["background"],
         background=colors["primary"],
-        mouse_callbacks={
-            "Button1": lambda: qtile.cmd_spawn(rofi_applets + "network_menu")
-        },
+        mouse_callbacks={"Button1": open_network_menu},
     ),
     # ------------------------
     widget.Spacer(length=bar.STRETCH),
     # ------------------------
-    widget.GroupBox(highlight_method="text"),
+    widget.GroupBox(
+        highlight_method="text",
+        font="UbuntuMono Nerd Font",
+        fontsize=19,
+        margin_y=3,
+        margin_x=0,
+        padding_y=8,
+        padding_x=5,
+        borderwidth=1,
+        active=colors["text"],
+        inactive=colors["text"],
+        rounded=False,
+        #  highlight_method="block",
+        urgent_alert_method="block",
+        urgent_border=colors["text"],
+        this_current_screen_border=colors["btn1"],
+        #  this_screen_border=colors["grey"],
+        other_current_screen_border=colors["btn2"],
+        #  other_screen_border=colors["dark"],
+        disable_drag=True,
+    ),
     # ------------------------
     widget.Spacer(length=bar.STRETCH),
     # ------------------------

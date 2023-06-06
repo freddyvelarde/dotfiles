@@ -8,9 +8,20 @@ import subprocess
 xrandr = "xrandr | grep -w 'connected' | cut -d ' ' -f 2 | wc -l"
 monitor_counter = int(subprocess.check_output(xrandr, shell=True).decode().strip())
 
-screens = []
+screens = [
+    Screen(
+        top=bar.Bar(
+            widgets,
+            24,
+            margin=[5, margin, 5, margin],
+            background=colors["background"],
+            border_width=[7, 10, 7, 10],
+            border_color=colors["background"],
+        ),
+    )
+]
 
-for _ in range(monitor_counter):
+for _ in range(monitor_counter - 1):
     screens.append(
         Screen(
             top=bar.Bar(

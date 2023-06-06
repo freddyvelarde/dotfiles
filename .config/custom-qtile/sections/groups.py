@@ -1,5 +1,5 @@
 from libqtile.lazy import lazy
-from libqtile.config import Group, Key
+from libqtile.config import Group, Key, Match
 from sections.keys import keys  # >> ignore this error
 
 #  groups = [Group(i) for i in "123456789"]
@@ -34,7 +34,10 @@ group_layouts = [
     "max",
     "max",
     "max",
+    "max",
 ]
+
+group_match_apps = ["firefox"]
 
 for i in range(len(group_names)):
     groups.append(
@@ -42,7 +45,7 @@ for i in range(len(group_names)):
             name=group_names[i],
             layout=group_layouts[i].lower(),
             label=group_labels[i],
-            #  match=[Match(wm_class=["firefox"])]
+            #  match=[Match(wm_class=[group_match_apps[i]])],
         )
     )
 

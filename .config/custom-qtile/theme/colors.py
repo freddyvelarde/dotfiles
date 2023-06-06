@@ -9,11 +9,7 @@ _colorschemes = {"marianne": marianne, "brisdenka": brisdenka}
 
 def _theme_name():
     content = ""
-    file_path = os.path.expanduser(
-        qtile_path
-        + "/theme/colorschemes/theme_name.txt"
-        #  "~/.config/qtile/theme/colorschemes/theme_name.txt"
-    )
+    file_path = os.path.expanduser(qtile_path + "/theme/colorschemes/theme_name.txt")
     with open(file_path, "r") as file:
         content = file.read().strip()
     return content

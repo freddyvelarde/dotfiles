@@ -2,6 +2,7 @@ from libqtile import bar
 from libqtile.config import Screen
 from .widgets import widgets
 from theme.colors import colors  # import theme.colors couldn't... >>> ignore that error
+from theme.global_styles import margin
 import subprocess
 
 xrandr = "xrandr | grep -w 'connected' | cut -d ' ' -f 2 | wc -l"
@@ -15,10 +16,9 @@ for _ in range(monitor_counter):
             top=bar.Bar(
                 widgets,
                 24,
-                margin=7,
+                margin=[5, margin, 5, margin],
                 background=colors["background"],
-                #  background="#00000000",
-                border_width=[10, 10, 10, 10],
+                border_width=[7, 10, 7, 10],
                 border_color=colors["background"],
             ),
         )

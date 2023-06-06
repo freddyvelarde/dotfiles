@@ -3,6 +3,10 @@ from theme.colors import colors  # import theme.colors couldn't... >>> ignore th
 from global_variables import terminal, rofi_applets
 
 
+def open_htop():
+    qtile.cmd_spawn(terminal + " -e htop")
+
+
 def open_network_menu():
     qtile.cmd_spawn(rofi_applets + "network_menu")
 
@@ -11,7 +15,7 @@ def open_rofi():
     qtile.cmd_spawn(rofi_applets + "rofi_launcher")
 
 
-def open_powemenu():
+def open_powermenu():
     qtile.cmd_spawn(rofi_applets + "rofi_powermenu")
 
 
@@ -70,11 +74,11 @@ widgets = [
         highlight_method="text",
         font="UbuntuMono Nerd Font",
         fontsize=19,
-        margin_y=3,
-        margin_x=0,
-        padding_y=8,
-        padding_x=5,
-        borderwidth=1,
+        #  margin_y=3,
+        #  margin_x=0,
+        #  padding_y=8,
+        #  padding_x=5,
+        #  borderwidth=1,
         active=colors["text"],
         inactive=colors["text"],
         rounded=False,
@@ -99,12 +103,11 @@ widgets = [
         padding=5,
     ),
     margin(),
-    icon("󰍛", colors["tertiary"], colors["background"]),
+    icon("󰍛", colors["tertiary"], colors["background"], open_htop),
     widget.Memory(
         background=colors["tertiary"],
         foreground=colors["background"],
-        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e htop")},
-        #  border_width=[0, 0, 2, 0],
+        mouse_callbacks={"Button1": open_htop},
     ),
     margin(),
     widget.TextBox(
@@ -113,6 +116,6 @@ widgets = [
         foreground=colors["background"],
         background=colors["btn1"],
         padding=5,
-        mouse_callbacks={"Button1": open_powemenu},
+        mouse_callbacks={"Button1": open_powermenu},
     ),
 ]

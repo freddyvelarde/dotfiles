@@ -15,8 +15,9 @@ for _ in range(monitor_counter):
             top=bar.Bar(
                 widgets,
                 24,
-                margin=10,
+                margin=7,
                 background=colors["background"],
+                #  background="#00000000",
                 border_width=[10, 10, 10, 10],
                 border_color=colors["background"],
             ),

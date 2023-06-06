@@ -1,4 +1,4 @@
-from libqtile import widget, qtile
+from libqtile import widget, qtile, bar
 from theme.colors import colors  # import theme.colors couldn't... >>> ignore that error
 from global_variables import terminal, rofi_applets
 
@@ -11,12 +11,12 @@ def open_powemenu():
     qtile.cmd_spawn(rofi_applets + "rofi_powermenu")
 
 
-def icon(icon, event=None):
+def icon(icon, bg=None, fg=None, event=None):
     return widget.TextBox(
         text=icon,  # Icon: nf-oct-triangle_left
         fontsize=20,
-        foreground=colors["background"],
-        background=colors["btn2"],
+        foreground=fg,
+        background=bg,
         padding=5,
         mouse_callbacks={"Button1": event},
     )
@@ -31,13 +31,6 @@ def margin():
     )
 
 
-def clock_format():
-    #  a = True
-    #  if a:
-    #  return "%H:%M"
-    return "%d/%m/%y"
-
-
 widgets = [
     widget.TextBox(
         text="",
@@ -49,53 +42,55 @@ widgets = [
         padding=12,
         mouse_callbacks={"Button1": open_rofi},
     ),
-    #  icon(""),
-    widget.GroupBox(highlight_method="text"),
+    margin(),
+    icon("󰥔", colors["tertiary"], colors["background"]),
     widget.Clock(
         format="%H:%M",
         foreground=colors["background"],
-        background=colors["btn2"],
+        background=colors["tertiary"],
         padding=5,
         mouse_callbacks={"Button1": open_rofi},
     ),
     margin(),
-    #  icon(""),
-    icon(" "),
-    widget.PulseVolume(
+    icon("󰤨", colors["primary"], colors["background"]),
+    widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
+        interface="enp37s0",
+        format="{down} ↓↑ {up}",
         foreground=colors["background"],
-        background=colors["btn2"],
+        background=colors["primary"],
+        mouse_callbacks={
+            "Button1": lambda: qtile.cmd_spawn(rofi_applets + "network_menu")
+        },
+    ),
+    # ------------------------
+    widget.Spacer(length=bar.STRETCH),
+    # ------------------------
+    widget.GroupBox(highlight_method="text"),
+    # ------------------------
+    widget.Spacer(length=bar.STRETCH),
+    # ------------------------
+    icon(" ", colors["primary"], colors["background"]),
+    widget.PulseVolume(
+        background=colors["primary"],
+        foreground=colors["background"],
         volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
         volume_up_command="pactl set-sink-volume @DEFAULT_SINK@ +10%",
         padding=5,
     ),
     margin(),
-    icon("󰍛"),
+    icon("󰍛", colors["tertiary"], colors["background"]),
     widget.Memory(
+        background=colors["tertiary"],
         foreground=colors["background"],
-        background=colors["btn2"],
         mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e htop")},
         #  border_width=[0, 0, 2, 0],
-    ),
-    margin(),
-    #  icon(""),
-    icon(
-        "󰤨"
-    ),  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
-    widget.Net(
-        interface="enp37s0",
-        format="{down} ↓↑ {up}",
-        foreground=colors["background"],
-        background=colors["btn2"],
-        mouse_callbacks={
-            "Button1": lambda: qtile.cmd_spawn(rofi_applets + "network_menu")
-        },
     ),
     margin(),
     widget.TextBox(
         text="⏻",  # Icon: nf-oct-triangle_left
         fontsize=20,
         foreground=colors["background"],
-        background=colors["btn2"],
+        background=colors["btn1"],
         padding=5,
         mouse_callbacks={"Button1": open_powemenu},
     ),

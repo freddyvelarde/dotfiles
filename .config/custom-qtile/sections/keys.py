@@ -4,8 +4,6 @@ from global_variables import mod, terminal, rofi_applets  # >> ignore the next e
 
 
 keys = [
-    # A list of available commands that can be bound to keys can be found
-    # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -48,7 +46,13 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key(
+        [mod, "shift"],
+        "r",
+        lazy.reload_config(),
+        lazy.spawn(rofi_applets + "wallpaper"),
+        desc="Reload the config",
+    ),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "n", lazy.spawn(rofi_applets + "rofi_launcher")),

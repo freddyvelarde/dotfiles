@@ -3,7 +3,8 @@ from os import path
 home = path.expanduser("~")
 
 
-mod = "control"
+#  mod = "control"
+mod = "mod4"
 terminal = "kitty"
 
 qtile_path = path.join(path.expanduser("~"), ".config", "custom-qtile")

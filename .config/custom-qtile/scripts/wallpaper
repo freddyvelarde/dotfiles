@@ -8,7 +8,7 @@ num_monitors=$(echo "$connected_monitors" | wc -l)
 qdir="$HOME/.config/custom-qtile"
 # qdir="$HOME/.config/qtile"
 
-theme_name=$(cat "$qdir"/theme/colorschemes/theme_name.txt)
+theme_name=$(cat "$qdir"/theme/theme_name.txt)
 
 
 for ((i=0; i<$num_monitors; i++))

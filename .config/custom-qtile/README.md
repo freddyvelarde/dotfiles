@@ -1,3 +1,12 @@
+## Themes:
+
+Archhack
+Diana
+Brisdenka
+Spiderverse
+
+---
+
 | Key Combination        | Description                                     |
 | ---------------------- | ----------------------------------------------- |
 | Mod + Return           | Launch terminal with qtile configs              |

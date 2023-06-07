@@ -52,13 +52,19 @@ def init_primary_widgets():
             mouse_callbacks={"Button1": open_rofi},
         ),
         margin(),
-        widget.CurrentLayout(),
+        icon("", colors["tertiary"], colors["background"]),
+        widget.Clock(
+            format="%d/%m/%Y",
+            foreground=colors["background"],
+            background=colors["tertiary"],
+            padding=5,
+        ),
         margin(),
-        icon("󰥔", colors["tertiary"], colors["background"]),
+        icon("󰥔", colors["btn2"], colors["background"]),
         widget.Clock(
             format="%H:%M",
             foreground=colors["background"],
-            background=colors["tertiary"],
+            background=colors["btn2"],
             padding=5,
         ),
         margin(),
@@ -73,6 +79,7 @@ def init_primary_widgets():
         # ------------------------
         widget.Spacer(length=bar.STRETCH),
         # ------------------------
+        margin(),
         widget.GroupBox(
             highlight_method="text",
             font="UbuntuMono Nerd Font",
@@ -89,9 +96,14 @@ def init_primary_widgets():
         # ------------------------
         widget.Spacer(length=bar.STRETCH),
         # ------------------------
-        icon(" ", colors["primary"], colors["background"]),
-        widget.PulseVolume(
+        widget.CurrentLayout(
+            foreground=colors["background"],
             background=colors["primary"],
+        ),
+        margin(),
+        icon(" ", colors["btn2"], colors["background"]),
+        widget.PulseVolume(
+            background=colors["btn2"],
             foreground=colors["background"],
             volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
             volume_up_command="pactl set-sink-volume @DEFAULT_SINK@ +10%",
@@ -129,8 +141,6 @@ def init_secondary_widgets():
             padding=12,
             mouse_callbacks={"Button1": open_rofi},
         ),
-        margin(),
-        widget.CurrentLayout(),
         margin(),
         icon("󰥔", colors["tertiary"], colors["background"]),
         widget.Clock(

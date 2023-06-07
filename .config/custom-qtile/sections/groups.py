@@ -1,6 +1,7 @@
 from libqtile.lazy import lazy
 from libqtile.config import Group, Key, Match
 from sections.keys import keys  # >> ignore this error
+from global_variables import mod
 
 #  groups = [Group(i) for i in "123456789"]
 group_names = [
@@ -15,7 +16,6 @@ group_names = [
 #  groups = [Group(i) for i in [
 #      "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
 #  ]]
-mod = "control"
 
 groups = []
 

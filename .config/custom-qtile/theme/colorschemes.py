@@ -1,3 +1,13 @@
+archhack = {
+    "background": "#01161b",
+    "foreground": "#00999e",
+    "btn1": "#b48ead",
+    "btn2": "#b48eada",
+    "primary": "#a3be8c",
+    "secondary": "#81a1c1",
+    "tertiary": "#007b82",
+    "text": "#808080",
+}
 diana = {
     "background": "#010427",
     "foreground": "#94CFEA",

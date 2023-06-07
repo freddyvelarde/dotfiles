@@ -1,5 +1,5 @@
 from libqtile.lazy import lazy
-from libqtile.config import Group, Key, Match
+from libqtile.config import Group, Key
 from sections.keys import keys  # >> ignore this error
 from global_variables import mod
 
@@ -12,18 +12,13 @@ group_names = [
     "5",
 ]
 
-#  groups = [Group(i) for i in "      "]
-#  groups = [Group(i) for i in [
-#      "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
-#  ]]
-
 groups = []
 
 group_labels = [
     " ",
     " ",
     " ",
-    " ",
+    " ",
     " ",
     " ",
 ]

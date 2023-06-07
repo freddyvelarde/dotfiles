@@ -25,28 +25,28 @@ extension_defaults = widget_defaults.copy()
 ###
 ###
 
-main = None
-dgroups_key_binder = None
-dgroups_app_rules = []
-follow_mouse_focus = True
-bring_front_click = False
-cursor_warp = True
-auto_fullscreen = True
-focus_on_window_activation = "urgent"
-wmname = "LG3D"
-
+#  main = None
 #  dgroups_key_binder = None
-#  dgroups_app_rules = []  # type: list
+#  dgroups_app_rules = []
 #  follow_mouse_focus = True
 #  bring_front_click = False
-#  cursor_warp = False
-#
+#  cursor_warp = True
 #  auto_fullscreen = True
-#  focus_on_window_activation = "smart"
-#  reconfigure_screens = True
-#
-#  auto_minimize = True
-#
-#  wl_input_rules = None
-#
+#  focus_on_window_activation = "urgent"
 #  wmname = "LG3D"
+
+dgroups_key_binder = None
+dgroups_app_rules = []  # type: list
+follow_mouse_focus = True
+bring_front_click = False
+cursor_warp = False
+
+auto_fullscreen = True
+focus_on_window_activation = "smart"
+reconfigure_screens = True
+
+auto_minimize = True
+
+wl_input_rules = None
+
+wmname = "LG3D"

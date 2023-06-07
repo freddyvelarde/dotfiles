@@ -51,6 +51,8 @@ widgets = [
         mouse_callbacks={"Button1": open_rofi},
     ),
     margin(),
+    widget.CurrentLayout(),
+    margin(),
     icon("󰥔", colors["tertiary"], colors["background"]),
     widget.Clock(
         format="%H:%M",

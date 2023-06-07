@@ -18,3 +18,13 @@ brisdenka = {
     "tertiary": "#068ee2",
     "text": "#ffffff",
 }
+spiderverse = {
+    "background": "#070537",
+    "foreground": "#f7073b",
+    "btn1": "#3581bb",
+    "btn2": "#b3235b",
+    "primary": "#f11440",
+    "secondary": "#0b83c6",
+    "tertiary": "#c744f7",
+    "text": "#ffffff",
+}

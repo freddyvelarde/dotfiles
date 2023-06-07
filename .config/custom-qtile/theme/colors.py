@@ -1,10 +1,10 @@
-from .colorschemes import marianne, brisdenka, spiderverse
+from .colorschemes import diana, brisdenka, spiderverse
 from global_variables import qtile_path
 
 import os
 
 _colorschemes = {
-    "marianne": marianne,
+    "diana": diana,
     "brisdenka": brisdenka,
     "spiderverse": spiderverse,
 }

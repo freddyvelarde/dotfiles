@@ -1,4 +1,4 @@
-marianne = {
+diana = {
     "background": "#010427",
     "foreground": "#94CFEA",
     "btn1": "#68ecc2",

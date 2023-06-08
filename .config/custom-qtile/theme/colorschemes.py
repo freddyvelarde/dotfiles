@@ -8,6 +8,16 @@ archhack = {
     "tertiary": "#007b82",
     "text": "#808080",
 }
+dark_city = {
+    "background": "#091217",
+    "foreground": "#030b0e",
+    "btn1": "#be0027",
+    "btn2": "#fe8326",
+    "primary": "#70cffd",
+    "secondary": "#f6486b",
+    "tertiary": "#007aba",
+    "text": "#808080",
+}
 diana = {
     "background": "#010427",
     "foreground": "#94CFEA",

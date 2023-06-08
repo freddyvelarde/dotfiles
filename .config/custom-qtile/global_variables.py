@@ -3,15 +3,15 @@ from os import path
 _home = path.expanduser("~")
 
 
-mod = "control"
-#  mod = "mod4"
+#  mod = "control"
+mod = "mod4"
 
 terminal = "kitty"
 second_terminal = "alacritty"
 file_manager = "thunar"
 
-qtile_path = path.join(_home, ".config", "custom-qtile")  # development path
-#  qtile_path = path.join(_home, ".config", "qtile")
+#  qtile_path = path.join(_home, ".config", "custom-qtile")  # development path
+qtile_path = path.join(_home, ".config", "qtile")
 
 rofi_applets = qtile_path + "/scripts/"
 

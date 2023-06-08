@@ -5,8 +5,8 @@
 output=$(xrandr)
 connected_monitors=$(echo "$output" | grep -E " connected ")
 num_monitors=$(echo "$connected_monitors" | wc -l)
-qdir="$HOME/.config/custom-qtile"
-# qdir="$HOME/.config/qtile"
+# qdir="$HOME/.config/custom-qtile"
+qdir="$HOME/.config/qtile"
 
 theme_name=$(cat "$qdir"/theme/theme_name.txt)
 

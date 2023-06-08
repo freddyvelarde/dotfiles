@@ -1,4 +1,4 @@
-from .colorschemes import diana, brisdenka, spiderverse, archhack
+from .colorschemes import diana, brisdenka, spiderverse, archhack, dark_city
 from global_variables import qtile_path
 
 import os
@@ -8,6 +8,7 @@ _colorschemes = {
     "brisdenka": brisdenka,
     "spiderverse": spiderverse,
     "archhack": archhack,
+    "dark_city": dark_city,
 }
 
 

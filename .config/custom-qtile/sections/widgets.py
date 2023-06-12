@@ -54,7 +54,7 @@ def init_primary_widgets():
         margin(),
         icon("", colors["tertiary"], colors["background"]),
         widget.Clock(
-            format="%d/%m/%Y",
+            format="%d %m %Y",
             foreground=colors["background"],
             background=colors["tertiary"],
             padding=5,
@@ -80,13 +80,10 @@ def init_primary_widgets():
         # ------------------------
         widget.GroupBox(
             highlight_method="text",
-            font="UbuntuMono Nerd Font",
             fontsize=19,
             active=colors["tertiary"],
             inactive=colors["text"],
-            rounded=False,
-            #  urgent_alert_method="block",
-            #  urgent_border=colors["text"],
+            #  rounded=False,
             this_current_screen_border=colors["primary"],  # current screen
             other_current_screen_border=colors["secondary"],
             disable_drag=True,
@@ -170,14 +167,11 @@ def init_secondary_widgets():
             highlight_method="text",
             font="UbuntuMono Nerd Font",
             fontsize=19,
-            active=colors["tertiary"],
-            #  active=colors["btn2"],
+            active=colors["primary"],
             inactive=colors["text"],
             rounded=False,
-            #  urgent_alert_method="block",
-            #  urgent_border=colors["text"],
-            this_current_screen_border=colors["primary"],  # current screen
-            other_current_screen_border=colors["secondary"],
+            this_current_screen_border=colors["tertiary"],  # current screen
+            #  this_screen_border=colors["secondary"],
             disable_drag=True,
         ),
         # ------------------------

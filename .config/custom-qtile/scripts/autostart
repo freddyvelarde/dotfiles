@@ -6,3 +6,6 @@ qdir="$HOME/.config/qtile"
 
 # setting wallpaper
 "$qdir"/scripts/wallpaper
+
+# config picom
+picom &

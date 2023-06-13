@@ -1,12 +1,15 @@
 from libqtile import layout
 from theme.colors import colors
-from theme.global_styles import margin
+from theme.global_styles import margin_vertical, margin_horizontal
 
-layout_conf_max = {"border_width": 0, "margin": margin}
+layout_conf_max = {
+    "border_width": 0,
+    "margin": [margin_horizontal, margin_vertical, margin_horizontal, margin_vertical],
+}
 layout_conf_general = {
-    "border_focus": colors["primary"],
+    "border_focus": colors["btn5"],
     "border_width": 2,
-    "margin": margin,
+    "margin": [margin_horizontal, margin_vertical, margin_horizontal, margin_vertical],
 }
 
 layouts = [

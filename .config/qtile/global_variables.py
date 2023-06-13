@@ -10,7 +10,7 @@ terminal = "kitty"
 second_terminal = "alacritty"
 file_manager = "thunar"
 
-#  qtile_path = path.join(_home, ".config", "custom-qtile")  # development path
+#  qtile_path = path.join(_home, "code", "qtile")  # development path
 qtile_path = path.join(_home, ".config", "qtile")
 
 rofi_applets = qtile_path + "/scripts/"

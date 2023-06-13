@@ -1,14 +1,13 @@
-from .colorschemes import diana, brisdenka, spiderverse, archhack, dark_city
+from .colorschemes import Diana, neon, Marianne, archzone
 from global_variables import qtile_path
 
 import os
 
 _colorschemes = {
-    "diana": diana,
-    "brisdenka": brisdenka,
-    "spiderverse": spiderverse,
-    "archhack": archhack,
-    "dark_city": dark_city,
+    "Diana": Diana,
+    "neon": neon,
+    "Marianne": Marianne,
+    "archzone": archzone,
 }
 
 
@@ -24,5 +23,5 @@ def _load_theme(theme_name):
     return _colorschemes[theme_name]
 
 
-_theme = _theme_name()
-colors = _load_theme(_theme)
+theme = _theme_name()
+colors = _load_theme(theme)

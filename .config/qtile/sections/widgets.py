@@ -80,12 +80,12 @@ def init_primary_widgets():
         # ------------------------
         widget.GroupBox(
             highlight_method="text",
+            font="UbuntuMono Nerd Font",
             fontsize=19,
-            active=colors["tertiary"],
+            active=colors["primary"],
             inactive=colors["text"],
-            #  rounded=False,
-            this_current_screen_border=colors["primary"],  # current screen
-            other_current_screen_border=colors["secondary"],
+            rounded=False,
+            this_current_screen_border=colors["tertiary"],  # current screen
             disable_drag=True,
         ),
         # ------------------------
@@ -171,7 +171,6 @@ def init_secondary_widgets():
             inactive=colors["text"],
             rounded=False,
             this_current_screen_border=colors["tertiary"],  # current screen
-            #  this_screen_border=colors["secondary"],
             disable_drag=True,
         ),
         # ------------------------

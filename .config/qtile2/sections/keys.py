@@ -1,5 +1,4 @@
 from libqtile.config import Key
-from libqtile import qtile
 from libqtile.lazy import lazy
 from global_variables import (
     mod,
@@ -18,17 +17,7 @@ from global_variables import (
 keys = [
     # Terminal --
     Key(
-        [mod],
-        "Return",
-        lazy.spawn(terminal),
-        desc="Launch terminal with qtile configs",
-    ),
-    Key(
-        [mod, "shift"],
-        "t",
-        qtile.cmd_spawn(terminal + " -e neofetch"),
-        #  lazy.spawn(terminal ' '),
-        desc="Launch terminal with qtile configs",
+        [mod], "Return", lazy.spawn(terminal), desc="Launch terminal with qtile configs"
     ),
     # GUI Apps --
     Key([mod, "shift"], "return", lazy.spawn(file_manager), desc="Launch file manager"),

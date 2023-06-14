@@ -10,15 +10,15 @@ neon = {
     "active": "#e3aaff",
 }
 archzone = {
-    "background": "#020d1c",
+    "background": "#0c0e14",
     "foreground": "#78DBAB",
-    "btn1": "#C397EC",
-    "btn2": "#94CFEA",
-    "btn3": "#87ACED",
+    "btn1": "#94CFEA",
+    "btn2": "#C397EC",
+    "btn3": "#DE6778",
     "btn4": "#EDD4A1",
     "btn5": "#91CFAC",
     "inactive": "#47717A",
-    "active": "#DE6778",
+    "active": "#87ACED",
 }
 Marianne = {
     "background": "#240b20",

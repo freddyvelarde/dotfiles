@@ -1,14 +1,3 @@
-neon = {
-    "background": "#171431",
-    "foreground": "#e24c4c",
-    "btn1": "#4ce2a2",
-    "btn2": "#e24ce2",
-    "btn3": "#58a1c4",
-    "btn4": "#f1d5ff",
-    "btn5": "#524bb9",
-    "inactive": "#42256f",
-    "active": "#e3aaff",
-}
 archzone = {
     "background": "#0c0e14",
     "foreground": "#78DBAB",
@@ -22,23 +11,23 @@ archzone = {
 }
 Marianne = {
     "background": "#15122f",
-    "foreground": "#9fc096",
+    "foreground": "#bda4e1",
     "btn1": "#9ccfd7",
     "btn2": "#ed8645",
     "btn3": "#bf616a",
-    "btn4": "#bda4e1",
-    "btn5": "#ebc591",
+    "btn4": "#ebc591",
+    "btn5": "#9fc096",
     "inactive": "#706c82",
     "active": "#34718c",
 }
 Diana = {
-    "background": "#16164c",
-    "foreground": "#5b7bb8",
-    "btn1": "#57cbae",
-    "btn2": "#ca6176",
-    "btn3": "#3d8e83",
-    "btn4": "#5ecb57",
-    "btn5": "#47498e",
-    "inactive": "#3d5c87",
-    "active": "#626bcb",
+    "background": "#070b14",
+    "foreground": "#8eb861",
+    "btn1": "#d85e74",
+    "btn2": "#50a7ee",
+    "btn3": "#bda4e1",
+    "btn4": "#9682DD",
+    "btn5": "#75E6DA",
+    "inactive": "#444C54",
+    "active": "#bf616a",
 }

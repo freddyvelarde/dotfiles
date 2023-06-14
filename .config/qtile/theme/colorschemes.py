@@ -7,7 +7,7 @@ archzone = {
     "btn4": "#EDD4A1",
     "btn5": "#91CFAC",
     "inactive": "#47717A",
-    "active": "#87ACED",
+    "active": "#975481",
 }
 Marianne = {
     "background": "#15122f",

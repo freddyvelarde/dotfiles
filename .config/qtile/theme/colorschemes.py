@@ -21,15 +21,15 @@ archzone = {
     "active": "#87ACED",
 }
 Marianne = {
-    "background": "#240b20",
-    "foreground": "#54c5c3",
-    "btn1": "#fee7da",
-    "btn2": "#c0337d",
-    "btn3": "#c0334c",
-    "btn4": "#B31312",
-    "btn5": "#432586",
-    "inactive": "#3C486B",
-    "active": "#7d2486",
+    "background": "#15122f",
+    "foreground": "#9fc096",
+    "btn1": "#9ccfd7",
+    "btn2": "#ed8645",
+    "btn3": "#bf616a",
+    "btn4": "#bda4e1",
+    "btn5": "#ebc591",
+    "inactive": "#706c82",
+    "active": "#34718c",
 }
 Diana = {
     "background": "#16164c",

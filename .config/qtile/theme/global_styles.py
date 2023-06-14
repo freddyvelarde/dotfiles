@@ -4,6 +4,6 @@ margin_vertical = 5
 margin_horizontal = 5
 margin = 0
 
-if theme == "neon":
+if theme == "neon" or theme == "Marianne":
     margin_vertical = 2
-    margin_horizontal = 0
+    margin_horizontal = 3

@@ -134,85 +134,85 @@ def archzone_widgets():
     return widgets
 
 
-#  def archzone_widgets():
-#      widgets = [
-#          widget.TextBox(
-#              text="",
-#              fontsize=25,
-#              rounded=True,
-#              foreground=colors["btn1"],
-#              #  background=colors["btn1"],
-#              width=30,
-#              #  padding=20,
-#              mouse_callbacks={"Button1": open_rofi},
-#          ),
-#          widget.TextBox(
-#              text="|",
-#              fontsize=25,
-#              rounded=True,
-#              foreground=colors["btn4"],
-#              #  background=colors["btn1"],
-#              #  width=47,
-#              padding=12,
-#              mouse_callbacks={"Button1": open_rofi},
-#          ),
-#          margin(),
-#          widget.GroupBox(
-#              highlight_method="text",
-#              font="UbuntuMono Nerd Font",
-#              fontsize=19,
-#              active=colors["active"],
-#              inactive=colors["inactive"],
-#              rounded=False,
-#              this_current_screen_border=colors["btn1"],  # current screen
-#              disable_drag=True,
-#          ),
-#          # --------------- Date and Clock widget beggin
-#          widget.Spacer(length=bar.STRETCH),
-#          #  widget.TextBox(
-#          #      text="",
-#          #      fontsize=20,
-#          #      #  background=colors["btn3"],
-#          #      foreground=colors["btn2"],
-#          #      padding=0,
-#          #  ),
-#          icon("", colors["background"], colors["btn2"]),
-#          widget.Clock(
-#              format="%d %m %Y",
-#              foreground=colors["btn2"],
-#              background=colors["background"],
-#              padding=5,
-#          ),
-#          #  margin(),
-#          icon("󰥔", colors["background"], colors["btn2"]),
-#          widget.Clock(
-#              format="%H:%M",
-#              foreground=colors["btn2"],
-#              background=colors["background"],
-#              padding=5,
-#          ),
-#          #  widget.TextBox(
-#          #      text="",
-#          #      fontsize=20,
-#          #      padding=0,
-#          #      foreground=colors["btn2"],
-#          #  ),
-#          widget.Spacer(length=bar.STRETCH),
-#          # --------------- Date and Clock widget end
-#          #  widget.TextBox(
-#          #      text="",
-#          #      fontsize=20,
-#          #      #  background=colors["btn3"],
-#          #      foreground=colors["btn5"],
-#          #      padding=0,
-#          #  ),
-#          icon("󰤨", colors["background"], colors["btn5"], open_network_menu),
-#          widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
-#              format="{down} ↓↑ {up}",
-#              foreground=colors["btn5"],
-#              background=colors["background"],
-#              mouse_callbacks={"Button1": open_network_menu},
-#          ),
-#          # ------------------------
-#      ]
-#      return widgets
+def neon_widgets():
+    widgets = [
+        widget.TextBox(
+            text="",
+            fontsize=25,
+            rounded=True,
+            foreground=colors["btn1"],
+            #  background=colors["btn1"],
+            width=30,
+            #  padding=20,
+            mouse_callbacks={"Button1": open_rofi},
+        ),
+        widget.TextBox(
+            text="|",
+            fontsize=25,
+            rounded=True,
+            foreground=colors["btn4"],
+            #  background=colors["btn1"],
+            #  width=47,
+            padding=12,
+            mouse_callbacks={"Button1": open_rofi},
+        ),
+        margin(),
+        widget.GroupBox(
+            highlight_method="text",
+            font="UbuntuMono Nerd Font",
+            fontsize=19,
+            active=colors["active"],
+            inactive=colors["inactive"],
+            rounded=False,
+            this_current_screen_border=colors["btn1"],  # current screen
+            disable_drag=True,
+        ),
+        # --------------- Date and Clock widget beggin
+        widget.Spacer(length=bar.STRETCH),
+        #  widget.TextBox(
+        #      text="",
+        #      fontsize=20,
+        #      #  background=colors["btn3"],
+        #      foreground=colors["btn2"],
+        #      padding=0,
+        #  ),
+        icon("", colors["background"], colors["btn2"]),
+        widget.Clock(
+            format="%d %m %Y",
+            foreground=colors["btn2"],
+            background=colors["background"],
+            padding=5,
+        ),
+        #  margin(),
+        icon("󰥔", colors["background"], colors["btn2"]),
+        widget.Clock(
+            format="%H:%M",
+            foreground=colors["btn2"],
+            background=colors["background"],
+            padding=5,
+        ),
+        #  widget.TextBox(
+        #      text="",
+        #      fontsize=20,
+        #      padding=0,
+        #      foreground=colors["btn2"],
+        #  ),
+        widget.Spacer(length=bar.STRETCH),
+        # --------------- Date and Clock widget end
+        #  widget.TextBox(
+        #      text="",
+        #      fontsize=20,
+        #      #  background=colors["btn3"],
+        #      foreground=colors["btn5"],
+        #      padding=0,
+        #  ),
+        icon("󰤨", colors["background"], colors["btn5"], open_network_menu),
+        widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
+            format="{down} ↓↑ {up}",
+            foreground=colors["btn5"],
+            background=colors["background"],
+            mouse_callbacks={"Button1": open_network_menu},
+        ),
+        # ------------------------
+    ]
+    return widgets

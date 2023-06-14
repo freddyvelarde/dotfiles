@@ -23,13 +23,6 @@ keys = [
         lazy.spawn(terminal),
         desc="Launch terminal with qtile configs",
     ),
-    Key(
-        [mod, "shift"],
-        "t",
-        qtile.cmd_spawn(terminal + " -e neofetch"),
-        #  lazy.spawn(terminal ' '),
-        desc="Launch terminal with qtile configs",
-    ),
     # GUI Apps --
     Key([mod, "shift"], "return", lazy.spawn(file_manager), desc="Launch file manager"),
     #  Key([mod, "shift"], "e", lazy.spawn(text_editor), desc="Launch text editor"),
@@ -41,6 +34,12 @@ keys = [
         lazy.spawn(rofi_applets + "rofi_launcher"),
         desc="Run application launcher",
     ),
+    #  Key(
+    #      ["mod1"],
+    #      "F1",
+    #      lazy.spawn(rofi_applets + "rofi_launcher"),
+    #      desc="Run application launcher",
+    #  ),
     Key(
         [mod, "shift"],
         "n",

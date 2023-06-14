@@ -37,6 +37,6 @@ if theme == "archzone":
 
 if theme == "Marianne":
     screens = [
-        Screen(bottom=status_bar(marianne_widgets())),  # monitor 1
-        Screen(bottom=status_bar(marianne_widgets())),  # monitor 2
+        Screen(top=status_bar(marianne_widgets())),  # monitor 1
+        Screen(top=status_bar(marianne_widgets())),  # monitor 2
     ]

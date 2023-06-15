@@ -42,6 +42,6 @@ if theme == "Marianne":
     ]
 if theme == "Diana":
     screens = [
-        Screen(bottom=status_bar(diana_widgets())),  # monitor 1
-        Screen(bottom=status_bar(diana_widgets())),  # monitor 2
+        Screen(top=status_bar(diana_widgets())),  # monitor 1
+        Screen(top=status_bar(diana_widgets())),  # monitor 2
     ]

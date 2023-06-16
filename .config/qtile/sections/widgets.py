@@ -130,7 +130,7 @@ def archzone_widgets():
     return widgets
 
 
-def marianne_widgets():
+def diana_widgets():  # diana widgets
     widgets = [
         widget.TextBox(
             text="",
@@ -288,7 +288,7 @@ def marianne_widgets():
     return widgets
 
 
-def diana_widgets():
+def marianne_widgets():  # marianne widgets
     widgets = [
         widget.TextBox(
             text="",

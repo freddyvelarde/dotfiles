@@ -9,7 +9,7 @@ archzone = {
     "inactive": "#47717A",
     "active": "#975481",
 }
-Marianne = {
+Diana = {
     "background": "#15122f",
     "foreground": "#bda4e1",
     "btn1": "#9ccfd7",
@@ -20,7 +20,7 @@ Marianne = {
     "inactive": "#706c82",
     "active": "#34718c",
 }
-Diana = {
+Marianne = {
     "background": "#070b14",
     "foreground": "#8eb861",
     "btn1": "#d85e74",

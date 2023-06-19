@@ -341,27 +341,27 @@ def marianne_widgets():  # marianne widgets
             foreground=colors["background"],
             mouse_callbacks={"Button1": open_htop},
         ),
-        widget.TextBox(
-            text="󰍞",
-            fontsize=63,
-            padding=0,
-            foreground=colors["btn2"],
-            background=colors["btn3"],
-        ),
-        # ---------- Internet connection
-        icon("󰤨", colors["btn2"], colors["background"], open_network_menu),
-        widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
-            format="{down} ↓↑ {up}",
-            background=colors["btn2"],
-            foreground=colors["background"],
-            mouse_callbacks={"Button1": open_network_menu},
-        ),
+        #  widget.TextBox(
+        #      text="󰍞",
+        #      fontsize=63,
+        #      padding=0,
+        #      foreground=colors["btn2"],
+        #      background=colors["btn3"],
+        #  ),
+        #  # ---------- Internet connection
+        #  icon("󰤨", colors["btn2"], colors["background"], open_network_menu),
+        #  widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
+        #      format="{down} ↓↑ {up}",
+        #      background=colors["btn2"],
+        #      foreground=colors["background"],
+        #      mouse_callbacks={"Button1": open_network_menu},
+        #  ),
         widget.TextBox(
             text="󰍞",
             fontsize=63,
             padding=0,
             foreground=colors["btn1"],
-            background=colors["btn2"],
+            background=colors["btn3"],
         ),
         # --------------- Date and Clock widget beggin
         icon("󰥔", colors["btn1"], colors["background"]),

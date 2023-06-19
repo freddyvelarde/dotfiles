@@ -73,13 +73,13 @@ def archzone_widgets():
             padding=5,
         ),
         margin(),
-        icon("󰤨", colors["background"], colors["btn4"], open_network_menu),
-        widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
-            format="{down} ↓↑ {up}",
-            background=colors["background"],
-            foreground=colors["btn4"],
-            mouse_callbacks={"Button1": open_network_menu},
-        ),
+        #  icon("󰤨", colors["background"], colors["btn4"], open_network_menu),
+        #  widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
+        #      format="{down} ↓↑ {up}",
+        #      background=colors["background"],
+        #      foreground=colors["btn4"],
+        #      mouse_callbacks={"Button1": open_network_menu},
+        #  ),
         # ------------------------
         widget.Spacer(length=bar.STRETCH),
         # ------------------------
@@ -117,6 +117,8 @@ def archzone_widgets():
             background=colors["background"],
             mouse_callbacks={"Button1": open_htop},
         ),
+        margin(),
+        widget.Systray(),
         margin(),
         widget.TextBox(
             text="⏻",  # Icon: nf-oct-triangle_left
@@ -219,28 +221,6 @@ def diana_widgets():  # diana widgets
             padding=0,
             foreground=colors["btn3"],
         ),
-        # ---------- Internet connection
-        widget.TextBox(
-            text="",
-            fontsize=25,
-            padding=0,
-            background=colors["btn2"],
-            foreground=colors["background"],
-        ),
-        icon("󰤨", colors["btn2"], colors["background"], open_network_menu),
-        widget.Net(  # you need to install the 'gi' module, in arch: `sudo pacman -S python-gobject`
-            format="{down} ↓↑ {up}",
-            background=colors["btn2"],
-            foreground=colors["background"],
-            mouse_callbacks={"Button1": open_network_menu},
-        ),
-        widget.TextBox(
-            text="",
-            fontsize=25,
-            padding=0,
-            background=colors["background"],
-            foreground=colors["btn2"],
-        ),
         # --------------- Date and Clock widget beggin
         widget.TextBox(
             text="",
@@ -276,6 +256,8 @@ def diana_widgets():  # diana widgets
             padding=0,
             foreground=colors["btn1"],
         ),
+        margin(),
+        widget.Systray(),
         margin(),
         widget.TextBox(
             text="⏻",  # Icon: nf-oct-triangle_left
@@ -416,6 +398,10 @@ def marianne_widgets():  # marianne widgets
             padding=0,
             foreground=colors["background"],
             background=colors["btn1"],
+        ),
+        widget.Systray(
+            background=colors["btn1"],
+            foreground=colors["background"],
         ),
         widget.TextBox(
             text="⏻",  # Icon: nf-oct-triangle_left

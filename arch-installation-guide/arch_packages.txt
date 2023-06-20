@@ -1,5 +1,3 @@
-qtile
-xorg
 kitty
 rofi
 feh
@@ -8,7 +6,6 @@ nitrogen
 ttf-nerd-fonts-symbols
 ttf-dejavu
 ttf-liberation
-noto-fonts
 pulseaudio
 pavucontrol
 brightnessctl
@@ -18,7 +15,6 @@ network-manager-applet
 volumeicon
 cbatticon
 python-gobject
-
 python-pywlroots
 python-dbus-next
 hsetroot
@@ -33,6 +29,6 @@ ksuperkey
 betterlockscreen
 xorg-xsetroot
 wmname
-pulsemixer 
+pulsemixer
 light
 xcolor

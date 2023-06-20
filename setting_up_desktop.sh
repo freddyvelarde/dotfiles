@@ -13,11 +13,6 @@ echo "Installing important packages:"
 
 sudo pacman -S $(cat ./arch-installation-guide/arch_packages.txt) 
 
-echo "Setting up sounds:"
-
-sudo mkdir -p /usr/share/sounds/
-sudo cp -r ./freedesktop/ /usr/share/sounds/
-
 echo "Setting up nerd-fonts:"
 
 sudo cp -r ./nerd-fonts/ /usr/share/fonts/

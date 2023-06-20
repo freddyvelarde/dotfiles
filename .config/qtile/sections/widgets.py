@@ -7,6 +7,10 @@ def open_htop():
     qtile.cmd_spawn(terminal + " -e htop")
 
 
+def open_volume():
+    qtile.cmd_spawn("pavucontrol")
+
+
 def open_network_menu():
     qtile.cmd_spawn(rofi_applets + "network_menu")
 
@@ -102,13 +106,14 @@ def archzone_widgets():
             foreground=colors["btn4"],
         ),
         margin(),
-        icon(" ", colors["background"], colors["btn3"]),
+        icon(" ", colors["background"], colors["btn3"], open_volume),
         widget.PulseVolume(
             foreground=colors["btn3"],
             background=colors["background"],
             volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
             volume_up_command="pactl set-sink-volume @DEFAULT_SINK@ +10%",
             padding=5,
+            mouse_callbacks={"Button1": open_volume},
         ),
         margin(),
         icon("󰍛", colors["background"], colors["btn2"], open_htop),
@@ -187,12 +192,13 @@ def diana_widgets():  # diana widgets
             foreground=colors["background"],
             background=colors["btn4"],
         ),
-        icon(" ", colors["btn4"], colors["background"]),
+        icon(" ", colors["btn4"], colors["background"], open_volume),
         widget.PulseVolume(
             background=colors["btn4"],
             foreground=colors["background"],
             volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
             volume_up_command="pactl set-sink-volume @DEFAULT_SINK@ +10%",
+            mouse_callbacks={"Button1": open_volume},
             padding=5,
         ),
         widget.TextBox(
@@ -319,12 +325,13 @@ def marianne_widgets():  # marianne widgets
             background=colors["btn5"],
         ),
         # audio
-        icon(" ", colors["btn4"], colors["background"]),
+        icon(" ", colors["btn4"], colors["background"], open_volume),
         widget.PulseVolume(
             background=colors["btn4"],
             foreground=colors["background"],
             volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
             volume_up_command="pactl set-sink-volume @DEFAULT_SINK@ +10%",
+            mouse_callbacks={"Button1": open_volume},
             padding=5,
         ),
         widget.TextBox(

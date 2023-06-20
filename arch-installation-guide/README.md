@@ -1,6 +1,6 @@
 # Arch Linux installation guide
 
-> This arch installation guide is custom for my needs
+> This arch installation guide is customized for my needs
 
 ## Set font and font-size
 

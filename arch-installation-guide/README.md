@@ -1,5 +1,7 @@
 # Arch Linux installation guide
 
+> This arch installation guide is custom for my needs
+
 ## Set font and font-size
 
 I use en_US keyboard layaout so I don't need to set it.

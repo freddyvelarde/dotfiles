@@ -1,0 +1,287 @@
+# Arch Linux installation guide
+
+## Set font and font-size
+
+I use en_US keyboard layaout so I don't need to set it.
+
+```sh
+setfont /usr/share/kbd/consolefonts/ter-c24b.psf.gz
+```
+
+Verify if you have internet connection:
+
+```sh
+ping google.com
+```
+
+## Connect to internet
+
+if you do not have internet connection you can run:
+
+```sh
+iwctl
+
+device list
+```
+
+```
+# output;
+# You should see something like this:
+#
+#                            Devices
+# -------------------------------------------------------------
+#   Name          Address          Powered    Adapter    Mode
+# -------------------------------------------------------------
+#   wlan0         ...              on         ...        ...
+
+[iwd]# station YOURDEVICE connect YOURSSID
+```
+
+list your partitions:
+
+```sh
+fdisk -l
+
+# also:
+
+lsblk
+```
+
+## Make your partitions
+
+Use `cfdisk`
+
+### Disclaimer
+
+> This guide is for BIOS users if you're UEFI user the partitioning disk is kind of different
+
+Once you run `cfdisk /dev/yourpartition` for example `cfdisk /dev/sda`
+
+You need to select `dos` and create 3 partitions
+
+1. Linux swap -> type Linux swap solaris and bootable
+2. root: /
+3. home: /home
+
+## Format the partitions
+
+Format the swap partition:
+
+Notice X is the disk number
+
+```sh
+mkswap /dev/sdaX
+swapon /dev/sdaX
+```
+
+Format the root and home partitions as ext4:
+
+```sh
+# root:
+mkfs.ext4 /dev/sdaX
+
+# home:
+mkfs.ext4 /dev/sdaX
+```
+
+## Mount the partitions
+
+Mount the root partitions:
+
+```sh
+mount /dev/sdaX /mnt
+```
+
+Mount the home partitions:
+
+```sh
+mount --mkdir /dev/sdaX /mnt/home
+```
+
+## Edit your mirrorlist file
+
+```sh
+pacman -Syy
+
+pacman -S reflector
+
+# I use Brazil cause Brazil is the
+reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+```
+
+## Install the main dependencies:
+
+```sh
+pacstrap /mnt linux linux-firmware base base-devel sudo vim ntfs-3g nerworkmanager
+```
+
+## Configure the system
+
+```sh
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+## last steps for the Installations
+
+```sh
+arch-chroot /mnt
+```
+
+## Setting up Time zone
+
+```sh
+ln -sf /usr/share/zoneinfo/America/La_Paz /etc/localtime
+
+hwclock --systohc
+```
+
+## Setting up localization
+
+```sh
+echo 'en_US.UTF-8 UTF-8
+es_BO.UTF-8 UTF-8' >> /etc/locale.gen
+
+
+echo 'LANG=en_US.UTF-8
+LC_ADDRESS=es_BO.UTF-8
+LC_IDENTIFICATION=es_BO.UTF-8
+LC_MEASUREMENT=es_BO.UTF-8
+LC_MONETARY=es_BO.UTF-8
+LC_NAME=es_BO.UTF-8
+LC_NUMERIC=es_BO.UTF-8
+LC_PAPER=es_BO.UTF-8
+LC_TELEPHONE=es_BO.UTF-8
+LC_TIME=es_BO.UTF-8' >> /etc/locale.conf
+
+locale-gen
+```
+
+## setting keymaps
+
+```sh
+echo 'KEYMAP=us
+FONT=default8x16
+FONT_MAP=8859-2' >> /etc/vconsole.conf
+```
+
+## Setting hosts
+
+Firstly setting the hostname:
+
+```sh
+# echo 'yourhostname' >> /etc/hostname
+echo 'archzone' >> /etc/hostname
+```
+
+Now setting up the hosts
+
+```sh
+echo '# Standard host addresses
+127.0.0.1  localhost
+::1        localhost ip6-localhost ip6-loopback
+ff02::1    ip6-allnodes
+ff02::2    ip6-allrouters
+# This host address
+127.0.1.1  archzone' >> /etc/hosts
+```
+
+## Enabling the internet
+
+Very important
+
+```sh
+systemctl enable NetworkManager
+```
+
+## Creating new user
+
+```sh
+useradd -m -G wheel erick
+passwd erick
+```
+
+now run:
+
+```sh
+EDITOR=vim visudo
+```
+
+and uncomment the line:
+
+```
+%wheel ALL=(ALL) ALL
+```
+
+## Installing some important packages
+
+```sh
+pacman -Sy
+pacman -S intel-ucode linux-headers grub os-prober openssh xorg neofetch xf86-video-intel
+```
+
+## Setting up the grub
+
+```sh
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## Finishing the bare Arch linux OS
+
+```sh
+mkinitcpio -P
+exit
+umount -R /mnt
+reboot
+```
+
+## Installing and setting up python and pip
+
+```sh
+sudo pacman -S python3 python3-pip
+sudo rm -rf /usr/lib/python3.x/EXTERNALLY-MANAGED
+```
+
+## Setting up the desktop environment
+
+Installing Window Manager and Display manager
+
+```sh
+sudo pacman -S qtile ly feh rofi picom xrandr nitrogen pulseaudio brightnessctl
+sudo systemctl enable ly
+```
+
+Installing some packages:
+
+```sh
+sudo pacman -S git ttf-nerd-fonts-symbols ttf-jetbrains-mono python-gobject
+```
+
+```sh
+pip3 install -r ~/.config/qtile/requeriments.txt
+```
+
+now reboot your computer: `sudo reboot`
+
+## Setting up Git
+
+```sh
+./git_setup.sh 'your_username' 'your_email@gmail.com'
+```
+
+Then when the next time you'll make a `git push` run the next command before
+
+> You need to have a git token and enter it into the `password` field
+
+```sh
+git config --global credential.helper store
+git push
+```
+
+## Installing Paru Aur helper
+
+```sh
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```

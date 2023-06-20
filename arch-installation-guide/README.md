@@ -218,7 +218,7 @@ and uncomment the line:
 
 ```sh
 pacman -Sy
-pacman -S intel-ucode linux-headers grub os-prober openssh xorg neofetch xf86-video-intel
+pacman -S intel-ucode linux-headers grub os-prober openssh neofetch xf86-video-intel dialog wpa_supplicant mtools dosfstools soft-firmware ntfs-3g
 ```
 
 ## Setting up the grub
@@ -249,14 +249,14 @@ sudo rm -rf /usr/lib/python3.x/EXTERNALLY-MANAGED
 Installing Window Manager and Display manager
 
 ```sh
-sudo pacman -S qtile ly feh rofi picom xrandr nitrogen pulseaudio brightnessctl
+sudo pacman -S qtile ly xorg
 sudo systemctl enable ly
 ```
 
 Installing some packages:
 
 ```sh
-sudo pacman -S git ttf-nerd-fonts-symbols ttf-jetbrains-mono python-gobject
+../setting_up_desktop.sh
 ```
 
 ```sh
@@ -280,10 +280,10 @@ git config --global credential.helper store
 git push
 ```
 
-## Installing Paru Aur helper
+## Installing yay Aur helper
 
 ```sh
-git clone https://aur.archlinux.org/paru.git
+git clone https://aur.archlinux.org/yay.git
 cd paru
 makepkg -si
 ```

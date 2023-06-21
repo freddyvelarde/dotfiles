@@ -4,10 +4,8 @@ feh
 picom
 nitrogen
 ttf-nerd-fonts-symbols
-ttf-dejavu
-ttf-liberation
-pulseaudio
 pavucontrol
+wget
 brightnessctl
 arandr
 xorg-xrandr

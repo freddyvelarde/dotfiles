@@ -280,10 +280,35 @@ git config --global credential.helper store
 git push
 ```
 
-## Installing yay Aur helper
+## Installing Paru (binary) Aur helper
 
 ```sh
-git clone https://aur.archlinux.org/yay.git
+git clone https://aur.archlinux.org/paru-bin.git
 cd paru
 makepkg -si
+```
+
+## Downloading icons and fonts:
+
+```sh
+
+paru -S nerd-fonts-jetbrains-mono ttf-material-design-icons
+```
+
+## Settig up ZSH Shell
+
+```sh
+sudo pacman -S zsh
+paru -S zsh-syntax-highlighting  zsh-autosuggestions
+
+sudo su
+
+usermod --shell /usr/bin/zsh 'username'
+
+echo 'plugins=(git zsh-autosuggestions zsh-syntax-highlighting)' >> ~/.zshrc
+echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
+
+# Installing powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```

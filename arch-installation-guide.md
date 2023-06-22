@@ -237,6 +237,12 @@ umount -R /mnt
 reboot
 ```
 
+## connect to internet
+
+```sh
+nmcli device wifi connect MyWiFi password mypassword
+```
+
 ## Installing and setting up python and pip
 
 ```sh
@@ -309,3 +315,7 @@ usermod --shell /usr/bin/zsh 'username'
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
+
+## Making visible password
+
+add this: `Defaults env_reset,pwfeedback,insults` into: `/etc/sudoers.d/01_pw_feedback`

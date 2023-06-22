@@ -9,12 +9,3 @@
 #
 # source "$HOME/.cargo/env"
 #
-echo "Installing important packages:"
-
-sudo pacman -S $(cat ./arch-installation-guide/arch_packages.txt) 
-
-echo "Setting up nerd-fonts:"
-
-sudo cp -r ./nerd-fonts/ /usr/share/fonts/
-
-echo "Setting up my dotfiles into the new linux os"

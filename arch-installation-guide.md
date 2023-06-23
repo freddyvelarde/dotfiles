@@ -319,3 +319,8 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ## Making visible password
 
 add this: `Defaults env_reset,pwfeedback,insults` into: `/etc/sudoers.d/01_pw_feedback`
+
+Missing packages:
+
+- ksuperkey
+- betterlockscreen

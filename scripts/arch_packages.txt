@@ -23,10 +23,13 @@ mpc
 maim
 xclip
 viewnior
-ksuperkey
-betterlockscreen
 xorg-xsetroot
 wmname
 pulsemixer
 light
 xcolor
+mtools
+dosfstools
+bluez 
+bluez-utils
+sof-firmware

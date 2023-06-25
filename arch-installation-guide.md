@@ -114,7 +114,7 @@ reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 ## Install the main dependencies:
 
 ```sh
-pacstrap /mnt linux linux-firmware base base-devel sudo vim ntfs-3g nerworkmanager
+pacstrap /mnt linux linux-firmware base base-devel sudo vim nerworkmanager pacman git wget
 ```
 
 ## Configure the system
@@ -218,7 +218,7 @@ and uncomment the line:
 
 ```sh
 pacman -Sy
-pacman -S intel-ucode linux-headers grub os-prober openssh neofetch xf86-video-intel dialog wpa_supplicant mtools dosfstools soft-firmware ntfs-3g
+pacman -S intel-ucode linux-headers grub os-prober openssh neofetch xf86-video-intel dialog wireless_tools wpa_supplicant mtools dosfstools soft-firmware ntfs-3g
 ```
 
 ## Setting up the grub
@@ -318,7 +318,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 ## Making visible password
 
-add this: `Defaults env_reset,pwfeedback,insults` into: `/etc/sudoers.d/01_pw_feedback`
+add this: `Defaults env_reset,pwfeedback,insults` into: `/etc/sudoers`
 
 Missing packages:
 

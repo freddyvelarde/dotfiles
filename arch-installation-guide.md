@@ -262,10 +262,6 @@ sudo systemctl enable ly
 Installing some packages:
 
 ```sh
-../setting_up_desktop.sh
-```
-
-```sh
 pip3 install -r ~/.config/qtile/requeriments.txt
 ```
 
@@ -294,13 +290,6 @@ cd paru
 makepkg -si
 ```
 
-## Downloading icons and fonts:
-
-```sh
-
-paru -S nerd-fonts-jetbrains-mono ttf-material-design-icons
-```
-
 ## Settig up ZSH Shell
 
 ```sh
@@ -312,8 +301,8 @@ sudo su
 usermod --shell /usr/bin/zsh 'username'
 
 # Installing powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
+echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 
 ## Making visible password

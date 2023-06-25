@@ -40,6 +40,12 @@ git config --global credential.helper store
 # config your user and password
 ```
 
+# Install
+
+```sh
+git clone https://github.com/freddyvelarde/dotfiles.git ~/.dotfiles
+```
+
 # My fonts
 
 - [Cascadia Code](https://www.nerdfonts.com/font-downloads)

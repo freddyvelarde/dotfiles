@@ -28,8 +28,13 @@ wmname
 pulsemixer
 light
 xcolor
-mtools
 dosfstools
 bluez 
 bluez-utils
 sof-firmware
+dialog 
+wireless_tools
+wpa_supplicant
+mtools
+soft-firmware 
+ntfs-3g

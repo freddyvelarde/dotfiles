@@ -218,7 +218,7 @@ and uncomment the line:
 
 ```sh
 pacman -Sy
-pacman -S intel-ucode linux-headers grub os-prober openssh neofetch xf86-video-intel dialog wireless_tools wpa_supplicant mtools dosfstools soft-firmware ntfs-3g
+pacman -S intel-ucode linux-headers grub os-prober openssh neofetch xf86-video-intel
 ```
 
 ## Setting up the grub

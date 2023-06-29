@@ -4,7 +4,7 @@
 mkdir -p utils
 sudo mkdir -p /usr/share/themes /usr/share/icons/ /usr/share/fonts
 cd utils
-sudo pacman -Sy jq
+sudo pacman -Sy jq wget
 wget -c $(curl -s https://api.github.com/repos/archcraft-os/pkgs/contents/x86_64/archcraft-gtk-theme-sweet-1.0-4-any.pkg.tar.zst | jq -r '.download_url')
 wget -c $(curl -s https://api.github.com/repos/archcraft-os/pkgs/contents/x86_64/archcraft-gtk-theme-cyberpunk-1.0-4-any.pkg.tar.zst | jq -r '.download_url')
 wget -c $(curl -s https://api.github.com/repos/archcraft-os/pkgs/contents/x86_64/archcraft-gtk-theme-hack-1.0-4-any.pkg.tar.zst | jq -r '.download_url')

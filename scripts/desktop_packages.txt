@@ -30,6 +30,8 @@ light
 xcolor
 dosfstools
 bluez 
+jq 
+wget
 bluez-utils
 sof-firmware
 dialog 

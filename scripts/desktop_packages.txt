@@ -41,3 +41,4 @@ wpa_supplicant
 mtools
 soft-firmware 
 ntfs-3g
+firefox

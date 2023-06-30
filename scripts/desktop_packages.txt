@@ -4,6 +4,7 @@ feh
 picom
 nitrogen
 ttf-nerd-fonts-symbols
+ttf-jetbrains-mono
 pavucontrol
 wget
 brightnessctl

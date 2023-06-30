@@ -103,9 +103,10 @@ mount /dev/sdaX /mnt/home
 
 Mount windows partitions
 
-````sh
+```sh
 mkdir /mnt/windowsX
 mount /dev/sdaX /mnt/windowsX
+```
 
 ## Edit your mirrorlist file
 
@@ -116,7 +117,7 @@ pacman -S reflector
 
 # I use Brazil cause Brazil is the
 reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
-````
+```
 
 ## Install the main dependencies:
 

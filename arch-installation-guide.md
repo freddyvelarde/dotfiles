@@ -97,8 +97,15 @@ mount /dev/sdaX /mnt
 Mount the home partitions:
 
 ```sh
-mount --mkdir /dev/sdaX /mnt/home
+mkdir /mnt/home
+mount /dev/sdaX /mnt/home
 ```
+
+Mount windows partitions
+
+````sh
+mkdir /mnt/windowsX
+mount /dev/sdaX /mnt/windowsX
 
 ## Edit your mirrorlist file
 
@@ -109,7 +116,7 @@ pacman -S reflector
 
 # I use Brazil cause Brazil is the
 reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
-```
+````
 
 ## Install the main dependencies:
 

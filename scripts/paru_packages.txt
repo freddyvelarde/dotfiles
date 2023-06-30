@@ -2,3 +2,4 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 ksuperkey
 betterlockscreen
+lxappearance-gtk3

@@ -39,6 +39,6 @@ dialog
 wireless_tools
 wpa_supplicant
 mtools
-soft-firmware 
+sof-firmware 
 ntfs-3g
 firefox

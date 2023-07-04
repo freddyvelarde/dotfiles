@@ -4,10 +4,15 @@
 # qdir="$HOME/code/qtile"
 qdir="$HOME/.config/qtile"
 
-# setting wallpaper
-"$qdir"/scripts/wallpaper
 
 # config picom
 picom &
 udiskie -t &
 nm-applet &
+
+xrandr --output VGA1 --brightness 1 
+xrandr --output LVDS1 --brightness 1 
+xrandr --output LVDS1 --mode 1366x768 --output VGA1 --mode 1440x900 --left-of LVDS1 
+
+# setting wallpaper
+"$qdir"/scripts/wallpaper

@@ -122,7 +122,8 @@ reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 ## Install the main dependencies:
 
 ```sh
-pacstrap /mnt linux linux-firmware base base-devel sudo vim nerworkmanager pacman git wget
+pacstrap /mnt linux linux-firmware base base-devel sudo vim nerworkmanager pacman git wget ntfs-3g
+
 ```
 
 ## Configure the system
@@ -231,10 +232,15 @@ pacman -S intel-ucode linux-headers grub os-prober openssh neofetch xf86-video-i
 
 ## Setting up the grub
 
-```sh
+````sh
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+sudo vim /etc/default/grub
 ```
+
+Uncomment the next line:
+
+> GRUB_DISABLE_OS_PROBER=false
 
 ## Finishing the bare Arch linux OS
 
@@ -243,7 +249,7 @@ mkinitcpio -P
 exit
 umount -R /mnt
 reboot
-```
+````
 
 ## connect to internet
 

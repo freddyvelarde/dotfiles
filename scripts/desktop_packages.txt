@@ -31,7 +31,7 @@ light
 xcolor
 dosfstools
 bluez 
-git
+unzip
 jq 
 wget
 bluez-utils

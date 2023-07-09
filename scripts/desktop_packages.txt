@@ -42,4 +42,7 @@ wpa_supplicant
 mtools
 sof-firmware 
 ntfs-3g
+htop
+glib2
+gvfs
 firefox

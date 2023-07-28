@@ -2,7 +2,6 @@
 require("config.set-plugins")
 require("config.plugins.nvim-tree")
 require("config.plugins.lualine")
-require("config.plugins.session")
 require("config.plugins.telescope")
 require("config.plugins.treesitter")
 require("config.plugins.commenter")
@@ -13,8 +12,6 @@ require("config.plugins.neoscroll")
 require("config.plugins.autopairs")
 require("config.plugins.todo-comments")
 
--- TODO something to do
-
 -- my personal config
 require("config.core.keymaps")
 require("config.core.options")
@@ -22,9 +19,9 @@ require("config.core.options")
 -- language server protocol config
 require("config.plugins.nvim-cmp")
 require("config.plugins.lsp.mason")
-require("config.plugins.lsp.lspsaga")
 require("config.plugins.lsp.lspconfig")
 require("config.plugins.lsp.null-ls")
+require("config.plugins.lsp.lspsaga")
 
 -- colorscheme
 require("config.set-colorscheme")

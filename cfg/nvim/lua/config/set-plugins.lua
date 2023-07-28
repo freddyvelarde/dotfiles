@@ -116,7 +116,9 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use({ "kkharji/lspsaga.nvim" }) -- nightly
+	use({ "kkharji/lspsaga.nvim", branch = "nvim6.0" or "nvim51" }) -- for specific version
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 	use("folke/neodev.nvim")
 
@@ -130,7 +132,7 @@ return packer.startup(function(use)
 	-- lualine use this instead of airline
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		-- requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
 	-- bufferline
@@ -145,13 +147,13 @@ return packer.startup(function(use)
 	})
 
 	-- session manager project
-	use({
-		"olimorris/persisted.nvim",
-		config = function()
-			require("persisted").setup()
-			require("telescope").load_extension("persisted") -- To load the telescope extension
-		end,
-	})
+	-- use({
+	--   "olimorris/persisted.nvim",
+	--   config = function()
+	--     require("persisted").setup()
+	--     require("telescope").load_extension("persisted") -- To load the telescope extension
+	--   end,
+	-- })
 
 	-- smooth scroll
 	use("karb94/neoscroll.nvim")

@@ -38,15 +38,6 @@ return packer.startup(function(use)
 	-- auto pairs
 	use("windwp/nvim-autopairs")
 
-	-- terminal - toggleterm
-	-- use({
-	--   "akinsho/toggleterm.nvim",
-	--   tag = "*",
-	--   config = function()
-	--     require("toggleterm").setup()
-	--   end,
-	-- })
-
 	-- file explorer
 	use({
 		"nvim-tree/nvim-tree.lua",
@@ -66,7 +57,6 @@ return packer.startup(function(use)
 	use("preservim/nerdcommenter")
 
 	-- todo comments
-	-- Lua
 	use({
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
@@ -91,11 +81,6 @@ return packer.startup(function(use)
 	-- use to make quotes ""
 	use("tpope/vim-surround")
 
-	-- use({
-	--   "RRethy/vim-hexokinase",
-	--   run = "cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase",
-	-- })
-
 	-- indent lines
 	use("lukas-reineke/indent-blankline.nvim")
 
@@ -116,7 +101,7 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use({ "kkharji/lspsaga.nvim" }) -- nightly
 	use({ "kkharji/lspsaga.nvim", branch = "nvim6.0" or "nvim51" }) -- for specific version
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
@@ -145,15 +130,6 @@ return packer.startup(function(use)
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
 	})
-
-	-- session manager project
-	-- use({
-	--   "olimorris/persisted.nvim",
-	--   config = function()
-	--     require("persisted").setup()
-	--     require("telescope").load_extension("persisted") -- To load the telescope extension
-	--   end,
-	-- })
 
 	-- smooth scroll
 	use("karb94/neoscroll.nvim")

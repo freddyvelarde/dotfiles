@@ -32,7 +32,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- colorschemes
-	use({ "ellisonleao/gruvbox.nvim" })
+	-- use({ "ellisonleao/gruvbox.nvim" })
 	use("folke/tokyonight.nvim")
 
 	-- auto pairs

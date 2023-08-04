@@ -17,10 +17,10 @@ null_ls.setup({
 	sources = {
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		formatting.gofumpt, -- go formatter
+		-- formatting.gofumpt, -- go formatter
 		formatting.black, -- python formatter
 		formatting.rustfmt, -- rust formatter
-		formatting.phpcsfixer, -- php formatter
+		-- formatting.phpcsfixer, -- php formatter
 		formatting.clang_format, -- java formatter
 
 		diagnostics.eslint_d.with({ -- js/ts linter

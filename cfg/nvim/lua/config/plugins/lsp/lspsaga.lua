@@ -1,8 +1,13 @@
-local lspsaga = require("lspsaga")
-lspsaga.setup({ -- defaults ...
-	symbol_in_winbar = {
-		enable = false,
-	},
+local saga_status, saga = pcall(require, "lspsaga")
+if not saga_status then
+	return
+end
+
+-- local lspsaga = require("lspsaga")
+saga.setup({ -- defaults ...
+	-- symbol_in_winbar = {
+	--   enable = false,
+	-- },
 	debug = false,
 	use_saga_diagnostic_sign = true,
 	-- diagnostic sign

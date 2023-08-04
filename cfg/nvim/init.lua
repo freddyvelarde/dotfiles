@@ -1,5 +1,6 @@
 -- plugins
-require("config.set-plugins")
+require("config.packer-plugins")
+-- require("config.lazy-plugins")
 require("config.plugins.nvim-tree")
 require("config.plugins.lualine")
 require("config.plugins.telescope")

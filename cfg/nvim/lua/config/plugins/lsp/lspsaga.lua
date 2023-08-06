@@ -1,13 +1,10 @@
 local saga_status, saga = pcall(require, "lspsaga")
 if not saga_status then
+	vim.api.nvim_err_writeln("Lspsaga is not installed!")
 	return
 end
 
--- local lspsaga = require("lspsaga")
-saga.setup({ -- defaults ...
-	-- symbol_in_winbar = {
-	--   enable = false,
-	-- },
+saga.setup({
 	debug = false,
 	use_saga_diagnostic_sign = true,
 	-- diagnostic sign
@@ -55,27 +52,3 @@ saga.setup({ -- defaults ...
 	diagnostic_message_format = "%m %c",
 	highlight_prefix = false,
 })
--- import lspsaga safely
--- local saga_status, saga = pcall(require, "lspsaga")
--- if not saga_status then
---   return
--- end
---
--- saga.setup({
---
---   code_action = "",
---   -- keybinds for navigation in lspsaga window
---   scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
---   -- use enter to open file with definition preview
---   symbol_in_winbar = {
---     enable = false,
---   },
---   definition = {
---     edit = "<CR>",
---   },
---   ui = {
---     colors = {
---       normal_bg = "#022746",
---     },
---   },
--- })

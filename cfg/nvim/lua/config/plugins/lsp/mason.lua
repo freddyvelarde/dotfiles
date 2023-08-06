@@ -1,18 +1,21 @@
 -- import mason plugin safely
 local mason_status, mason = pcall(require, "mason")
 if not mason_status then
+	vim.api.nvim_err_writeln("Mason plugin is not available. Please install it to use this functionality.")
 	return
 end
 
 -- import mason-lspconfig plugin safely
 local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lspconfig_status then
+	vim.api.nvim_err_writeln("Mason-lspconfig plugin is not available. Please install it to use this functionality.")
 	return
 end
 
 -- import mason-null-ls plugin safely
 local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
 if not mason_null_ls_status then
+	vim.api.nvim_err_writeln("mason-null-ls plugin is not available. Please install it to use this functionality.")
 	return
 end
 

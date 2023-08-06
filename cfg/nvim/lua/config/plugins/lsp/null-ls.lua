@@ -1,6 +1,7 @@
 -- import null-ls plugin safely
 local setup, null_ls = pcall(require, "null-ls")
 if not setup then
+	vim.api.nvim_err_writeln("Null-ls plugin is not available. Please install it to use this functionality.")
 	return
 end
 

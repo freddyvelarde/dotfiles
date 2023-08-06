@@ -142,7 +142,7 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use("szw/vim-maximizer") -- maximizes and restores current window
+	-- use("szw/vim-maximizer") -- maximizes and restores current window
 
 	if packer_bootstrap then
 		require("packer").sync()

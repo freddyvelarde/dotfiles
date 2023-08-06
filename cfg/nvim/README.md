@@ -1,5 +1,5 @@
 <!-- <div align="center"> -->
-<!--   <img src="../../.screenshots/nvim-gallery/nvim-logo.png" width="50" height="50" style="margin-bottom: 15px; margin-right: 10px "  /> -->
+<!--   <img src="../../assets/nvim-gallery/nvim-logo.png" width="50" height="50" style="margin-bottom: 15px; margin-right: 10px "  /> -->
 <!--   [> <h1>My Neovim config</h1> <] -->
 <!-- ## </div> -->
 
@@ -7,7 +7,7 @@
 
 # MY NEOVIM CONFIG
 
-![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png)
+![material](../../assets/nvim-gallery/colorschemes/material-ocean.png)
 
 This is my Neovim configuration based in lua script (lua is better that vim script, trust me :sweat_smile:), I tried to emulate the Visual Studio Code UI (because I really like the VScode UI) but at same time I use all the Neovim performance.
 
@@ -210,18 +210,18 @@ These are my colorschemes installed, if you want, you can add or remove any colo
 > ADVICE: If you going to install a colorscheme make sure that it's compatible with tree-sitter highlight support. [themes](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes)
 
 <!-- - [Material Ocean](https://github.com/marko-cerovac/material.nvim) (by default) -->
-<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/material-ocean.png) -->
+<!--   ![material](../../assets/nvim-gallery/colorschemes/material-ocean.png) -->
 <!-- - [Moonlight](https://github.com/shaunsingh/moonlight.nvim) -->
-<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/moonlight.png) -->
+<!--   ![material](../../assets/nvim-gallery/colorschemes/moonlight.png) -->
 <!-- - [Oceanic next](https://github.com/mhartington/oceanic-next) -->
-<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/oceanic.png) -->
+<!--   ![material](../../assets/nvim-gallery/colorschemes/oceanic.png) -->
 <!-- - [Onedark DARK](https://github.com/olimorris/onedarkpro.nvim) -->
-<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/onedark.png) -->
+<!--   ![material](../../assets/nvim-gallery/colorschemes/onedark.png) -->
 <!-- - [Pinkmare](https://github.com/Matsuuu/pinkmare) -->
-<!--   ![material](../../.screenshots/nvim-gallery/colorschemes/pinkmare.png) -->
+<!--   ![material](../../assets/nvim-gallery/colorschemes/pinkmare.png) -->
 
 - [Tokyo night](https://github.com/folke/tokyonight.nvim)
-  ![material](../../.screenshots/nvim-gallery/colorschemes/tokyo.png)
+  ![material](../../assets/nvim-gallery/colorschemes/tokyo.png)
 
 ## FUTURE FEATURES
 

@@ -398,7 +398,6 @@ def marianne_widgets():  # marianne widgets
             padding=0,
             foreground=colors["btn1"],
         ),
-        #  margin(),
         widget.TextBox(
             text="",
             fontsize=25,

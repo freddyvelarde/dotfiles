@@ -1,7 +1,7 @@
 return {
-  "preservim/nerdcommenter",
-  config = function()
-    vim.cmd([[
+	"preservim/nerdcommenter",
+	config = function()
+		vim.cmd([[
       let g:NERDCreateDefaultMappings = 1
 
       let g:NERDSpaceDelims = 1
@@ -18,5 +18,5 @@ return {
 
       let g:NERDToggleCheckAllLines = 1
     ]])
-  end
+	end,
 }

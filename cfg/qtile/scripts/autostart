@@ -13,6 +13,7 @@ nm-applet &
 xrandr --output VGA1 --brightness 1 
 xrandr --output LVDS1 --brightness 1 
 xrandr --output LVDS1 --mode 1366x768 --output VGA1 --mode 1440x900 --left-of LVDS1 
+xbacklight -set 10
 
 # setting wallpaper
 "$qdir"/scripts/wallpaper

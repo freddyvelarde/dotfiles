@@ -107,7 +107,7 @@ def archzone_widgets():
         ),
         margin(),
         icon(" ", colors["background"], colors["btn3"], open_volume),
-        widget.PulseVolume(
+        widget.Volume(
             foreground=colors["btn3"],
             background=colors["background"],
             volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
@@ -115,6 +115,14 @@ def archzone_widgets():
             padding=5,
             mouse_callbacks={"Button1": open_volume},
         ),
+        #  widget.PulseVolume(
+        #      foreground=colors["btn3"],
+        #      background=colors["background"],
+        #      volume_down_command="pactl set-sink-volume @DEFAULT_SINK@ -10%",
+        #      volume_up_command="pactl set-sink-volume @DEFAULT_SINK@ +10%",
+        #      padding=5,
+        #      mouse_callbacks={"Button1": open_volume},
+        #  ),
         margin(),
         icon("󰍛", colors["background"], colors["btn2"], open_htop),
         widget.Memory(

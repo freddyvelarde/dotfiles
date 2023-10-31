@@ -25,6 +25,7 @@ return {
 				"emmet_ls",
 				"tsserver",
 				"pyright",
+				"zls", -- zig
 				-- "intelephense",
 				"rust_analyzer",
 				"jdtls",

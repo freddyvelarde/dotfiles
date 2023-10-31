@@ -32,4 +32,5 @@ return {
 			require("onedark").load()
 		end,
 	},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 }

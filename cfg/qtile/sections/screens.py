@@ -41,6 +41,7 @@ if theme == "archzone":
 if theme == "Marianne":
     widgets = marianne_widgets().copy()
     widgets.pop(-3)  # removing `Systray` widget for secondary monitors
+    widgets.pop(-2)  # removing `Systray` widget for secondary monitors
     screens = [
         Screen(top=status_bar(marianne_widgets())),  # monitor 1
         Screen(top=status_bar(widgets)),  # monitor 2

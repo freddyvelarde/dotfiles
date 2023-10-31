@@ -13,7 +13,8 @@ theme_name=$(cat "$qdir"/theme/theme_name.txt)
 
 for ((i=0; i<$num_monitors; i++))
 do
-  nitrogen --head=$i --set-zoom-fill "$qdir"/wallpapers/"$theme_name".jpg
+  # nitrogen --head=$i --set-zoom-fill "$qdir"/wallpapers/"$theme_name".jpg
+  nitrogen --head=$i --set-zoom-fill ~/Downloads/wallpaper.jpg
 done
 
 # if uou want a wallpaper fill it:

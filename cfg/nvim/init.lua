@@ -6,4 +6,4 @@ require("config.set-colorscheme") -- colorscheme
 require("config.languages-conf") -- languages config for lsp
 
 -- set colorscheme
-vim.cmd.colorscheme("midnight")
+vim.cmd.colorscheme("catppuccin-mocha")

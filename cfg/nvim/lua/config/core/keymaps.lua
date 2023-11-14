@@ -137,6 +137,10 @@ keymap.set("n", "<leader>fl", ":vertical resize -10 <CR>==", { silent = true })
 keymap.set("n", "<leader>fk", ":horizontal resize +3 <CR>==", { silent = true })
 keymap.set("n", "<leader>fj", ":horizontal resize -3 <CR>==", { silent = true })
 
+-- Increment/Decrement
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
+
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization
 
@@ -145,4 +149,4 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- togg
 -- keymap.set("n", "<leader>ntv", ":ToggleTerm size=70 dir=$(pwd) direction=vertical<CR>", { silent = true }) -- toggle split window maximization
 
 --TODO comments
-keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { silent = true }) -- toggle split window maximization
+-- keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { silent = true }) -- toggle split window maximization

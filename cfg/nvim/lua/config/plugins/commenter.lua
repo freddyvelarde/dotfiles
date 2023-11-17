@@ -1,6 +1,5 @@
 return {
 	"preservim/nerdcommenter",
-	branch = "v2.6.0",
 	config = function()
 		vim.cmd([[
       let g:NERDCreateDefaultMappings = 1

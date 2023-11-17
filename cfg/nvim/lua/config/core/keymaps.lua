@@ -19,7 +19,8 @@ keymap.set("v", "fc", ":fold <CR>")
 keymap.set("n", "<leader>s", ":w <CR>")
 
 -- nvim tree toggle
-keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { silent = true })
+-- keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { silent = true })
+keymap.set("n", "<leader>b", "<cmd>Neotree toggle<CR>", { silent = true })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true })
@@ -64,8 +65,8 @@ keymap.set("n", "mm", ":put 1 <CR>", { silent = true })
 keymap.set({ "n", "v" }, "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
 keymap.set({ "n", "v" }, "gc", "<Plug>NERDCommenterToggle", { silent = true })
 
-keymap.set("n", "<A-.>", ":bnext <CR>==", { silent = true })
-keymap.set("n", "<A-,>", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<A-.>.", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<A-,>,", ":bprevious <CR>==", { silent = true })
 keymap.set("n", "<A-x>", ":bdelete <CR>==", { silent = true })
 
 keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })

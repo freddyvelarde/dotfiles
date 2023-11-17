@@ -1,3 +1,14 @@
+camila = {
+    "background": "#0c0e14",
+    "foreground": "#78DBAB",
+    "btn1": "#94CFEA",
+    "btn2": "#C397EC",
+    "btn3": "#DE6778",
+    "btn4": "#EDD4A1",
+    "btn5": "#91CFAC",
+    "inactive": "#47717A",
+    "active": "#975481",
+}
 archzone = {
     "background": "#0c0e14",
     "foreground": "#78DBAB",

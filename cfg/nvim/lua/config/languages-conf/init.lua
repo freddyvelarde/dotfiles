@@ -1,10 +1,12 @@
 local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
+-- local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
--- languages
+--
 require("config.languages-conf.languages.typescript")
 -- require("config.languages-conf.languages.go")
 require("config.languages-conf.languages.python")

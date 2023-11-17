@@ -38,6 +38,17 @@ if theme == "archzone":
         Screen(top=status_bar(widgets)),  # monitor 2
     ]
 
+if theme == "Camila":
+    widgets = archzone_widgets().copy()
+    widgets.pop(-3)  # removing `Systray` widget for secondary monitors
+    widgets.pop(-2)  # removing `Systray` widget for secondary monitors
+    screens = [
+        # I have two monitors, if you have only one, remove this line or if you have even more than me,
+        # create a new Screen()
+        Screen(top=status_bar(archzone_widgets())),  # monitor 1
+        Screen(top=status_bar(widgets)),  # monitor 2
+    ]
+
 if theme == "Marianne":
     widgets = marianne_widgets().copy()
     widgets.pop(-3)  # removing `Systray` widget for secondary monitors

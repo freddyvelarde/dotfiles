@@ -1,18 +1,10 @@
 -- configure html server
-lspconfig["html"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+lspconfig["html"].setup({})
 
 -- configure css server
-lspconfig["cssls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+lspconfig["cssls"].setup({})
 
 -- configure emmet language server
 lspconfig["emmet_ls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
 	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })

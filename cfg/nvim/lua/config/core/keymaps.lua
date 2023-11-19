@@ -19,7 +19,6 @@ keymap.set("v", "fc", ":fold <CR>")
 keymap.set("n", "<leader>s", ":w <CR>")
 
 -- nvim tree toggle
--- keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { silent = true })
 keymap.set("n", "<leader>b", "<cmd>Neotree toggle<CR>", { silent = true })
 
 -- clear search highlights
@@ -37,10 +36,10 @@ keymap.set("n", "<leader>m,", ":set clipboard= | echo 'clipboard disabled' <CR>"
 keymap.set("n", "<leader>fw", "*", { silent = true })
 
 -- tmux vim moves
-keymap.set("n", "<leader>l", ":<C-U>TmuxNavigateRight<cr>", { silent = true })
-keymap.set("n", "<leader>h", ":<C-U>TmuxNavigateLeft<cr>", { silent = true })
-keymap.set("n", "<leader>j", ":<C-U>TmuxNavigateDown<cr>", { silent = true })
-keymap.set("n", "<leader>k", ":<C-U>TmuxNavigateUp<cr>", { silent = true })
+keymap.set("n", "fl", ":<C-U>TmuxNavigateRight<cr>", { silent = true })
+keymap.set("n", "fh", ":<C-U>TmuxNavigateLeft<cr>", { silent = true })
+keymap.set("n", "fj", ":<C-U>TmuxNavigateDown<cr>", { silent = true })
+keymap.set("n", "fk", ":<C-U>TmuxNavigateUp<cr>", { silent = true })
 
 -- telescope
 keymap.set("n", "<leader>ff", ":Telescope find_files <CR>", { silent = true })
@@ -65,9 +64,9 @@ keymap.set("n", "mm", ":put 1 <CR>", { silent = true })
 keymap.set({ "n", "v" }, "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
 keymap.set({ "n", "v" }, "gc", "<Plug>NERDCommenterToggle", { silent = true })
 
-keymap.set("n", "<A-.>.", ":bnext <CR>==", { silent = true })
-keymap.set("n", "<A-,>,", ":bprevious <CR>==", { silent = true })
-keymap.set("n", "<A-x>", ":bdelete <CR>==", { silent = true })
+keymap.set("n", "<A-1>", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<A-2>", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<A-3>", ":bdelete <CR>==", { silent = true })
 
 keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
 keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })
@@ -133,10 +132,10 @@ keymap.set("n", "<leader>sh", "<C-w>s", { silent = true }) -- split window horiz
 keymap.set("n", "<leader>se", "<C-w>=", { silent = true }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>", { silent = true }) -- close current split window
 -- rezize windows
-keymap.set("n", "<leader>fh", ":vertical resize +10 <CR>==", { silent = true })
-keymap.set("n", "<leader>fl", ":vertical resize -10 <CR>==", { silent = true })
-keymap.set("n", "<leader>fk", ":horizontal resize +3 <CR>==", { silent = true })
-keymap.set("n", "<leader>fj", ":horizontal resize -3 <CR>==", { silent = true })
+keymap.set("n", "f>", ":vertical resize +10 <CR>==", { silent = true })
+keymap.set("n", "f<", ":vertical resize -10 <CR>==", { silent = true })
+keymap.set("n", "g>", ":horizontal resize +3 <CR>==", { silent = true })
+keymap.set("n", "g<", ":horizontal resize -3 <CR>==", { silent = true })
 
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
@@ -145,9 +144,28 @@ keymap.set("n", "-", "<C-x>")
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- toggle split window maximization
 
--- terminal
--- keymap.set("n", "<leader>nth", ":ToggleTerm size=15 dir=$(pwd) direction=horizontal<CR>", { silent = true }) -- toggle split window maximization
--- keymap.set("n", "<leader>ntv", ":ToggleTerm size=70 dir=$(pwd) direction=vertical<CR>", { silent = true }) -- toggle split window maximization
+-- Definitions
 
---TODO comments
--- keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { silent = true }) -- toggle split window maximization
+-- keymap.set("n", "<C-j>", function()
+--   vim.diagnostic.goto_next()
+-- end) -- toggle split window maximization
+
+keymap.set("n", "<leader>d", function()
+	local found_float = false
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_get_config(win).relative ~= "" then
+			vim.api.nvim_win_close(win, true)
+			found_float = true
+		end
+	end
+
+	if found_float then
+		return
+	end
+
+	vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+end, { desc = "Toggle Diagnostics" })
+
+-- keymap.set("n", "<leader>gd", function()
+--   vim.diagnostic.show_position_diagnostics()
+-- end)

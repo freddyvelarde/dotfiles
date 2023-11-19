@@ -1,4 +1,5 @@
 kitty
+fzf
 xdg-user-dirs
 rofi
 feh

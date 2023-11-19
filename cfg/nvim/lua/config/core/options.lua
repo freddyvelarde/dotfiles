@@ -2,7 +2,6 @@ local opt = vim.opt
 
 vim.cmd("set background=dark")
 -- vim.cmd("let g:lspsaga.use_signs = 0")
-vim.cmd("g:lspsaga_sign_icons=0")
 
 -- line numbers
 opt.number = true

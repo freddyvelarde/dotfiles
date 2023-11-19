@@ -22,6 +22,7 @@ return {
 		telescope.setup({
 			-- configure custom mappings
 			defaults = {
+				file_ignore_patterns = { "node_modules", ".git", "__pycache__", "*.class", "bin", "target" },
 				path_display = { "truncate" },
 				mappings = {
 					i = {

@@ -146,10 +146,6 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { silent = true }) -- togg
 
 -- Definitions
 
--- keymap.set("n", "<C-j>", function()
---   vim.diagnostic.goto_next()
--- end) -- toggle split window maximization
-
 keymap.set("n", "<leader>d", function()
 	local found_float = false
 	for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -166,6 +162,6 @@ keymap.set("n", "<leader>d", function()
 	vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
 end, { desc = "Toggle Diagnostics" })
 
--- keymap.set("n", "<leader>gd", function()
---   vim.diagnostic.show_position_diagnostics()
--- end)
+keymap.set("n", "<leader>gd", function()
+	vim.diagnostic.show_position_diagnostics()
+end)

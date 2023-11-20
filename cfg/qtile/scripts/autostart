@@ -10,10 +10,10 @@ picom &
 udiskie -t &
 nm-applet &
 
-xrandr --output VGA1 --brightness 1 
+xrandr --output VGA1 --brightness 0.63  # my external monitor
 xrandr --output LVDS1 --brightness 1 
 xrandr --output LVDS1 --mode 1366x768 --output VGA1 --mode 1440x900 --left-of LVDS1 
-xbacklight -set 10
+xbacklight -set 20
 
 # setting wallpaper
 "$qdir"/scripts/wallpaper

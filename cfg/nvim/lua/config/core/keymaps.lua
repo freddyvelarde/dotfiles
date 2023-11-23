@@ -64,9 +64,9 @@ keymap.set("n", "mm", ":put 1 <CR>", { silent = true })
 keymap.set({ "n", "v" }, "<C-/>", "<Plug>NERDCommenterToggle", { silent = true })
 keymap.set({ "n", "v" }, "gc", "<Plug>NERDCommenterToggle", { silent = true })
 
-keymap.set("n", "<A-1>", ":bnext <CR>==", { silent = true })
-keymap.set("n", "<A-2>", ":bprevious <CR>==", { silent = true })
-keymap.set("n", "<A-3>", ":bdelete <CR>==", { silent = true })
+keymap.set("n", "<A-2>", ":bnext <CR>==", { silent = true })
+keymap.set("n", "<A-1>", ":bprevious <CR>==", { silent = true })
+keymap.set("n", "<A-`>", ":bdelete <CR>==", { silent = true })
 
 keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
 keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })

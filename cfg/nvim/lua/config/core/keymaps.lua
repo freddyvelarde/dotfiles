@@ -2,6 +2,7 @@
 --- My Neovim Keybinds ---
 --------------------------
 vim.g.mapleader = " "
+-- vim.g.mapleader = ","
 
 local keymap = vim.keymap
 
@@ -11,6 +12,9 @@ keymap.set("v", "ii", "<ESC>", { silent = true })
 
 -- create a new file
 keymap.set("n", "<leader>jf", ":tabnew | w ")
+
+-- indent lines
+keymap.set("n", ",a", "gg=G")
 
 -- folding code
 keymap.set("v", "fc", ":fold <CR>")
@@ -111,9 +115,9 @@ filetype plugin indent on
 " map q <Nop>
 
 augroup remember_folds
-  autocmd!
-  au BufWinLeave ?* mkview 1
-  au BufWinEnter ?* silent! loadview 1
+autocmd!
+au BufWinLeave ?* mkview 1
+au BufWinEnter ?* silent! loadview 1
 augroup END
 
 ]])

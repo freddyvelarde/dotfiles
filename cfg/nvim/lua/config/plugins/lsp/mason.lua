@@ -28,6 +28,7 @@ return {
 				"zls", -- zig
 				-- "intelephense",
 				"rust_analyzer",
+				"angularls",
 				"jdtls",
 				-- "gopls",
 				"dockerls",

@@ -8,6 +8,7 @@ end
 
 --
 require("config.languages-conf.languages.typescript")
+require("config.languages-conf.languages.angular")
 -- require("config.languages-conf.languages.go")
 require("config.languages-conf.languages.python")
 require("config.languages-conf.languages.web-development")

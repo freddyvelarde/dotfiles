@@ -1,5 +1,6 @@
 kitty
 ranger
+evince
 fzf
 xdg-user-dirs
 rofi

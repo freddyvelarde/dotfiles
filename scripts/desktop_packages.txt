@@ -1,5 +1,6 @@
 kitty
 ranger
+exa
 evince
 fzf
 xdg-user-dirs

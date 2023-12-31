@@ -169,3 +169,7 @@ end, { desc = "Toggle Diagnostics" })
 keymap.set("n", "<leader>gd", function()
 	vim.diagnostic.show_position_diagnostics()
 end)
+
+-- search in document
+
+-- keymap.set("n", "/", "/\\<\\>", { silent = true })

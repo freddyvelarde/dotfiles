@@ -3,3 +3,4 @@ zsh-autosuggestions
 lxappearance-gtk3
 beekeeper-studio-bin
 trash-cli
+eww

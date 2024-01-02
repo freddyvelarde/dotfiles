@@ -3,9 +3,10 @@
 ## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 
 ## Files and Directories
-DIR="$HOME/.config/qtile/polybar"
-SFILE="$DIR/system.ini"
-RFILE="$DIR/.system"
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+DIR="$HOME/.config/polybar"
+SFILE="$HOME/.config/polybar/sistem.ini"
+RFILE="$HOME/.config/polybar/.system"
 
 ## Get system variable values for various modules
 get_values() {
@@ -31,7 +32,7 @@ set_values() {
 	fi
 }
 
-## Launch Polybar
+## Launch Polybar with selected style
 launch_bar() {
 	bash "$DIR"/launch.sh
 }

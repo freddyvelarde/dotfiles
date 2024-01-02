@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # setting qtile directory
-# qdir="$HOME/code/qtile"
 qdir="$HOME/.config/qtile"
+#qdir="$HOME/.config/qtile-polybar"
 
 
 # config picom
@@ -17,3 +17,6 @@ xbacklight -set 20
 
 # setting wallpaper
 "$qdir"/scripts/wallpaper
+
+# Lauch polybar
+"$qdir"/scripts/qtile_bar

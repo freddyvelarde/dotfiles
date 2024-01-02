@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#
+eww -c ~/.config/eww/menu open menu --toggle --screen 0

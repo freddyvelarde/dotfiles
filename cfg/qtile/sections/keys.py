@@ -151,42 +151,44 @@ keys = [
         desc="Shutdown Qtile",
     ),
     # Switch between windows
-    Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
+    Key([mod, "control"], "l", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod, "control"], "h", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod, "control"], "j", lazy.layout.down(), desc="Move focus down"),
+    Key([mod, "control"], "k", lazy.layout.up(), desc="Move focus up"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key(
         [mod, "shift"],
-        "Left",
+        "h",
         lazy.layout.shuffle_left(),
         desc="Move window to the left",
     ),
     Key(
         [mod, "shift"],
-        "Right",
+        "l",
         lazy.layout.shuffle_right(),
         desc="Move window to the right",
     ),
-    Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key(
-        [mod, "control"],
-        "Left",
+        [mod, "control", "shift"],
+        "h",
         lazy.layout.grow_left(),
         desc="Grow window to the left",
     ),
     Key(
-        [mod, "control"],
-        "Right",
+        [mod, "control", "shift"],
+        "l",
         lazy.layout.grow_right(),
         desc="Grow window to the right",
     ),
-    Key([mod, "control"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
+    Key(
+        [mod, "control", "shift"], "j", lazy.layout.grow_down(), desc="Grow window down"
+    ),
+    Key([mod, "control", "shift"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key(
         [mod, "control"],
         "Return",

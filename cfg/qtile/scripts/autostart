@@ -19,4 +19,6 @@ xbacklight -set 20
 "$qdir"/scripts/wallpaper
 
 # Lauch polybar
-"$qdir"/scripts/qtile_bar
+RICE_NAME=$(cat "$HOME/.rice.conf")
+
+"$qdir"/scripts/qtile_bar $RICE_NAME

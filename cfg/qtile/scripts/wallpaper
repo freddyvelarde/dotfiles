@@ -8,12 +8,15 @@ num_monitors=$(echo "$connected_monitors" | wc -l)
 # qdir="$HOME/code/qtile"
 qdir="$HOME/.config/qtile"
 
-theme_name=$(cat "$qdir"/theme/theme_name.txt)
+# theme_name=$(cat "$qdir"/theme/theme_name.txt)
+theme_name=$(cat $HOME/.rice.conf)
+
+
 
 
 for ((i=0; i<$num_monitors; i++))
 do
-  nitrogen --head=$i --set-zoom-fill "$qdir"/wallpapers/"$theme_name".jpg
+  nitrogen --head=$i --set-zoom-fill "$qdir/wallpapers/$theme_name/4.jpg"
   # nitrogen --head=$i --set-zoom-fill ~/Downloads/wallpaper.jpg
 done
 

@@ -34,7 +34,9 @@ set_values() {
 
 ## Launch Polybar with selected style
 launch_bar() {
-	bash "$DIR"/launch.sh
+  name=$1
+
+	bash "$DIR"/$name/launch.sh
 }
 
 # Execute functions
@@ -43,4 +45,5 @@ if [[ ! -f "$RFILE" ]]; then
 	set_values
 	touch ${RFILE}
 fi
-launch_bar
+
+launch_bar "$1"

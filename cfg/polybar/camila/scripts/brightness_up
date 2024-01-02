@@ -1,0 +1,2 @@
+#!/bin/bash
+xbacklight -inc 10   # Increase brightness by 10%

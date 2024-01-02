@@ -141,6 +141,7 @@ keys = [
         lazy.restart(),
         lazy.spawn(notify_cmd + ' "Restarting Qtile..."'),
         lazy.spawn(rofi_applets + "wallpaper"),
+        lazy.spawn("~/.config/qtile/scripts/autostart"),
         desc="Restart Qtile",
     ),
     Key(

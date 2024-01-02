@@ -131,7 +131,7 @@ def archzone_widgets():
             mouse_callbacks={"Button1": open_htop},
         ),
         margin(),
-        widget.Systray(),
+        #  widget.Systray(),
         margin(),
         widget.TextBox(
             text="⏻",  # Icon: nf-oct-triangle_left
@@ -271,7 +271,7 @@ def diana_widgets():  # diana widgets
             foreground=colors["btn1"],
         ),
         margin(),
-        widget.Systray(),
+        #  widget.Systray(),
         margin(),
         widget.TextBox(
             text="⏻",  # Icon: nf-oct-triangle_left
@@ -413,10 +413,10 @@ def marianne_widgets():  # marianne widgets
             foreground=colors["background"],
             background=colors["btn1"],
         ),
-        widget.Systray(
-            background=colors["btn1"],
-            foreground=colors["background"],
-        ),
+        #  widget.Systray(
+        #      background=colors["btn1"],
+        #      foreground=colors["background"],
+        #  ),
         widget.TextBox(
             text="⏻",  # Icon: nf-oct-triangle_left
             fontsize=20,

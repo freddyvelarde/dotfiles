@@ -9,16 +9,27 @@ camila = {
     "inactive": "#47717A",
     "active": "#975481",
 }
+#  archzone = {
+#      "background": "#0c0e14",
+#      "foreground": "#78DBAB",
+#      "btn1": "#94CFEA",
+#      "btn2": "#C397EC",
+#      "btn3": "#DE6778",
+#      "btn4": "#EDD4A1",
+#      "btn5": "#91CFAC",
+#      "inactive": "#47717A",
+#      "active": "#975481",
+#  }
 archzone = {
-    "background": "#0c0e14",
-    "foreground": "#78DBAB",
-    "btn1": "#94CFEA",
-    "btn2": "#C397EC",
-    "btn3": "#DE6778",
-    "btn4": "#EDD4A1",
-    "btn5": "#91CFAC",
-    "inactive": "#47717A",
-    "active": "#975481",
+    "background": "#161320",
+    "foreground": "#90D6E3",
+    "btn1": "#DDB6F2",
+    "btn2": "#A6DA95",
+    "btn3": "#B5E8E0",
+    "btn4": "#EE99A0",
+    "btn5": "#EED49F",
+    "inactive": "",
+    "active": "#F2CDCD",
 }
 Diana = {
     "background": "#15122f",

@@ -32,8 +32,8 @@ launch_bar() {
 	# for mon in $(polybar --list-monitors | cut -d":" -f1); do
   #   MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
 	# done
-  polybar --config=~/.config/polybar/camila/config.ini main & 
-  polybar --config=~/.config/polybar/camila/config.ini secondary &
+  polybar --config=~/.config/qtile/bar/camila/config.ini main & 
+  polybar --config=~/.config/qtile/bar/camila/config.ini secondary &
 
 }
 

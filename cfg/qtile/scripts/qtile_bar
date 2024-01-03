@@ -4,9 +4,10 @@
 
 ## Files and Directories
 #DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-DIR="$HOME/.config/polybar"
-SFILE="$HOME/.config/polybar/sistem.ini"
-RFILE="$HOME/.config/polybar/.system"
+#$DIR="$HOME/.config/polybar"
+DIR="$HOME/.config/qtile/bar"
+SFILE="$HOME/.config/qtile/bar/archzone/sistem.ini"
+RFILE="$HOME/.config/qtile/bar/archzone/.system"
 
 ## Get system variable values for various modules
 get_values() {
@@ -36,7 +37,7 @@ set_values() {
 launch_bar() {
   name=$1
 
-	bash "$DIR"/$name/launch.sh
+  bash "$DIR"/$name/launch.sh
 }
 
 # Execute functions

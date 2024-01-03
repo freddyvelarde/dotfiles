@@ -33,4 +33,5 @@ return {
 		end,
 	},
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "decaycs/decay.nvim", as = "decay" },
 }

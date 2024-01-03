@@ -78,6 +78,6 @@ WIDGET_DIR="$HOME/.config/eww"
       eww -c "$WIDGET_DIR/menu" open --toggle menu --screen "$2"
 			;;
 		*)
-			echo "Invalid Option"
+      echo "Invalid Option"
 			;;
 	esac

@@ -16,7 +16,7 @@ theme_name=$(cat $HOME/.rice.conf)
 
 for ((i=0; i<$num_monitors; i++))
 do
-  nitrogen --head=$i --set-zoom-fill "$qdir/wallpapers/$theme_name/4.jpg"
+  nitrogen --head=$i --set-zoom-fill "$qdir/wallpapers/$theme_name/3.jpg"
   # nitrogen --head=$i --set-zoom-fill ~/Downloads/wallpaper.jpg
 done
 

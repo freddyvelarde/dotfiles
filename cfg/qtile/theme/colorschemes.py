@@ -20,6 +20,7 @@ camila = {
 #      "inactive": "#47717A",
 #      "active": "#975481",
 #  }
+pacman = {"btn5": "#78DBAA"}
 archzone = {
     "background": "#161320",
     "foreground": "#90D6E3",

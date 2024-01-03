@@ -1,0 +1,25 @@
+#!/bin/bash 
+
+input=$1
+qdir="$HOME/.config/qtile"
+
+
+case $input in
+  --camila)
+    echo "camila" > "$HOME/.rice.conf"
+    ~/.config/qtile/scripts/autostart
+    ;;
+  --archzone)
+    echo "archzone" > "$HOME/.rice.conf"
+    ~/.config/qtile/scripts/autostart
+    ;;
+  --pacman)
+    echo "pacman" > "$HOME/.rice.conf"
+    ~/.config/qtile/scripts/autostart
+    ;;
+		*)
+    echo "Invalid rice, only --camila, --archzone  and --pacman valid options."
+    ;;
+	esac
+
+

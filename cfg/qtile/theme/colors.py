@@ -1,4 +1,4 @@
-from .colorschemes import Diana, Marianne, archzone, camila
+from .colorschemes import Diana, Marianne, archzone, camila, pacman
 
 # from global_variables import qtile_path
 
@@ -9,6 +9,7 @@ _colorschemes = {
     "Marianne": Marianne,
     "camila": camila,
     "archzone": archzone,
+    "pacman": pacman,
 }
 
 

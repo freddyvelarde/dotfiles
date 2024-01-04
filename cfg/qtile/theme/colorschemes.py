@@ -20,7 +20,17 @@ camila = {
 #      "inactive": "#47717A",
 #      "active": "#975481",
 #  }
-pacman = {"btn5": "#78DBAA"}
+pacman = {
+    "background": "#0c0e14",
+    "foreground": "#78DBAB",
+    "btn1": "#94CFEA",
+    "btn2": "#C397EC",
+    "btn3": "#DE6778",
+    "btn4": "#EDD4A1",
+    "btn5": "#EED4A1",
+    "inactive": "#47717A",
+    "active": "#975481",
+}
 archzone = {
     "background": "#161320",
     "foreground": "#90D6E3",

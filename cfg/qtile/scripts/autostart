@@ -21,4 +21,5 @@ xbacklight -set 20
 # Lauch polybar
 RICE_NAME=$(cat "$HOME/.rice.conf")
 
+pkill -9 polybar
 "$qdir"/scripts/qtile_bar $RICE_NAME

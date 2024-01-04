@@ -29,9 +29,13 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 	# Launch the bar
-	for mon in $(polybar --list-monitors | cut -d":" -f1); do
-		MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
-	done
+	# for mon in $(polybar --list-monitors | cut -d":" -f1); do
+	#   MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
+	# done
+
+  polybar --config=~/.config/qtile/bar/archzone/config.ini main & 
+  polybar --config=~/.config/qtile/bar/archzone/config.ini secondary &
+
 }
 
 # Execute functions

@@ -1,1 +1,1 @@
-require("config.colorschemes.tokyo")
+require("config.colorschemes.catppuccin")

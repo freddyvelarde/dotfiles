@@ -51,3 +51,4 @@ htop
 glib2
 gvfs
 firefox
+polybar

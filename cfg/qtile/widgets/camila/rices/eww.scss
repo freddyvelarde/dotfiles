@@ -1,0 +1,42 @@
+$BLACK ; #444b6a
+$BLUE ; #7da6ff
+$CYAN ; #0db9d7
+$GREEN ; #b9f27c
+$MAGENTA ; #bb9af7
+$RED ; #ff7a93
+$WHITE ; #ACB0D0
+$YELLOW ; #ff9e64
+
+
+altbackground ; #222234
+background ; #161320
+foreground ; #B5E8E0
+btn3 ; #DDB6F2
+btn6 ; #A6DA95
+btn7 ; #90D6E3
+btn4 ; #EED49F
+btn5 ; #EE99A0
+btn2 ; #F2CDCD
+btn1 ; #bb9af7
+text ; #ffffff
+
+
+
+.body {
+  padding: 2 5;
+  background: $background;
+  border-radius: 10px;
+  // border: 1px solid $green;
+}
+
+.btn {
+  background: $orange;
+  color: $background;
+  // border-top: 7px solid $orange;
+  // border-bottom: 7px solid $orange;
+}
+
+.btn:hover {
+  background: $green;
+  color: $background;
+}

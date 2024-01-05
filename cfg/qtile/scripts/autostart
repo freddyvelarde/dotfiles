@@ -22,4 +22,6 @@ xbacklight -set 20
 RICE_NAME=$(cat "$HOME/.rice.conf")
 
 pkill -9 polybar
+pkill -9 eww
+
 "$qdir"/scripts/qtile_bar $RICE_NAME

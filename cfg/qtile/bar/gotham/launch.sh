@@ -33,8 +33,8 @@ launch_bar() {
 	#   MONITOR=$mon polybar -q main -c "$DIR"/config.ini &
 	# done
 
-  polybar --config=~/.config/qtile/bar/archzone/config.ini main & 
-  polybar --config=~/.config/qtile/bar/archzone/config.ini secondary &
+  polybar --config=~/.config/qtile/bar/gotham/config.ini main & 
+  polybar --config=~/.config/qtile/bar/gotham/config.ini secondary &
 
 }
 

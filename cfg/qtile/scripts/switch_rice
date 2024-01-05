@@ -9,8 +9,8 @@ case $input in
     echo "camila" > "$HOME/.rice.conf"
     ~/.config/qtile/scripts/autostart
     ;;
-  --archzone)
-    echo "archzone" > "$HOME/.rice.conf"
+  --gotham)
+    echo "gotham" > "$HOME/.rice.conf"
     ~/.config/qtile/scripts/autostart
     ;;
   --pacman)
@@ -18,7 +18,7 @@ case $input in
     ~/.config/qtile/scripts/autostart
     ;;
 		*)
-    echo "Invalid rice, only --camila, --archzone  and --pacman valid options."
+    echo "Invalid rice, only --camila, --gotham  and --pacman valid options."
     ;;
 	esac
 

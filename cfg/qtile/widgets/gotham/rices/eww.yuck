@@ -24,8 +24,8 @@
 
   (button :cursor "pointer" :class "btn" :onclick "~/.config/qtile/scripts/switch_rice --camila"
       "󰇈   camila")
-    (button :cursor "pointer" :class "btn" :onclick "~/.config/qtile/scripts/switch_rice --archzone"
-      "󰭟   archzone")
+    (button :cursor "pointer" :class "btn" :onclick "~/.config/qtile/scripts/switch_rice --gotham"
+      "󰭟   gotham")
     (button :cursor "pointer" :class "btn" :onclick "~/.config/qtile/scripts/switch_rice --pacman"
       "󰊠   pacman"))
 )

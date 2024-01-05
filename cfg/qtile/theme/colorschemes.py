@@ -31,7 +31,7 @@ pacman = {
     "inactive": "#47717A",
     "active": "#975481",
 }
-archzone = {
+gotham = {
     "background": "#161320",
     "foreground": "#90D6E3",
     "btn1": "#DDB6F2",

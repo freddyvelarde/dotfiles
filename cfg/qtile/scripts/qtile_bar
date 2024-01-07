@@ -8,6 +8,7 @@
 DIR="$HOME/.config/qtile/bar"
 SFILE="$HOME/.config/qtile/bar/archzone/sistem.ini"
 RFILE="$HOME/.config/qtile/bar/archzone/.system"
+RICE_NAME=$(cat "$HOME/.rice.conf")
 
 ## Get system variable values for various modules
 get_values() {
@@ -35,9 +36,8 @@ set_values() {
 
 ## Launch Polybar with selected style
 launch_bar() {
-  name=$1
 
-  bash "$DIR"/$name/launch.sh
+  bash "$DIR"/$RICE_NAME/launch.sh
 }
 
 # Execute functions
@@ -48,4 +48,4 @@ if [[ ! -f "$RFILE" ]]; then
 fi
 
 
-launch_bar "$1"
+launch_bar

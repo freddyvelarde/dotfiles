@@ -1,0 +1,36 @@
+#!/bin/bash
+
+wall_dir="$HOME/.config/qtile/wallpapers/"
+
+file_count=$(ls -l "$wall_dir" | wc -l)
+
+n=$(($file_count - 3)) # where "n" is the number of wallpapers
+
+wallpaper_num=$(cat $wall_dir/num_wallpaper.txt)
+
+# echo $wallpaper_num
+
+case "$1" in 
+  --prev)
+    if [[ $wallpaper_num -ge 2 ]] ; then
+      ((wallpaper_num--))
+      echo $wallpaper_num > "$wall_dir/num_wallpaper.txt"
+    else
+      echo $((n + 1)) > "$wall_dir/num_wallpaper.txt"
+    fi
+    echo 'prev'
+    ;;
+  --next)
+    if [[ $wallpaper_num -le $n ]] ; then
+      ((wallpaper_num++))
+      echo $wallpaper_num > "$wall_dir/num_wallpaper.txt"
+    else
+      echo 1 > "$wall_dir/num_wallpaper.txt"
+    fi
+    ;;
+  *)
+    echo "$1: argument not valid, only --prev and --next valid arguments."
+    ;;
+esac
+
+~/.config/qtile/scripts/wallpaper

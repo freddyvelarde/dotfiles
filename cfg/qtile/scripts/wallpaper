@@ -12,11 +12,13 @@ qdir="$HOME/.config/qtile"
 theme_name=$(cat $HOME/.rice.conf)
 
 
+num_wallpaper=$(cat ~/.config/qtile/wallpapers/num_wallpaper.txt)
 
 
 for ((i=0; i<$num_monitors; i++))
 do
-  nitrogen --head=$i --set-zoom-fill "$qdir/wallpapers/$theme_name/3.jpg"
+  # nitrogen --head=$i --set-zoom-fill "$qdir/wallpapers/$theme_name/3.jpg"
+  nitrogen --head=$i --set-zoom-fill "$qdir/wallpapers/$num_wallpaper.jpg"
   # nitrogen --head=$i --set-zoom-fill ~/Downloads/wallpaper.jpg
 done
 

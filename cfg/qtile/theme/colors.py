@@ -15,7 +15,8 @@ _colorschemes = {
 
 def _theme_name():
     content = ""
-    file_path = os.path.expanduser("~" + "/.rice.conf")
+    #  file_path = os.path.expanduser("~" + "/.rice.conf")
+    file_path = os.path.expanduser("~" + "/.config/qtile/theme/theme_name.txt")
     with open(file_path, "r") as file:
         content = file.read().strip()
     return content

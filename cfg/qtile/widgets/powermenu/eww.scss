@@ -1,0 +1,31 @@
+$background: #11111b;
+$background_alt: #282831;
+$foreground: #b8c1fe;
+$transparent: #00000000;
+
+$warning: #f38ba8;
+$success: #a6da95;
+$lead: #8bd5ca;
+
+* {
+  all: unset;
+}
+
+.powermenu_layout {
+  padding: 10 20px;
+  // background-color: green;
+  background-color: $background;
+  border-radius: 15px;
+  border: 2px solid $foreground;
+}
+
+.btn {
+  background: $foreground;
+  color: $background;
+  padding: 15 25px;
+  font-size: 30px;
+}
+.btn:hover {
+  background: $lead;
+  color: $background_alt;
+}

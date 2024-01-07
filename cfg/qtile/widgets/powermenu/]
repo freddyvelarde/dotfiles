@@ -1,0 +1,66 @@
+(
+  defwidget powermenu_layout []
+    (
+    box 
+        :class "powermenu_layout"
+        :space-evenly "false"
+        :orientation "h"
+        :halign "center"
+  (buttons__)
+    )
+)
+
+(
+  defwidget buttons__ []
+  (
+    box 
+      :class "buttons"
+    :orientation "horizontal"
+      :halign "center"
+      :spacing 10
+      (
+      eventbox
+          :cursor "pointer"
+          (
+            button 
+              :class "powermenu_lock"
+              "lock"
+          )
+      )
+
+      (
+        eventbox
+          :cursor "pointer"
+          (
+            button 
+              :class "powermenu_exit"
+              "restart"
+          )
+      )
+
+      (
+        eventbox
+          :cursor "pointer"
+          (
+            button 
+              :class "powermenu_exit"
+              "exit"
+          )
+      )
+  )
+)
+
+(
+  defwindow powermenu
+    :stacking "fg"
+    :windowtype "normal"
+    :wm-ignore true
+    :geometry (
+      geometry 
+        :width "30%"
+    :height "20%"
+        :anchor "center center"
+    )
+    (powermenu_layout)
+)
+

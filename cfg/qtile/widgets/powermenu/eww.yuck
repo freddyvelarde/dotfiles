@@ -27,6 +27,7 @@
           (
             button 
         :class "btn powermenu_lock"
+        :onclick "betterlockscreen --lock"
         "󰌾"
           )
       )
@@ -37,6 +38,7 @@
     (
             button 
               :class "btn powermenu_exit"
+              :onclick "systemctl reboot"
               ""
           )
       )
@@ -47,6 +49,7 @@
           (
             button 
         :class "btn powermenu_exit"
+              :onclick "systemctl poweroff"
         "󰗼"
           )
       )

@@ -1,13 +1,12 @@
 (
-  defwidget powermenu_layout__test []
-    (
-    box
-    :class "powermenu_layout"
-        :space-evenly "false"
-        :orientation "v"
-        :halign "center"
-     (buttons__)
-    )
+  defwidget powermenu_popup []
+  (
+    eventbox
+    :onhoverlost "eww -c ~/.config/qtile/widgets/powermenu open powermenu --toggle --screen 0"
+    (revealer :transition "slideleft" :reveal "true" :duration "10000ms"
+        (powermenu_layout)
+  )
+)
 )
 
 (
@@ -70,6 +69,7 @@
     :height "0%"
         :anchor "top right"
     )
-    (powermenu_layout)
+    ;(powermenu_layout)
+    (powermenu_popup)
 )
 

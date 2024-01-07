@@ -1,0 +1,86 @@
+(defpoll music_title :interval "1s" "~/.config/qtile/widgets/music-player/scripts/get_current_music")
+(defpoll music_status :interval "1s" "~/.config/qtile/widgets/music-player/scripts/music_status")
+(
+  defwidget player_controls []
+    (box 
+      :class "player_layout"
+      :orientation "h"
+      :halign "center"
+      :spacing 10
+
+      (
+        eventbox 
+          :cursor "pointer"
+          (
+            button 
+              :class "btn"
+              :onclick "playerctl prev"
+              "󰙤"
+          )
+      )
+
+      (
+        eventbox 
+          :cursor "pointer"
+          (
+            button 
+              :class "btn"
+              :onclick "playerctl play-pause"
+
+      {music_status == "true" ? "󰐍" : ""}
+
+          )
+      )
+
+      (
+        eventbox 
+          :cursor "pointer"
+          (
+            button 
+              :class "btn"
+              :onclick "playerctl next"
+              "󰙢"
+          )
+      )
+    )
+)
+
+(
+  defwidget player_layout []
+  (
+    box 
+      
+      :orientation "v"
+      :valign "center"
+    (player_controls)
+    (title_music)
+  )
+
+
+)
+
+(
+  defwidget title_music []
+  (
+    box 
+      (
+        label
+          :class "music_title"
+          :text music_title
+      )
+  )
+)
+
+(
+  defwindow player
+    :stacking "fg"
+    :windowtype "normal"
+    :wm-ignore true
+    :geometry (
+      geometry
+        :width "20%"
+        :height "20px"
+        :anchor "center center"
+      )
+    (player_layout)
+)

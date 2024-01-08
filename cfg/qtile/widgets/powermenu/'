@@ -1,0 +1,30 @@
+.player_layout {
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  background-color: green;
+  // padding: 0.6rem;
+  // min-height: 1rem;
+  border-radius: 0.6rem;
+}
+
+.music_title {
+  background-color: #fff;
+  color: black;
+}
+
+.player_controls {
+  background-color: red;
+}
+
+// .cover {
+//   min-height: 7rem;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   box-shadow: 0 0 0.3rem black;
+//   border-radius: 1.2rem;
+//   min-width: 2rem;
+// }
+//
+.title {
+  min-height: 2rem;
+}

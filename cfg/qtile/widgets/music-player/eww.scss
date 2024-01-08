@@ -1,0 +1,48 @@
+$background: #11111b;
+$background_alt: #282831;
+$foreground: #b8c1fe;
+$transparent: #00000000;
+
+$warning: #f38ba8;
+$success: #a6da95;
+$lead: #8bd5ca;
+
+* {
+  all: unset;
+}
+
+.player_layout {
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  background-color: $background;
+  padding: 0.6rem;
+  // min-height: 10rem;
+  border-radius: 0.6rem;
+  border: 2px solid $foreground;
+
+  .art_img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 5rem;
+    min-width: 5rem;
+    // border-radius: 50px;
+  }
+  .title {
+    background-color: red;
+  }
+  .artist {
+    background-color: blue;
+  }
+}
+
+.player_controls {
+  // background-color: blue;
+  .btn {
+    font-size: 2rem;
+    // color: $background_alt;
+    color: $foreground;
+    // background-color: $foreground;
+    min-width: 3rem;
+    margin: 1rem 0;
+  }
+}

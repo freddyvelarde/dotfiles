@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 status=$(playerctl status 2>/dev/null)
 
 playing=false

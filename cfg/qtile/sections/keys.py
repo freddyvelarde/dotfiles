@@ -27,6 +27,8 @@ keys = [
     Key([mod, "shift"], "return", lazy.spawn(file_manager), desc="Launch file manager"),
     #  Key([mod, "shift"], "e", lazy.spawn(text_editor), desc="Launch text editor"),
     Key([mod, "shift"], "f", lazy.spawn(web_browser), desc="Launch web browser"),
+    #  Key([""], "", lazy.spawn(web_browser), desc="Launch web browser"),
+    Key(["control"], "Escape", lazy.spawn("pkill -9 eww")),
     # Rofi Applets --
     Key(
         [mod],

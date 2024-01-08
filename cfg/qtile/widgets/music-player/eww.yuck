@@ -1,23 +1,29 @@
-(defpoll music_title :interval "1s" "~/.config/qtile/widgets/music-player/scripts/get_current_music")
+(defpoll title :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --title")
+(defpoll album :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --album")
+(defpoll artist :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --artist")
+(defpoll cover :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --artUrl")
 (defpoll music_status :interval "1s" "~/.config/qtile/widgets/music-player/scripts/music_status")
+
 (
   defwidget player_controls []
     (box 
-      :class "player_layout"
+    :class "player_controls"
+    :space-evely true
       :orientation "h"
       :halign "center"
-      :spacing 10
+      :vexpand true
+    :spacing 10
 
       (
         eventbox 
           :cursor "pointer"
-          (
+    (
             button 
               :class "btn"
               :onclick "playerctl prev"
               "󰙤"
           )
-      )
+    )
 
       (
         eventbox 
@@ -25,9 +31,9 @@
           (
             button 
               :class "btn"
-              :onclick "playerctl play-pause"
+              :onclick "~/.config/qtile/widgets/music-player/scripts/play_music"
 
-      {music_status == "true" ? "󰐍" : ""}
+              {music_status == "true" ? "󰐍" : ""}
 
           )
       )
@@ -49,38 +55,91 @@
   defwidget player_layout []
   (
     box 
-      
-      :orientation "v"
+      :orientation "h"
+      :hexpand false
+      :vexpand false
+      :class "player_layout"
       :valign "center"
-    (player_controls)
-    (title_music)
+      :space-evely "false"
+    :spacing 5
+      ;(title)
+      ;(artist)
+    ;(album)
+      (cover)
+      (player_controls)
+    ;(
+    ;  box 
+    ;    :class "art_img"
+    ;    :style "background-image: url('${cover}')"
+    ;)
   )
 
 
 )
 
 (
-  defwidget title_music []
+  defwidget cover []
   (
     box 
+    :class "art_img"
+    :style "background-image: url('${cover}')"
+    ;:style "background-image: url('${cover}')"
+  )
+)
+
+(
+  defwidget album []
+  (
+    box 
+    :class "album"
       (
-        label
-          :class "music_title"
-          :text music_title
+      label
+          :text album
       )
   )
+)
+(
+  defwidget artist []
+  (
+    box 
+      :hexpand false
+      :vexpand false
+      :valign "center"
+      :halign "center"
+      :class "artist"
+      :hexpand false
+      :valign "center"
+
+      (
+        label
+          :text artist
+      )
+  )
+)
+(
+  defwidget title []
+      (
+      label
+         :hexpand true
+          :vexpand true
+    ;          :valign "center"
+;          :halign "center"
+          :class "title"
+          :text title
+      )
 )
 
 (
   defwindow player
     :stacking "fg"
-    :windowtype "normal"
+    :windowtype "dock"
     :wm-ignore true
     :geometry (
       geometry
-        :width "20%"
-        :height "20px"
+        :width "0%"
+        :height "0%"
         :anchor "center center"
       )
+    ;:reserve (struts :distance "40px" :side "top")
     (player_layout)
 )

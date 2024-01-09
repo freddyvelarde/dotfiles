@@ -1,0 +1,99 @@
+(defpoll current_vol :interval "1s" "./scripts/volume --current-vol")
+(defpoll current_brightness :interval "1s" "./scripts/brightness --get")
+
+(
+  defwidget volume_control []
+    (
+    box 
+      :class "control"
+      :orientation "h"
+      :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+        (
+          label 
+            :class "icon"
+            :tooltip "volume"
+            :text "󰕾 "
+        )
+        (
+      eventbox :cursor 'pointer'
+        (scale 
+          :class "scale"
+          :flipped "false" 
+          :orientation "h" 
+          :min 0 
+          :max 101 
+          :value current_vol
+          :tooltip {current_vol + "%"}
+          :active "true"
+          :onchange "./scripts/volume --set-volume {}"
+
+        )
+    )
+    )
+)
+
+(
+  defwidget brightness_control []
+    (
+      box 
+       :class "control"
+       :orientation "h"
+       :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+      
+        (
+          label
+           :class "icon"
+           :halign "center"
+           :valign "center"
+           :tooltip "brightness"
+           :text "󰃞 "
+    )
+        (
+          eventbox
+            :cursor "pointer"
+        (
+         scale 
+           :class "scale"
+           :flipped "false" 
+           :orientation "h" 
+           :min 0 
+           :max 101 
+           :value current_brightness
+           :tooltip {current_brightness + "%"}
+           :active "true"
+           :onchange "./scripts/brightness --set {}"
+      )
+          
+        )
+
+      )
+)
+
+(
+  defwidget system_layout []
+    (
+      box 
+    :class "system_layout"
+        :orientation "v"
+        :valign "center"
+        :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+        (brightness_control)
+        (volume_control)
+    )
+)
+
+
+
+(
+  defwindow system_control
+    :wm-ignore true
+    :stacking "fg"
+    :windowtype "normal"
+    :geometry (
+      geometry
+        :width "10%"
+        :height "0%"
+        :anchor "center center"
+    )
+    (system_layout)
+)

@@ -1,5 +1,6 @@
 $background: #11111b;
 $background_alt: #282831;
+$background_alt: #1c1c26;
 $foreground: #b8c1fe;
 $transparent: #00000000;
 
@@ -13,9 +14,8 @@ $lead: #8bd5ca;
 
 .player_layout {
   font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
-  background-color: $background;
+  background-color: $background_alt;
   padding: 0.6rem;
-  // min-height: 10rem;
   border-radius: 0.6rem;
   border: 2px solid $foreground;
 
@@ -25,23 +25,22 @@ $lead: #8bd5ca;
     background-size: cover;
     min-height: 5rem;
     min-width: 5rem;
-    // border-radius: 50px;
   }
   .title {
-    background-color: red;
+    color: #ffffff;
   }
   .artist {
-    background-color: blue;
+    color: $warning;
+  }
+  .album {
+    color: $warning;
   }
 }
 
 .player_controls {
-  // background-color: blue;
   .btn {
     font-size: 2rem;
-    // color: $background_alt;
     color: $foreground;
-    // background-color: $foreground;
     min-width: 3rem;
     margin: 1rem 0;
   }

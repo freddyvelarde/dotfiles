@@ -1,0 +1,17 @@
+#!/bin/bash
+
+firefox_id=$(pgrep -o "firefox" | awk '{print $1}')
+
+# Get the sink input ID for the Firefox application
+sink_input_id=$(pactl list sink-inputs | grep "application.process.id = $firefox_id" -B 5 | awk '/Sink Input/ {print $3}')
+
+# Get the volume for the sink input ID
+#volume_percentage=$(pactl list sink-inputs | grep -A 15 "Sink Input #$sink_input_id" | grep "Volume:" | awk '{print $5}' | tr -d '%')
+
+echo "Firefox volume percentage: $volume_percentage%"
+
+# echo "sink_input_id: $sink_input_id"
+# echo "new_volume: $new_volume%"
+#
+# pactl set-sink-input-volume $sink_input_id $new_volume%
+#

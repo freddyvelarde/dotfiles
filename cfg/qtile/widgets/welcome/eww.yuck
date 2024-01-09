@@ -1,0 +1,47 @@
+(defpoll whoami :interval "3600s" "~/.config/qtile/widgets/welcome/scripts/whoami")
+
+(
+  defwidget header []
+    (
+      label
+        :halign "start"
+        :class "header" 
+        :text whoami
+    )
+)
+
+(
+  defwidget avatar []
+  (
+    label 
+      :class "avatar"
+      :halign "center"
+      :text "󰊠"
+  )
+)
+
+(
+  defwidget welcome_layout []
+    (
+      box
+        :class "welcome_layout"
+        (avatar)
+        (header)
+    )
+)
+
+(
+  defwindow welcome 
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore true
+    :geometry (
+      geometry 
+        :width "25%"
+        :height "0%"
+        :x "-10px"
+        :y "40px"
+        :anchor "top right"
+      )
+    (welcome_layout)
+)

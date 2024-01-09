@@ -10,7 +10,7 @@
     :class "player_controls"
     :space-evely true
       :orientation "h"
-      :halign "center"
+    :halign "center"
       :vexpand true
     :spacing 10
 
@@ -20,7 +20,7 @@
     (
             button 
               :class "btn"
-              :onclick "playerctl prev"
+              :onclick "playerctl previous"
               "󰙤"
           )
     )
@@ -51,30 +51,21 @@
     )
 )
 
+
 (
-  defwidget player_layout []
+  defwidget player_header []
   (
-    box 
+    box
+      :class "player_header"
       :orientation "h"
       :hexpand false
       :vexpand false
-      :class "player_layout"
       :valign "center"
       :space-evely "false"
-    :spacing 5
-      ;(title)
-      ;(artist)
-    ;(album)
+      :spacing 5
       (cover)
       (player_controls)
-    ;(
-    ;  box 
-    ;    :class "art_img"
-    ;    :style "background-image: url('${cover}')"
-    ;)
   )
-
-
 )
 
 (
@@ -92,9 +83,10 @@
   (
     box 
     :class "album"
+      :halign "end"
       (
       label
-          :text album
+      :text {"album: " + album} 
       )
   )
 )
@@ -105,14 +97,14 @@
       :hexpand false
       :vexpand false
       :valign "center"
-      :halign "center"
+      :halign "end"
       :class "artist"
       :hexpand false
       :valign "center"
 
       (
         label
-          :text artist
+          :text {"artist: " + artist} 
       )
   )
 )
@@ -121,12 +113,40 @@
       (
       label
          :hexpand true
-          :vexpand true
-    ;          :valign "center"
-;          :halign "center"
-          :class "title"
-          :text title
+         :vexpand true
+         :halign "end"
+         :class "title"
+         :text title
       )
+)
+
+(
+  defwidget song_info []
+  (
+    box
+      :class "song_info"
+      :orientation "v"
+      :valign "start"
+      (title)
+      (artist)
+      (album)
+  )
+)
+
+(
+  defwidget player_layout []
+  (
+    box 
+      :orientation "v"
+      :hexpand false
+      :vexpand false
+      :class "player_layout"
+      :valign "center"
+      :space-evely "false"
+      :spacing 5
+      (player_header)
+      (song_info)
+  )
 )
 
 (
@@ -141,5 +161,5 @@
         :anchor "center center"
       )
     ;:reserve (struts :distance "40px" :side "top")
-    (player_layout)
+(player_layout)
 )

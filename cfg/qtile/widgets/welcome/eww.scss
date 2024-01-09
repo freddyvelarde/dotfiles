@@ -1,0 +1,33 @@
+$background: #11111b;
+// $background_alt: #282831;
+$background_alt: #1c1c26;
+$foreground: #b8c1fe;
+$transparent: #00000000;
+
+$warning: #f38ba8;
+$success: #a6da95;
+$lead: #8bd5ca;
+
+* {
+  all: unset;
+}
+
+.welcome_layout {
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  padding: 10px 0px;
+  background-color: $background_alt;
+  border-radius: 20px;
+  border: 2px solid $foreground;
+  .avatar {
+    margin: 0 10px;
+    min-width: 60px;
+    min-height: 60px;
+    background-color: $foreground;
+    color: $background;
+    font-size: 30px;
+    border-radius: 50%;
+  }
+  .header {
+    font-size: 16px;
+  }
+}

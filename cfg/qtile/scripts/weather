@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# latitude and longitude of your city
+lat="-16.50"
+long="-68.15"
 
 encode_to_url_format() {
     echo "$1" | sed 's/ /%20/g'
@@ -8,17 +11,19 @@ check_if_empty() {
 	[[ -z "$1" ]] && echo "0" || echo "$1"
 }
 
-KEY="8b05d62206f459e1d298cbe5844d7d87"
+# please do not stole or use my api key
+# you can follow this tutorial for get your own api key for free: https://www.youtube.com/watch?v=MIYQR-Ybrn4&ab_channel=GreatStack
+KEY="24948c9111728ea52752279ac8ad9719"
 CITY="La Paz, Bolivia City"
-CITYN=$(encode_to_url_format "$CITY")
 UNITS="metric" # Available "metric" "imperial"
-WEATHER=$(curl -sf "api.openweathermap.org/data/2.5/weather?q=$CITYN&appid=$KEY&units=$UNITS")
-#WEATHER=$(curl -sf "https://api.openweathermap.org/data/3.0/onecall?lat=-16.5000000&lon=-68.1500000&appid=$KEY")
+URL="https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$long&appid=$KEY&units=$UNITS"
+WEATHER=$(curl -sf "$URL")
 
 WEATHER_DESC=$(echo "$WEATHER" | jq -r ".weather[0].main")
 WEATHER_TEMP=$(echo "$WEATHER" | jq ".main.temp" | cut -d "." -f 1)
 WEATHER_ICON_CODE=$(echo "$WEATHER" | jq -r ".weather[].icon" | head -1)
 WEATHER_FEELS_LIKE=$(echo "$WEATHER" | jq ".main.feels_like" | cut -d "." -f 1)
+CITY_NAME=$(echo "$WEATHER" | jq -r ".name")
 WEATHER_ICON=""
 WEATHER_HEX=""
 
@@ -125,7 +130,7 @@ case $1 in
 		echo "$WEATHER"
 		;;
 	"city")
-		echo "$CITY"
+    echo "$CITY_NAME"
 		;;
 	"wmodule")
 		echo $WEATHER_ICON "$WEATHER_TEMP"°

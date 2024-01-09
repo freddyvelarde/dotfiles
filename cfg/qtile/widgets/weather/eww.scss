@@ -1,0 +1,25 @@
+$background: #11111b;
+$background_alt: #282831;
+$background_alt: #1c1c26;
+$foreground: #b8c1fe;
+$transparent: #00000000;
+
+$warning: #f38ba8;
+$success: #a6da95;
+$lead: #8bd5ca;
+
+.weather_layout {
+  border-radius: 10px;
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  background: $background_alt;
+  min-width: 200px;
+  .temp_info {
+    font-size: 2.5rem;
+  }
+  .cloud_icon {
+    font-size: 2rem;
+  }
+  .city_info {
+    font-size: 1.5rem;
+  }
+}

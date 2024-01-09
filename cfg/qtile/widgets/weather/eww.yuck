@@ -1,0 +1,73 @@
+(defpoll icon_cloud :interval "900s" "~/.config/qtile/scripts/weather icon")
+(defpoll current_temp :interval "900s" "~/.config/qtile/scripts/weather current_temp")
+(defpoll feels_like :interval "900s" "~/.config/qtile/scripts/weather feels_like")
+(defpoll city_name :interval "900s" "~/.config/qtile/scripts/weather city")
+(defpoll hex_color :interval "900s" "~/.config/qtile/scripts/weather hex")
+
+
+(
+  defwidget cloud_layout []
+    (
+      label
+        :class "cloud_icon"
+        :style "color: ${hex_color}"
+        :halign "end"
+        :text {icon_cloud + "  "}
+    )
+)
+
+(
+  defwidget temp_info []
+    (
+      label
+        :class "temp_info"
+        :halign "start"
+        :text {current_temp + "°C"}
+    )
+)
+
+(
+  defwidget weather_info []
+    (
+      box
+        :class ""
+        (cloud_layout)
+        (temp_info)
+    )
+)
+
+(
+  defwidget city_info []
+    (
+      label 
+        :class "city_info"
+        :halign "center"
+    :text  {city_name + " city"}
+    )
+)
+
+
+(
+  defwidget weather_layout []
+    (
+      box
+        :class "weather_layout"
+        :orientation "v"
+        (weather_info)
+        (city_info)
+    )
+)
+
+(
+  defwindow weather
+    :wm-ignore true
+    :stacking "fg"
+    :windowtype "normal"
+    :geometry (
+    geometry
+    :width "0%"
+        :height "0%"
+        :anchor "center center"
+    )
+    (weather_layout)
+)

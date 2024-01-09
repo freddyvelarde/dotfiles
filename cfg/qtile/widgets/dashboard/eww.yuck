@@ -353,6 +353,18 @@
     )
 )
 
+(
+  defwidget dashboard_popup []
+    (
+    eventbox
+      :onhoverlost "eww -c ~/.config/qtile/widgets/dashboard/ open dashboard --toggle"
+      (
+       revealer :transition "slideleft" :reveal "true" :duration "10000ms"
+       (dashboard_layout)
+      )
+  )
+)
+
 
 (
   defwindow dashboard
@@ -367,5 +379,5 @@
         :height "0%"
         :anchor "top left"
     )
-    (dashboard_layout)
+    (dashboard_popup)
 )

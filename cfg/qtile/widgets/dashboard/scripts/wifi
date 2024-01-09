@@ -1,0 +1,13 @@
+#!/bin/bash
+
+icon=""
+
+if iwconfig 2>&1 | grep -q "ESSID:"; then
+    icon=""
+else
+    icon="󰖪"
+fi
+
+echo -n "$icon"
+echo
+

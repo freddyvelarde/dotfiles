@@ -122,6 +122,17 @@ $lead: #8bd5ca;
 .system_layout {
   background-color: green;
 }
+// buttons
+.btn__ {
+  color: $background;
+  background-color: $foreground;
+  margin: 0 30px;
+  min-height: 4rem;
+  // min-width: 3rem;
+  font-size: 2rem;
+  // border: 1px solid red;
+  border-radius: 50%;
+}
 
 .dashboard {
   background-color: $background;

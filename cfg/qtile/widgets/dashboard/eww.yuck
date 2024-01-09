@@ -332,6 +332,56 @@
     )
 )
 
+(defpoll wifi_icon :interval "2s" "./scripts/wifi")
+;;;;
+(
+  defwidget buttons []
+    (
+      box
+        :orientation "h"
+    
+        (
+          eventbox :cursor "pointer"
+            (
+              button 
+                :class "btn__"
+                :tooltip "screenshot"
+                :onclick "~/.config/qtile/scripts/rofi_screenshot"
+                ""
+            )
+        )
+        (
+          eventbox :cursor "pointer"
+            (
+              button 
+                :class "btn__"
+                :onclick '~/.config/qtile/scripts/network_menu'
+                {wifi_icon + " "}
+            )
+        )
+        (
+          eventbox :cursor "pointer"
+            (
+              button 
+                :class "btn__"
+                :tooltip "firefox"
+                :onclick "notify-send 'opening firefox'; firefox &"
+                ""
+            )
+        )
+        (
+          eventbox :cursor "pointer"
+            (
+              button 
+                :class "btn__"
+                :tooltip "kitty"
+                :onclick "notify-send 'opening kitty terminal'; kitty --directory ~ &"
+                ""
+            )
+        )
+    )
+)
+
 (
   defwidget dashboard_layout []
     (
@@ -347,6 +397,7 @@
         (welcome_layout)
         (weather_layout)
       )
+        (buttons)
         (system_layout)
         (player_layout)
     )
@@ -359,7 +410,7 @@
       :onhoverlost "eww -c ~/.config/qtile/widgets/dashboard/ open dashboard --toggle"
       (
        revealer :transition "slideleft" :reveal "true" :duration "10000ms"
-    (dashboard_layout)
+       (dashboard_layout)
       )
   )
 )

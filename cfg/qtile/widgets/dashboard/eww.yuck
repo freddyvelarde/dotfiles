@@ -333,6 +333,7 @@
 )
 
 (defpoll wifi_icon :interval "2s" "./scripts/wifi")
+
 ;;;;
 (
   defwidget buttons []

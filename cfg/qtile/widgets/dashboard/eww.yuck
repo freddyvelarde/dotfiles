@@ -128,7 +128,7 @@
           (
             button 
               :class "btn"
-              :onclick "./scripts/play_music"
+        :onclick "./scripts/play_music"
 
               {music_status == "true" ? "" : "󰐍"}
 
@@ -169,6 +169,7 @@
   (
     box 
     :class "art_img"
+    :tooltip {title + "-" + artist}
     :style "background-image: url('${cover}')"
     ;:style "background-image: url('${cover}')"
   )

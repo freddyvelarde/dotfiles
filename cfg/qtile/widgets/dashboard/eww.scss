@@ -1,15 +1,14 @@
 $background: #11111b;
-// $background_alt: #282831;
 $background_alt: #1c1c26;
 $foreground: #b8c1fe;
 $transparent: #00000000;
-
 $warning: #f38ba8;
 $success: #a6da95;
 $lead: #8bd5ca;
 
 * {
   all: unset;
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
 }
 
 .welcome_weather {
@@ -21,10 +20,7 @@ $lead: #8bd5ca;
 .welcome_layout {
   font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
   padding: 10px 0px;
-  // background-color: $background_alt;
-  // background-color: red;
   border-radius: 20px;
-  // border: 2px solid $foreground;
   .avatar {
     margin: 0px 10px;
     min-width: 60px;
@@ -38,20 +34,10 @@ $lead: #8bd5ca;
     font-size: 16px;
   }
 }
-$background: #11111b;
-$background_alt: #282831;
-$background_alt: #1c1c26;
-$foreground: #b8c1fe;
-$transparent: #00000000;
-
-$warning: #f38ba8;
-$success: #a6da95;
-$lead: #8bd5ca;
 
 .weather_layout {
   border-radius: 10px;
   font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
-  // background: $background_alt;
   min-width: 200px;
   .temp_info {
     font-size: 2.5rem;
@@ -63,34 +49,18 @@ $lead: #8bd5ca;
     font-size: 1.5rem;
   }
 }
-$background: #11111b;
-$background_alt: #282831;
-$background_alt: #1c1c26;
-$foreground: #b8c1fe;
-$transparent: #00000000;
-
-$warning: #f38ba8;
-$success: #a6da95;
-$lead: #8bd5ca;
-
-* {
-  all: unset;
-}
 
 .player_layout {
   margin-top: 10px;
-  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
   background-color: $background;
   padding: 0.6rem;
   border-radius: 20px;
-  // border: 2px solid $foreground;
 
   .art_img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 6rem;
-    // min-width: 5rem;
   }
   .title {
     color: #ffffff;
@@ -110,19 +80,6 @@ $lead: #8bd5ca;
     min-width: 3rem;
     margin: 1rem 0;
   }
-}
-$background: #11111b;
-$background_alt: #282831;
-$background_alt: #1c1c26;
-$foreground: #b8c1fe;
-$transparent: #00000000;
-
-$warning: #f38ba8;
-$success: #a6da95;
-$lead: #8bd5ca;
-
-* {
-  all: unset;
 }
 
 .control {

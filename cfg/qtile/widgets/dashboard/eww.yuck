@@ -169,9 +169,7 @@
   (
     box 
     :class "art_img"
-    :tooltip {title + "-" + artist}
     :style "background-image: url('${cover}')"
-    ;:style "background-image: url('${cover}')"
   )
 )
 
@@ -337,10 +335,10 @@
 (
   defwidget dashboard_layout []
     (
-      box :class "dashboard"
+    box :class "dashboard"
           :orientation "v"
           :halign "center"
-          :valign "center"
+    :valign "center"
           :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
       
       (
@@ -361,7 +359,7 @@
       :onhoverlost "eww -c ~/.config/qtile/widgets/dashboard/ open dashboard --toggle"
       (
        revealer :transition "slideleft" :reveal "true" :duration "10000ms"
-       (dashboard_layout)
+    (dashboard_layout)
       )
   )
 )
@@ -376,7 +374,7 @@
       geometry
         :x "1%"
         :y "39px"
-        :width "30%"
+        :width "36%"
         :height "0%"
         :anchor "top left"
     )

@@ -126,6 +126,7 @@ $lead: #8bd5ca;
 .dashboard {
   background-color: $background;
   padding: 7px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid $foreground;
+  min-width: 460px;
 }

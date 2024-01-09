@@ -1,8 +1,8 @@
-(defpoll icon_cloud :interval "900s" "~/.config/qtile/scripts/weather icon")
-(defpoll current_temp :interval "900s" "~/.config/qtile/scripts/weather current_temp")
-(defpoll feels_like :interval "900s" "~/.config/qtile/scripts/weather feels_like")
-(defpoll city_name :interval "900s" "~/.config/qtile/scripts/weather city")
-(defpoll hex_color :interval "900s" "~/.config/qtile/scripts/weather hex")
+(defpoll icon_cloud :interval "900s" "./scripts/weather icon")
+(defpoll current_temp :interval "900s" "./scripts/weather current_temp")
+(defpoll feels_like :interval "900s" "./scripts/weather feels_like")
+(defpoll city_name :interval "900s" "./scripts/weather city")
+(defpoll hex_color :interval "900s" "./scripts/weather hex")
 
 
 (

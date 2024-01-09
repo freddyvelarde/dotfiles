@@ -1,0 +1,81 @@
+#!/bin/bash
+
+
+normalize_title () {
+  title_song="$1"
+  title_song_normalized=""
+  title_song="${title_song//\(*\)}"
+  title_song="${title_song//\[*\]}"
+  title_song="${title_song//\{*\}}"
+
+  title_song="${title_song#"${title_song%%[![:space:]]*}"}"
+  title_song="${title_song%"${title_song##*[![:space:]]}"}"
+
+  # Remove extra spaces
+  title_song="${title_song//  / }"
+  string_length=${#title_song}
+
+  if [[ "$string_length" -gt 34 ]]; then
+    n=1
+    for ((i = 0; i < ${#title_song}; i++)); do
+      current_char="${title_song:i:1}"
+      if [[ n -le 35 ]]; then
+        title_song_normalized+=$current_char
+      fi
+      ((n++))
+    done
+    title_song_normalized="$title_song_normalized..."
+  else
+    title_song_normalized="$title_song"
+  fi
+
+  title_song_normalized="${title_song_normalized//\(*\)}"
+
+  # Remove extra spaces
+  title_song_normalized="${title_song_normalized//  / }"
+
+  echo -n "$title_song_normalized"
+}
+
+
+case "$1" in
+  --title)
+      title=$(playerctl metadata spotify --format "{{ title }}" 2>/dev/null)
+      if [[ -z "$title" ]]; then
+        echo -n "No Title"
+      else
+        # echo -n "$title"
+        normalize_title "$title"
+      fi
+    ;;
+  --album)
+      album=$(playerctl metadata spotify --format "{{ album }}" 2>/dev/null)
+      if [[ -z "$album" ]]; then
+        echo -n "Unknown"
+      else
+        echo -n "$album"
+      fi
+    ;;
+  --artist)
+      artist=$(playerctl metadata spotify --format "{{ artist }}" 2>/dev/null)
+      if [[ -z "$artist" ]]; then
+        echo -n "Unknown"
+      else
+        echo -n "$artist"
+      fi
+    ;;
+  --artUrl)
+    artUrl=$(playerctl metadata | awk '/mpris:artUrl/ {print $3}') 
+      if [[ -z "$artUrl" ]]; then
+        echo -n "$HOME/.config/qtile/widgets/music-player/assets/artImg_not_found.jpg"
+      else
+        echo -n "$artUrl"
+      fi
+    ;;
+  *)
+  ;;
+esac
+
+# Add a newline character at the end
+echo
+

@@ -1,0 +1,370 @@
+(defpoll whoami :interval "3600s" "./scripts/whoami")
+
+(
+  defwidget header []
+    (
+      label
+        :halign "start"
+        :class "header" 
+        :text whoami
+    )
+)
+
+(
+  defwidget avatar []
+  (box
+  
+  (
+    label 
+      :class "avatar"
+      :halign "center"
+      :text "󰊠"
+  )
+  )
+)
+
+(
+  defwidget welcome_layout []
+    (
+      box
+        :class "welcome_layout"
+        ;:spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+        :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+  (avatar)
+        (header)
+    )
+)
+
+(defpoll icon_cloud :interval "900s" "./scripts/weather icon")
+(defpoll current_temp :interval "900s" "./scripts/weather current_temp")
+(defpoll feels_like :interval "900s" "./scripts/weather feels_like")
+(defpoll city_name :interval "900s" "./scripts/weather city")
+(defpoll hex_color :interval "900s" "./scripts/weather hex")
+
+
+(
+  defwidget cloud_layout []
+    (
+      label
+        :class "cloud_icon"
+        :style "color: ${hex_color}"
+        :halign "end"
+        :text {icon_cloud + "  "}
+    )
+)
+
+(
+  defwidget temp_info []
+    (
+      label
+        :class "temp_info"
+        :halign "start"
+        :text {current_temp + "°C"}
+    )
+)
+
+(
+  defwidget weather_info []
+    (
+      box
+        :class ""
+        (cloud_layout)
+        (temp_info)
+    )
+)
+
+(
+  defwidget city_info []
+    (
+      label 
+        :class "city_info"
+        :halign "center"
+        :text  {city_name + " city"}
+    )
+)
+
+
+(
+  defwidget weather_layout []
+    (
+      box
+        :class "weather_layout"
+        :orientation "v"
+        (weather_info)
+        (city_info)
+    )
+)
+
+(defpoll title :interval "1s" "./scripts/data_music --title")
+(defpoll album :interval "1s" "./scripts/data_music --album")
+(defpoll artist :interval "1s" "./scripts/data_music --artist")
+(defpoll cover :interval "1s" "./scripts/data_music --artUrl")
+(defpoll music_status :interval "1s" "./scripts/music_status")
+
+(
+  defwidget player_controls []
+    (box 
+    :class "player_controls"
+    :space-evely true
+      :orientation "h"
+    :halign "center"
+      :vexpand true
+    :spacing 10
+
+      (
+        eventbox 
+          :cursor "pointer"
+    (
+            button 
+              :class "btn"
+              :onclick "playerctl previous"
+              "󰙤"
+          )
+    )
+
+      (
+        eventbox 
+          :cursor "pointer"
+          (
+            button 
+              :class "btn"
+              :onclick "./scripts/play_music"
+
+              {music_status == "true" ? "" : "󰐍"}
+
+          )
+      )
+
+      (
+        eventbox 
+          :cursor "pointer"
+          (
+            button 
+              :class "btn"
+              :onclick "playerctl next"
+              "󰙢"
+          )
+      )
+    )
+)
+
+
+(
+  defwidget player_header []
+  (
+    box
+      :class "player_header"
+      :orientation "h"
+      :hexpand false
+      :vexpand false
+      :valign "center"
+      :space-evely "false"
+      :spacing 5
+      (cover)
+      (player_controls)
+  )
+)
+
+(
+  defwidget cover []
+  (
+    box 
+    :class "art_img"
+    :style "background-image: url('${cover}')"
+    ;:style "background-image: url('${cover}')"
+  )
+)
+
+(
+  defwidget album []
+  (
+    box 
+    :class "album"
+      :halign "end"
+      (
+      label
+      :text {"album: " + album} 
+      )
+  )
+)
+(
+  defwidget artist []
+  (
+    box 
+      :hexpand false
+      :vexpand false
+      :valign "center"
+      :halign "end"
+      :class "artist"
+      :hexpand false
+      :valign "center"
+
+      (
+        label
+          :text {"artist: " + artist} 
+      )
+  )
+)
+(
+  defwidget title []
+      (
+      label
+         :hexpand true
+         :vexpand true
+         :halign "end"
+         :class "title"
+         :text title
+      )
+)
+
+(
+  defwidget song_info []
+  (
+    box
+      :class "song_info"
+      :orientation "v"
+      :valign "start"
+      (title)
+      (artist)
+      (album)
+  )
+)
+
+(
+  defwidget player_layout []
+  (
+    box 
+      :orientation "v"
+      :hexpand false
+      :vexpand false
+      :class "player_layout"
+      :valign "center"
+      :space-evely "false"
+      :spacing 5
+      (player_header)
+      (song_info)
+  )
+)
+
+(defpoll current_vol :interval "1s" "./scripts/volume --current-vol")
+(defpoll current_brightness :interval "1s" "./scripts/brightness --get")
+
+(
+  defwidget volume_control []
+    (
+    box 
+      :class "control"
+      :orientation "h"
+      :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+        (
+          label 
+            :class "icon"
+            :tooltip "volume"
+            :text "󰕾 "
+        )
+        (
+      eventbox :cursor 'pointer'
+        (scale 
+          :class "scale"
+          :flipped "false" 
+          :orientation "h" 
+          :min 0 
+          :max 101 
+          :value current_vol
+          :tooltip {current_vol + "%"}
+          :active "true"
+          :onchange "./scripts/volume --set-volume {}"
+
+        )
+    )
+    )
+)
+
+(
+  defwidget brightness_control []
+    (
+      box 
+       :class "control"
+       :orientation "h"
+       :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+      
+        (
+          label
+           :class "icon"
+           :halign "center"
+           :valign "center"
+           :tooltip "brightness"
+           :text "󰃞 "
+    )
+        (
+          eventbox
+            :cursor "pointer"
+        (
+         scale 
+           :class "scale"
+           :flipped "false" 
+           :orientation "h" 
+           :min 0 
+           :max 101 
+           :value current_brightness
+           :tooltip {current_brightness + "%"}
+           :active "true"
+           :onchange "./scripts/brightness --set {}"
+      )
+          
+        )
+
+      )
+)
+
+(
+  defwidget system_layout []
+    (
+      box 
+        :class "system_layout"
+        :orientation "v"
+        :valign "center"
+        :halign "center"
+        (brightness_control)
+        (volume_control)
+    )
+)
+
+(
+  defwidget dashboard_layout []
+    (
+      box :class "dashboard"
+          :orientation "v"
+          :halign "center"
+          :valign "center"
+          :spacing 0 :space-evenly "false" :vexpand "false" :hexpand "false"
+      
+      (
+      box
+      :class "welcome_weather"
+        (welcome_layout)
+        (weather_layout)
+      )
+        (system_layout)
+        (player_layout)
+    )
+)
+
+
+(
+  defwindow dashboard
+    :wm-ignore true
+    :stacking "fg"
+    :windowtype "normal"
+    :geometry (
+      geometry
+        :x "1%"
+        :y "39px"
+        :width "30%"
+        :height "0%"
+        :anchor "top left"
+    )
+    (dashboard_layout)
+)
+
+

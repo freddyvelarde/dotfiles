@@ -1,0 +1,6 @@
+#!/bin/bash
+
+name=$(whoami)
+
+
+echo -n "Welcome, $name"

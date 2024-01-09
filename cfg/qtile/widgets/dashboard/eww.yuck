@@ -154,13 +154,12 @@
   (
     box
       :class "player_header"
-      :orientation "h"
+      :orientation "v"
       :hexpand false
       :vexpand false
       :valign "center"
       :space-evely "false"
       :spacing 5
-      (cover)
       (player_controls)
   )
 )
@@ -234,15 +233,19 @@
   defwidget player_layout []
   (
     box 
-      :orientation "v"
+      :orientation "h"
       :hexpand false
       :vexpand false
       :class "player_layout"
       :valign "center"
       :space-evely "false"
       :spacing 5
+      (cover)
+      (
+      box :orientation "v"
       (player_header)
       (song_info)
+    )
   )
 )
 
@@ -366,5 +369,3 @@
     )
     (dashboard_layout)
 )
-
-

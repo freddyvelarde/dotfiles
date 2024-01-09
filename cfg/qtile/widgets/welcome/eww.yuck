@@ -1,4 +1,4 @@
-(defpoll whoami :interval "3600s" "~/.config/qtile/widgets/welcome/scripts/whoami")
+(defpoll whoami :interval "3600s" "./scripts/whoami")
 
 (
   defwidget header []

@@ -1,8 +1,8 @@
-(defpoll title :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --title")
-(defpoll album :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --album")
-(defpoll artist :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --artist")
-(defpoll cover :interval "1s" "~/.config/qtile/widgets/music-player/scripts/data_music --artUrl")
-(defpoll music_status :interval "1s" "~/.config/qtile/widgets/music-player/scripts/music_status")
+(defpoll title :interval "1s" "./scripts/data_music --title")
+(defpoll album :interval "1s" "./scripts/data_music --album")
+(defpoll artist :interval "1s" "./scripts/data_music --artist")
+(defpoll cover :interval "1s" "./scripts/data_music --artUrl")
+(defpoll music_status :interval "1s" "./scripts/music_status")
 
 (
   defwidget player_controls []
@@ -31,9 +31,9 @@
           (
             button 
               :class "btn"
-              :onclick "~/.config/qtile/widgets/music-player/scripts/play_music"
+              :onclick "./scripts/play_music"
 
-              {music_status == "true" ? "󰐍" : ""}
+              {music_status == "true" ? "" : "󰐍"}
 
           )
       )

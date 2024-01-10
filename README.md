@@ -9,6 +9,7 @@ This repo contains my own code and code from others repositories like:
 ## Disclaimer - Warning!!!
 
 > All my config code is for my needs. I use two monitors: 1366x768, 1440x900
+> If you like this config or you will use some of my code, please give this repo a star :).
 
 Main monitor:
 ![monitor 0](./assets/screenshots/monitor0.png)

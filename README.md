@@ -24,6 +24,7 @@ External monitor:
 - Editor: _Neovim_ (My own config)
 - App launcher: _Rofi_
 - Main Font: _Jetbrains Mono_
+- Bar: _Polybar_
 - Widgets library: _Eww_
 
 ## I use VIM btw

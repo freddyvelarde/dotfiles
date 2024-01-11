@@ -22,7 +22,7 @@ work_time=$(( minute * 25 ))
 break_time=$(( minute * 5 ))
 long_break_time=$(( minute * 25 ))
 
-if [ -e "$seconds_file" ]; then
+if [ ! -e "$seconds_file" ]; then
   echo $work_time > $seconds_file
 fi
 

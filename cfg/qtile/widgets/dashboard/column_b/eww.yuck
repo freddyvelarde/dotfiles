@@ -43,7 +43,7 @@
                           (
                             button 
                               :class "btn" 
-                              :onclick "./scripts/pomodoro --reset"
+                :onclick "./scripts/pomodoro --reset"
                               "reset"
                           )
                         )

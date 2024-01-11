@@ -2,6 +2,8 @@
 WIDGET_PATH="$HOME/.config/qtile/widgets/dashboard/column_b"
 
 seconds_file="$WIDGET_PATH/scripts/seconds.txt"
+
+
 process_name="pomodoro"
 countdown=$(cat "$seconds_file")
 number_process=$(pgrep -f "$process_name --start")
@@ -19,8 +21,10 @@ minute=60
 work_time=$(( minute * 25 ))
 break_time=$(( minute * 5 ))
 long_break_time=$(( minute * 25 ))
-#
-# echo "$work_time"
+
+if [ -e "$seconds_file" ]; then
+  echo $work_time > $seconds_file
+fi
 
 case "$1" in
   --start)
@@ -36,9 +40,10 @@ case "$1" in
         if [[ $countdown -eq 0 ]]; then
           if [[ $is_break_time == "true" ]]; then
             # we are in break time here
-            paplay "$bell_sound"
             echo "$work_time" > $seconds_file
             echo "false" > $is_break_time_file
+            paplay "$bell_sound"
+            notify-send "Pomodoro" 'Get ready to work'
             break
           else
             # we are in work time here
@@ -50,11 +55,13 @@ case "$1" in
               echo "true" > $is_break_time_file
               echo 0 > $times_breaks_file
               paplay "$bell_sound" &
+              notify-send "Pomodoro" 'Take a break'
               break
             else
               echo "$break_time" > $seconds_file
               echo "true" > $is_break_time_file
               paplay "$bell_sound" &
+              notify-send "Pomodoro" 'Take a break'
               break
             fi
             

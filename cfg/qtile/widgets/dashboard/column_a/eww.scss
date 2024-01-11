@@ -1,0 +1,22 @@
+@import "colors";
+* {
+  all: unset;
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  font-size: 2rem;
+}
+
+.column {
+  background: blue;
+}
+.col_1 {
+  background-color: red;
+  // min-width: 50rem;
+}
+
+.dashboard_layout {
+  background-color: $background_alt;
+  color: $lead;
+  // border-radius: 50%;
+  // border-radius: 0.9rem;
+  // backdrop-filter: blur(10px);
+}

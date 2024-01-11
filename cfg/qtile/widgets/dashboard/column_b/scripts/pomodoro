@@ -1,0 +1,125 @@
+#!/bin/bash
+WIDGET_PATH="$HOME/.config/qtile/widgets/dashboard/column_b"
+
+seconds_file="$WIDGET_PATH/scripts/seconds.txt"
+process_name="pomodoro"
+countdown=$(cat "$seconds_file")
+number_process=$(pgrep -f "$process_name --start")
+is_break_time_file="$HOME/.config/qtile/widgets/dashboard/column_b/scripts/is_break_time.txt"
+times_breaks_file=$"$HOME/.config/qtile/widgets/dashboard/column_b/scripts/times_break.txt"
+
+bell_sound="$HOME/.config/qtile/widgets/dashboard/column_b/assets/bell.mp3"
+bell_start_sound="$HOME/.config/qtile/widgets/dashboard/column_b/assets/bell_start.mp3"
+
+is_break_time=$(cat "$is_break_time_file")
+times_of_breaks=$(cat "$times_breaks_file")
+
+# times
+minute=60
+work_time=$(( minute * 25 ))
+break_time=$(( minute * 5 ))
+long_break_time=$(( minute * 25 ))
+#
+# echo "$work_time"
+
+case "$1" in
+  --start)
+    if [[ $(pgrep -c -f "$process_name --start") -ge 0 ]]; then
+      paplay $bell_start_sound &
+      while [[ "$countdown" -ge 0 ]]; do
+        minutes=$(( countdown / 60 ))
+        seconds=$(( countdown % 60 ))
+
+        sleep 1
+        ~/.config/qtile/widgets/dashboard/column_b/scripts/pomodoro --get-time
+
+        if [[ $countdown -eq 0 ]]; then
+          if [[ $is_break_time == "true" ]]; then
+            # we are in break time here
+            paplay "$bell_sound"
+            echo "$work_time" > $seconds_file
+            echo "false" > $is_break_time_file
+            break
+          else
+            # we are in work time here
+            (( times_of_breaks++ ))
+            echo $times_of_breaks > $times_breaks_file
+
+            if [[ $times_of_breaks -eq 4 ]]; then
+              echo "$long_break_time" > $seconds_file
+              echo "true" > $is_break_time_file
+              echo 0 > $times_breaks_file
+              paplay "$bell_sound" &
+              break
+            else
+              echo "$break_time" > $seconds_file
+              echo "true" > $is_break_time_file
+              paplay "$bell_sound" &
+              break
+            fi
+            
+          fi
+
+        else
+          (( countdown-- ))
+          echo "$countdown" > "$seconds_file"
+        fi
+      done
+    else
+      echo "running "
+    fi
+    ;;
+  --pause)
+    pids=$(pgrep -f "$process_name --start" | head -n 2)
+    kill $pids
+    ;;
+  --get-time)
+    minutes=$(( countdown / 60 ))
+    seconds=$(( countdown % 60 ))
+    if [[ "$seconds" -le 9 ]]; then
+      echo -n "$minutes:0$seconds"
+      echo
+    else
+      echo -n "$minutes:$seconds"
+      echo
+    fi
+    ;;
+  --get-icon)
+    n=$(pgrep -c -f "$process_name --start")
+    if [[ $n -ge 1 ]]; then
+      echo -n ""
+      echo
+    else
+      echo -n ""
+      echo
+    fi
+    ;;
+  --is-running)
+    n=$(pgrep -c -f "$process_name --start")
+    if [[ $n -ge 1 ]]; then
+      echo -n "true"
+      echo
+    else
+      echo -n "false"
+      echo
+    fi
+    ;;
+  --is-break-time)
+    echo -n "$is_break_time"
+    echo
+    ;;
+  --reset)
+    # ~/.config/qtile/widgets/dashboard/column_b/scripts/pomodoro --pause
+    "$WIDGET_PATH/scripts/pomodoro" --pause
+    echo $work_time > $seconds_file
+    echo "false" > $is_break_time_file
+    echo 0 > $times_breaks_file
+    ;;
+  --get-times-of-breaks)
+    echo -n $times_of_breaks
+    echo
+    ;;
+  *)
+    ;;
+esac
+

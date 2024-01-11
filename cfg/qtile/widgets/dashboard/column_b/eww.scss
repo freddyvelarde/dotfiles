@@ -1,0 +1,101 @@
+@import "colors";
+* {
+  all: unset;
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  // font-size: 2rem;
+}
+
+.column {
+  background-color: $background_alt;
+  .top_widget {
+    // background-color: red;
+  }
+
+  .music_player {
+    background-color: $background;
+    font-size: 3rem;
+    color: white;
+    margin: 0.9rem 0.9rem;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
+    .header {
+      min-height: 240px;
+    }
+    .info_song {
+      font-size: 1.3rem;
+      min-height: 100px;
+      .artist {
+        color: $warning;
+      }
+      .album {
+        color: $warning;
+      }
+    }
+
+    .cover_song {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px 0px 0px 10px;
+    }
+    .player {
+      font-size: 4rem;
+      color: $foreground;
+      .playing {
+        color: $lead;
+        font-size: 6rem;
+      }
+      .paused {
+        color: $warning;
+        font-size: 6rem;
+      }
+      .prev {
+        margin-left: 6rem;
+      }
+      .next {
+        margin-right: 6rem;
+      }
+    }
+  }
+}
+
+.top_widget {
+  margin: 0.9rem 0.9rem;
+  margin-bottom: 0.2rem;
+  border-radius: 10px;
+  .pom_title {
+    font-size: 1.5rem;
+  }
+  .pomodoro {
+    background-color: $background;
+    border-radius: 10px;
+  }
+  .time {
+    font-size: 4rem;
+  }
+  .btn {
+    min-height: 2.3rem;
+    min-width: 7rem;
+    margin: 0 2rem;
+    font-size: 1.4rem;
+    background-color: $foreground;
+    color: $background;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: 1px solid $foreground;
+  }
+  .btn:hover {
+    background-color: $background;
+    color: $foreground;
+    border: 1px solid $foreground;
+  }
+
+  .w {
+    font-size: 2rem;
+    color: $lead;
+  }
+  .b {
+    font-size: 2rem;
+    color: $warning;
+  }
+}

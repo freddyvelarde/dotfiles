@@ -1,0 +1,10 @@
+@import "colors";
+* {
+  all: unset;
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  font-size: 2rem;
+}
+
+.column {
+  background-color: $background_alt;
+}

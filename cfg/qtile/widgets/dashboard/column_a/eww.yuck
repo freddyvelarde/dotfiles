@@ -1,0 +1,60 @@
+
+(
+  defwidget column_1 []
+    (
+      box
+    :class "column col_1"
+        "column 1"
+    )
+)
+
+(
+  defwidget column_2 []
+    (
+      box
+        :class "column"
+        "column 2"
+    )
+)
+
+(
+  defwidget column_3 []
+    (
+      box
+        :class "column"
+        "column 3"
+    )
+)
+
+(
+  defwidget column_a_layout []
+    (
+      box 
+        :class "dashboard_layout"
+        :spacing 0 
+        ;:halign "start"
+        :space-evenly "false" 
+        :vexpand "false" 
+        :hexpand "false"
+
+        "column_a"
+
+    )
+)
+
+(
+  defwindow column_a
+    :wm-ignore true
+    :stacking "fg"
+    :windowtype "normal"
+    :geometry (
+      geometry 
+        :y "40px"
+        :x "0.5%"
+    :width "25.6%"
+    :height "95%"
+        :anchor "top left"
+    )
+    (column_a_layout)
+)
+

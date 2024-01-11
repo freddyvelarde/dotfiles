@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 normalize_title () {
   title_song="$1"
   title_song_normalized=""
@@ -15,11 +14,11 @@ normalize_title () {
   title_song="${title_song//  / }"
   string_length=${#title_song}
 
-  if [[ "$string_length" -gt 34 ]]; then
+  if [[ "$string_length" -gt 55 ]]; then
     n=1
     for ((i = 0; i < ${#title_song}; i++)); do
       current_char="${title_song:i:1}"
-      if [[ n -le 35 ]]; then
+      if [[ n -le 56 ]]; then
         title_song_normalized+=$current_char
       fi
       ((n++))
@@ -36,9 +35,67 @@ normalize_title () {
 
   echo -n "$title_song_normalized"
 }
-
-
+#play music
 case "$1" in
+  --next)
+    playerctl next
+    ;;
+  --prev)
+    playerctl previous
+    ;;
+  --play-pause)
+    browse () {
+      if ps -A | grep -q "firefox"; then
+        xdg-open $1
+      else
+        nohup firefox >/dev/null 2>&1 &
+        sleep 2
+        xdg-open $1
+      fi
+    }
+
+    status=$(playerctl status 2>/dev/null)
+
+
+    if [[ "$status" == "Playing" ]]; then
+      playerctl play-pause
+    elif [[ "$status" == "Paused" ]]; then
+      playerctl play-pause
+    else
+      spotify="https://open.spotify.com/search/"
+
+
+      browser_title="firefox"
+
+      # Check if the browser is running
+      if pgrep -x "$(basename "$browser_title")" > /dev/null; then
+          # Check if the Spotify tab is open by searching for its title in the browser
+          if xdotool search --name "$browser_title" search --name "Spotify"; then
+              notify-send 'music player' "please play one of your favorite song."
+          else
+              browse "$spotify"
+          fi
+      else
+          browse "$spotify"
+      fi
+    fi
+
+    ;;
+  --music-status)
+    status=$(playerctl status 2>/dev/null)
+
+    playing=false
+
+    if [[ "$status" == "Playing" ]]; then
+      playing=true
+    elif [[ "$status" == "Paused" ]]; then
+      playing=false
+    else 
+      playing=false
+    fi
+
+    echo $playing
+  ;;
   --title)
       title=$(playerctl metadata spotify --format "{{ title }}" 2>/dev/null)
       if [[ -z "$title" ]]; then
@@ -63,19 +120,17 @@ case "$1" in
       else
         echo -n "$artist"
       fi
-    ;;
+      ;;
   --artUrl)
     artUrl=$(playerctl metadata | awk '/mpris:artUrl/ {print $3}') 
       if [[ -z "$artUrl" ]]; then
-        echo -n "$HOME/.config/qtile/widgets/music-player/assets/artImg_not_found.jpg"
+        echo -n "$HOME/.config/qtile/widgets/dashboard/column_b/assets/cover_not_found.jpg"
       else
         echo -n "$artUrl"
       fi
     ;;
   *)
   ;;
+
 esac
-
-# Add a newline character at the end
 echo
-

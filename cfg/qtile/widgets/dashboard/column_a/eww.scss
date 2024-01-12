@@ -2,21 +2,137 @@
 * {
   all: unset;
   font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
-  font-size: 2rem;
+  // font-size: 2rem;
 }
 
-.column {
-  background: blue;
+.welcome {
+  background-color: $background;
+  color: $lead;
+  border-radius: 10px;
+  margin-bottom: 0.4rem;
+  .username {
+    font-size: 1.7rem;
+    color: $success;
+  }
+  .uptime {
+    color: $warning;
+    font-size: 1.1rem;
+  }
 }
-.col_1 {
-  background-color: red;
-  // min-width: 50rem;
+
+calendar:selected {
+  color: $warning;
+}
+
+calendar.header {
+  color: $lead;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $background;
+}
+
+calendar.highlight {
+  color: $success;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: #666666;
+}
+calendar {
+  background-color: $background;
+  color: white;
+  // margin: 0.3rem 0.5rem;
 }
 
 .dashboard_layout {
   background-color: $background_alt;
   color: $lead;
-  // border-radius: 50%;
-  // border-radius: 0.9rem;
-  // backdrop-filter: blur(10px);
+  padding-right: 0.4rem;
+}
+.system_control {
+  // background: blue;
+  // margin-left: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.box {
+  background-color: red;
+}
+
+.audio_control {
+  margin-bottom: 0.3rem;
+  border-radius: 10px;
+  background-color: $background;
+}
+.memory_usage {
+  // margin-top: 0.4rem;
+  border-radius: 10px;
+  background-color: $background;
+}
+
+.icon_ {
+  margin-left: 1rem;
+  margin-right: 2.5rem;
+}
+
+.control {
+  padding: 6px 4px;
+  font-size: 2rem;
+
+  & scale trough {
+    border-radius: 10px;
+    background-color: $background_alt;
+    border: 10px;
+    min-height: 20px;
+    min-width: 250px;
+    // margin-left: 3px;
+    & highlight {
+      all: unset;
+      background-color: $lead;
+      color: green;
+      border-radius: 10px;
+    }
+  }
+}
+
+.cpu_ {
+  & scale trough {
+    & highlight {
+      background-color: $success;
+    }
+  }
+  .icon_ {
+    color: $success;
+  }
+}
+
+.ram_ {
+  & scale trough {
+    & highlight {
+      background-color: $warning;
+    }
+  }
+  .icon_ {
+    color: $warning;
+  }
+}
+
+.info_layout {
+  margin-bottom: 0.2rem;
+}
+
+.info {
+  // margin: 0.3rem 0;
+  border-radius: 10px;
+  background-color: $background;
+}
+.icon_ram {
+  font-size: 3rem;
+  color: $lead;
+}
+.ram {
+  font-size: 1.2rem;
 }

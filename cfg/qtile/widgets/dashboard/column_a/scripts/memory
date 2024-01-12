@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case "$1" in
+  --ram)
+    total_mem=$(free -k | awk '/^Mem:/ {print $2}')
+    used_mem=$(free -k | awk '/^Mem:/ {print $3}')
+
+    mem_percentage=$(awk "BEGIN {printf \"%.2f\n\", ${used_mem}/${total_mem} * 100}")
+    echo -n "$mem_percentage"
+    echo
+    ;;
+  --cpu)
+    cpu_percentage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2+$4}')
+    echo "$cpu_percentage"
+  ;;
+  *)
+  ;;
+
+esac

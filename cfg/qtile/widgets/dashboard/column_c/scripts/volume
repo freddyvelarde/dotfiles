@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+#
+case "$1" in
+  --set-firefox-volume)
+    percentage_increase="$2"
+
+    # Find the Firefox process ID
+    firefox_pid=$(pgrep firefox)
+
+    # Check if Firefox is running
+    if [ -z "$firefox_pid" ]; then
+      echo "Firefox is not running."
+      exit 1
+    fi
+
+    # Adjust the volume for the Firefox process
+    pamixer --source-input $firefox_pid --increase $percentage_increase
+
+    ;;
+  --current-firefox-vol)
+    # Find the Firefox process ID
+    firefox_pid=$(pgrep firefox)
+
+    # Check if Firefox is running
+    if [ -z "$firefox_pid" ]; then
+      echo "Firefox is not running."
+      exit 1
+    fi
+
+    # Get the current volume for the Firefox process
+    current_vol=$(pamixer --source-input $firefox_pid --get-volume)
+
+    echo -n "$current_vol"
+    ;;
+  --set-volume)
+    percentage_increase="$2"
+
+    sink_index=$(pactl list short sinks | awk '{print $1}')
+
+    current_volume=$(pactl list sinks | grep "Volume: 0:" | awk '{print $5}' | sed 's/%//')
+
+    new_volume=$((current_volume + percentage_increase))
+
+    if [ $new_volume -gt 100 ]; then
+      new_volume=100
+    fi
+
+    pactl set-sink-volume $sink_index "${new_volume}%"
+
+    ;;
+  --current-vol)
+    current_vol=$(pactl list sinks | grep "Sink #$sink_index" -A 15 | grep 'Volume:' | awk '{print $5}' | sed -n '1p' | sed 's/%//')
+    echo -n "$current_vol"
+    ;;
+  *)
+    ;;
+
+esac
+
+echo

@@ -12,7 +12,10 @@ from global_variables import (
     volume,
     screenshot,
     color_picker,
+    dashboard,
 )  # >> ignore the next error
+
+#  eww_dashboard = "~/.config/qtile/widgets/dashboard/lauch_dashboard"
 
 
 keys = [
@@ -30,6 +33,11 @@ keys = [
     #  Key([""], "", lazy.spawn(web_browser), desc="Launch web browser"),
     Key(["control"], "Escape", lazy.spawn("pkill -9 eww")),
     # Rofi Applets --
+    Key(
+        [mod],
+        "m",
+        lazy.spawn(dashboard),
+    ),
     Key(
         [mod],
         "n",

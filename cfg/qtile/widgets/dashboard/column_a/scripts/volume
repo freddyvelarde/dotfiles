@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+#
+case "$1" in
+  --set-vol)
+    percentage_increase="$2"
+
+    sink_index=$(pactl list short sinks | awk '{print $1}')
+
+    current_volume=$(pactl list sinks | grep "Volume: 0:" | awk '{print $5}' | sed 's/%//')
+
+    new_volume=$((current_volume + percentage_increase))
+
+    if [ $new_volume -gt 100 ]; then
+      new_volume=100
+    fi
+
+    pactl set-sink-volume $sink_index "${new_volume}%"
+
+    ;;
+  --get-vol)
+    current_vol=$(pactl list sinks | grep "Sink #$sink_index" -A 15 | grep 'Volume:' | awk '{print $5}' | sed -n '1p' | sed 's/%//')
+    echo -n "$current_vol"
+    ;;
+  *)
+    ;;
+
+esac
+
+echo

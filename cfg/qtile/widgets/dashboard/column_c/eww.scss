@@ -8,3 +8,26 @@
 .column {
   background-color: $background_alt;
 }
+
+.powermenu {
+  // background-color: $background;
+  margin: 0.5rem 0.7rem;
+  border-radius: 10px;
+}
+
+.apps {
+  background-color: $background;
+  margin: 0.5rem 0.7rem;
+  border-radius: 10px;
+}
+
+.img_icon {
+  background-repeat: no-repeat;
+  background-size: 74px;
+  min-height: 94px;
+  min-width: 94px;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-left: 1rem;
+  // margin: 2rem 2rem;
+}

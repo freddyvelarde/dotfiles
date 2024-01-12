@@ -8,14 +8,29 @@
 .column {
   background-color: $background_alt;
   .top_widget {
+    // margin: 0.3rem 0.7rem;
     // background-color: red;
+    .left {
+      .__box {
+        // margin-bottom: 0.9rem;
+        border-radius: 10px;
+        background-color: $background;
+        // margin-right: 0.4rem;
+      }
+      .hour {
+        color: $success;
+        font-size: 4.4rem;
+        margin-bottom: 0.9rem;
+        // min-height: 6rem;
+      }
+    }
   }
 
   .music_player {
     background-color: $background;
     font-size: 3rem;
     color: white;
-    margin: 0.9rem 0.9rem;
+    margin-top: 0.2rem;
     margin-bottom: 0.9rem;
     border-radius: 10px;
     .header {
@@ -50,18 +65,18 @@
         font-size: 6rem;
       }
       .prev {
-        margin-left: 6rem;
+        // margin-left: 6rem;
       }
       .next {
-        margin-right: 6rem;
+        // margin-right: 6rem;
       }
     }
   }
 }
 
 .top_widget {
-  margin: 0.9rem 0.9rem;
-  margin-bottom: 0.2rem;
+  // margin: 0.9rem 0.9rem;
+  // margin-bottom: 0.2rem;
   border-radius: 10px;
   .pom_title {
     font-size: 1.5rem;
@@ -69,6 +84,7 @@
   .pomodoro {
     background-color: $background;
     border-radius: 10px;
+    margin-left: 0.4rem;
   }
   .time {
     font-size: 4rem;
@@ -98,4 +114,44 @@
     font-size: 2rem;
     color: $warning;
   }
+}
+
+.icon_ram {
+  font-size: 3rem;
+  color: $lead;
+}
+.ram {
+  font-size: 1.2rem;
+}
+calendar:selected {
+  color: $warning;
+}
+
+calendar.header {
+  color: $lead;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $background;
+}
+
+calendar.highlight {
+  color: $success;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: #666666;
+}
+calendar {
+  background-color: $background;
+  color: white;
+  // margin-right: 0.4rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+.cal {
+  // margin-right: 0.3rem;
+  // padding-top: 0.6rem;
 }

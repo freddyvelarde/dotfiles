@@ -1,0 +1,32 @@
+#!/bin/bash
+
+case "$1" in
+  --set-br)
+    new_brightness="$2"
+
+    if [ "$new_brightness" -le 99 ]; then
+      brightnessctl set "$new_brightness%"
+      new_brightness=$((new_brightness + 30))
+      if [[ new_brightness -le 69 ]]; then
+        xrandr --output VGA1 --brightness "0.$new_brightness"
+      else
+        xrandr --output VGA1 --brightness "1"
+      fi
+    else
+      # Set brightness to 100% if it exceeds 99%
+      brightnessctl set "100%"
+      
+      # Set brightness to maximum using xrandr (example)
+      xrandr --output VGA1 --brightness "1"
+    fi
+    ;;
+  --get-br)
+    value=$(light -G)
+    echo -n $value
+    ;;
+
+  *)
+    ;;
+esac
+
+echo

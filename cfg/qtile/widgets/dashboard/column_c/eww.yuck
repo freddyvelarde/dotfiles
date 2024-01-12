@@ -1,14 +1,77 @@
 (
+  defwidget powermenu []
+    (
+      box
+        :class "powermenu"
+        "powermenu"
+    )
+)
+
+(
+  defwidget apps []
+    (
+      box
+        :class "apps"
+        :orientation "h"
+
+        (
+          box :class "" :orientation "v"
+            :space-evely "false"
+            :halign "center"
+            :valign "center"
+          (
+        eventbox 
+              :class ""
+              :cursor "pointer"
+              (
+                button :class "img_icon" :onclick "notify-send 'hello' world" :style "background-image: url('./assets/firefox.png')"
+              )
+          )
+          (
+            eventbox 
+              :class ""
+              :cursor "pointer"
+              (
+                button :class "img_icon" :style "background-image: url('./assets/terminal.png')"
+              )
+          )
+        )
+
+        (
+          box :class "" :orientation "v"
+      :space-evely "false"
+            :halign "center"
+            :valign "center"
+          (
+            eventbox 
+              :class ""
+              :cursor "pointer"
+              (
+                button :class "img_icon" :style "background-image: url('./assets/spotify.png')"
+              )
+          )
+          (
+            eventbox 
+              :class ""
+              :cursor "pointer"
+              (
+                button :class "img_icon" :style "background-image: url('./assets/youtube.png')"
+              )
+          )
+        )
+
+    )
+)
+
+(
   defwidget column_c_layout []
     (
       box 
         :class "column"
         :spacing 0 
-        :space-evenly "false" 
-        :vexpand "false" 
-        :hexpand "false"
-
-    "column_c"
+        :orientation "v"
+        (powermenu)
+        (apps)
     )
 )
 

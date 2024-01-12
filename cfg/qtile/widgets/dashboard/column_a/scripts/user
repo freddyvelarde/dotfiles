@@ -1,0 +1,26 @@
+#!/bin/bash
+
+case "$1" in
+  --uptime)
+    uptime=$(uptime -p)
+    echo -n "$uptime"
+    echo
+    ;;
+
+  --greet)
+    hour=$(date +"%H")
+    username=$(whoami)
+    capitalized_username="${username^}"
+
+    if [[ $hour -ge 6 && $hour -lt 12 ]]; then
+      echo "Good morning, $capitalized_username"
+    elif [[ $hour -ge 12 && $hour -lt 18 ]]; then
+      echo "Good afternoon, $capitalized_username"
+    elif [[ $hour -ge 18 && $hour -lt 24 ]]; then
+      echo "Good evening, $capitalized_username"
+    else
+      echo "Good night, $capitalized_username"
+    fi
+    ;;
+
+esac

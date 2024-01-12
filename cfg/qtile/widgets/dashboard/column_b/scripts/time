@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$1" in
+  --min)
+    min=$(date +"%M")
+    echo -n "$min"
+    echo
+    ;;
+  --hour)
+    min=$(date +"%H")
+    echo -n "$min"
+    echo
+    ;;
+  *)
+    ;;
+esac
+

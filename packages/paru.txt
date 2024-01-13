@@ -1,6 +1,5 @@
 zsh-syntax-highlighting
+light
 zsh-autosuggestions
 lxappearance-gtk3
-beekeeper-studio-bin
 trash-cli
-eww

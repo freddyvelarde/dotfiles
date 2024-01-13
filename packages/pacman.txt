@@ -1,7 +1,6 @@
 kitty
 ranger
 exa
-evince
 fzf
 xdg-user-dirs
 rofi
@@ -32,7 +31,6 @@ viewnior
 xorg-xsetroot
 wmname
 pulsemixer
-light
 xcolor
 dosfstools
 bluez 
@@ -50,5 +48,4 @@ ntfs-3g
 htop
 glib2
 gvfs
-firefox
 polybar

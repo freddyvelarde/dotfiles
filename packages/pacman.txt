@@ -49,3 +49,5 @@ htop
 glib2
 gvfs
 polybar
+playerctl
+bc

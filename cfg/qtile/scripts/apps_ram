@@ -1,0 +1,13 @@
+#!/bin/bash
+
+app="$1"
+
+app_pids=($(pgrep $app))
+total_memory=0
+for pid in "${app_pids[@]}"; do
+    rss=$(ps -o rss= -p $pid)
+    rss_mb=$(echo "scale=2; $rss / 1024" | bc)
+    total_memory=$(echo "$total_memory + $rss" | bc)
+done
+total_memory_mb=$(echo "scale=2; $total_memory / 1024" | bc)
+echo "${total_memory_mb} MB"

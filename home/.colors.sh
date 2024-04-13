@@ -1,5 +1,6 @@
 transparent="#00000000"
-background="#2C2640"
+# background="#2C2640"
+background="#0E283F"
 foreground="#11131C"
 
 primary="#78DBAA"

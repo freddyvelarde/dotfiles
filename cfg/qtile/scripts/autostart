@@ -25,3 +25,4 @@ pkill -9 polybar
 pkill -9 eww
 
 "$qdir"/scripts/qtile_bar $RICE_NAME
+redshift -c ~/.config/redshift/redshift.conf &

@@ -1,0 +1,20 @@
+Fist run:
+```
+sudo pacman -Sy docker docker-compose
+```
+
+then be user root
+
+```
+sudo su
+
+usermod -aG docker $USER
+
+sudo su $USER
+```
+
+then start the docker service
+
+```
+sudo systemctl start docker
+```

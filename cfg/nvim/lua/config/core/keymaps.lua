@@ -23,7 +23,8 @@ keymap.set("v", "fc", ":fold <CR>")
 keymap.set("n", "<leader>s", ":w <CR>")
 
 -- nvim tree toggle
-keymap.set("n", "<leader>b", "<cmd>Neotree toggle<CR>", { silent = true })
+-- keymap.set("n", "<leader>b", "<cmd>Neotree toggle<CR>", { silent = true })
+keymap.set("n", "<leader>b", "<cmd>NvimTreeToggle<CR>", { silent = true })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true })

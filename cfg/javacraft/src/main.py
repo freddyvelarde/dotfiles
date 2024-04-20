@@ -4,7 +4,8 @@
 # 3. ...
 from .path import Directory
 
-dir = Directory()
-print("current dir: ", dir.get_current_directory())
 
-print("new path", dir.merge_paths("com/dev/crud"))
+def main():
+    dir = Directory()
+    print("current dir: ", dir.get_current_directory())
+    print("new path:", dir.merge_paths("crud/users"))

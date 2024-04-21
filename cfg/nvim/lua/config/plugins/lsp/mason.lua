@@ -21,11 +21,11 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"html",
-				"cssls",
+				-- "cssls",
 				"emmet_ls",
 				-- "tsserver",
 				"pyright",
-				"zls", -- zig
+				-- "zls", -- zig
 				-- "intelephense",
 				"rust_analyzer",
 				"angularls",

@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-HOME_DIR="$HOME"
-ZSH_FILE="$HOME_DIR/.zshrc" # I'm a zsh user
-
-echo "Setting javacraft in: $ZSH_FILE"
-echo 'export PATH="$HOME/.config/javacraft:$PATH"' >> $ZSH_FILE

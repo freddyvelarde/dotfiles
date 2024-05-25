@@ -51,3 +51,4 @@ gvfs
 polybar
 playerctl
 bc
+ripgrep

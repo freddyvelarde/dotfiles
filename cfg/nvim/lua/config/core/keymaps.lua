@@ -141,6 +141,11 @@ keymap.set("n", "f>", ":vertical resize +10 <CR>==", { silent = true })
 keymap.set("n", "f<", ":vertical resize -10 <CR>==", { silent = true })
 keymap.set("n", "g>", ":horizontal resize +3 <CR>==", { silent = true })
 keymap.set("n", "g<", ":horizontal resize -3 <CR>==", { silent = true })
+-- alternatives
+keymap.set("n", "<A-i>", "<cmd>vertical resize +10 <CR>==", { silent = true })
+keymap.set("n", "<A-d>", "<cmd>vertical resize -10 <CR>==", { silent = true })
+keymap.set("n", "<A-u>", "<cmd>horizontal resize +10 <CR>==", { silent = true })
+keymap.set("n", "<A-d>", "<cmd>horizontal resize -10 <CR>==", { silent = true })
 
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")

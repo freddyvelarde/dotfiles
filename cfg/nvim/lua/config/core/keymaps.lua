@@ -171,6 +171,8 @@ keymap.set("n", "<leader>gd", function()
 	vim.diagnostic.show_position_diagnostics()
 end)
 
+keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
+
 -- search in document
 
 -- keymap.set("n", "/", "/\\<\\>", { silent = true })

@@ -77,33 +77,33 @@ keymap.set("n", "<leader>w", ":bnext <CR>==", { silent = true })
 keymap.set("n", "<leader>q", ":bprevious <CR>==", { silent = true })
 keymap.set("n", "<leader>x", ":bdelete <CR>==", { silent = true })
 
--- quotes, square and curly brackets completition
+-- quotes, square "and curly brackets" completition
 -- exaple text ->  "example text"
-keymap.set("v", '"', 's"<ESC>pa" <ESC>x', { silent = true })
-keymap.set("v", "fff", 'di"<ESC>pa" <ESC>x', { silent = true })
+keymap.set("v", '"', 'di "<ESC>pa" <ESC>x', { silent = true })
+keymap.set("v", "fff", 'di "<ESC>pa" <ESC>x', { silent = true })
 
 -- exaple text ->  `example text`
-keymap.set("v", "`", "di`<ESC>pa` <ESC>x", { silent = true })
-keymap.set("v", "ffj", "di`<ESC>pa` <ESC>x", { silent = true })
+keymap.set("v", "`", "di `<ESC>pa` <ESC>x", { silent = true })
+keymap.set("v", "ffj", "di `<ESC>pa` <ESC>x", { silent = true })
 
 -- exaple text ->  'example text'
-keymap.set("v", "'", "di'<ESC>pa' <ESC>x", { silent = true })
-keymap.set("v", "ffh", "di'<ESC>pa' <ESC>x", { silent = true })
+keymap.set("v", "'", "di '<ESC>pa' <ESC>x", { silent = true })
+keymap.set("v", "ffh", "di '<ESC>pa' <ESC>x", { silent = true })
 
 -- exaple text ->  (example text)
-keymap.set("v", "(", "di(<ESC>pa) <ESC>x", { silent = true })
-keymap.set("v", ")", "di(<ESC>pa) <ESC>x", { silent = true })
-keymap.set("v", "ffg", "di(<ESC>pa) <ESC>x", { silent = true })
+keymap.set("v", "(", "di (<ESC>pa) <ESC>x", { silent = true })
+keymap.set("v", ")", "di (<ESC>pa) <ESC>x", { silent = true })
+keymap.set("v", "ffg", "di (<ESC>pa) <ESC>x", { silent = true })
 
 -- exaple text ->  [example text]
-keymap.set("v", "[", "di[<ESC>pa] <ESC>x", { silent = true })
-keymap.set("v", "]", "di[<ESC>pa] <ESC>x", { silent = true })
-keymap.set("v", "ffd", "di[<ESC>pa] <ESC>x", { silent = true })
+keymap.set("v", "[", "di [<ESC>pa] <ESC>x", { silent = true })
+keymap.set("v", "]", "di [<ESC>pa] <ESC>x", { silent = true })
+keymap.set("v", "ffd", "di [<ESC>pa] <ESC>x", { silent = true })
 
 -- exaple text ->  {example text}
-keymap.set("v", "{", "di{<ESC>pa} <ESC>x", { silent = true })
-keymap.set("v", "}", "di{<ESC>pa} <ESC>x", { silent = true })
-keymap.set("v", "ffk", "di{<ESC>pa} <ESC>x", { silent = true })
+keymap.set("v", "{", "di {<ESC>pa} <ESC>x", { silent = true })
+keymap.set("v", "}", "di {<ESC>pa} <ESC>x", { silent = true })
+keymap.set("v", "ffk", "di {<ESC>pa} <ESC>x", { silent = true })
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
@@ -177,6 +177,10 @@ keymap.set("n", "<leader>gd", function()
 end)
 
 keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
+
+-- TODO: add the keymaps for TODO plugin
+-- Todo comments:
+-- keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
 
 -- search in document
 

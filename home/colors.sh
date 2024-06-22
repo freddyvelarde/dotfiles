@@ -1,0 +1,13 @@
+# define your colors here
+bg="#131519"
+alt_bg="#2b2a33"
+fg="#abb2bf"
+accent="#60b0f0"
+red="#e16b75"
+green="#97c379"
+yellow="#e5c07b"
+blue="#61afef"
+magenta="#c678dd"
+cyan="#56b6c2"
+white="#dcdfe4"
+transparent="#00000000"

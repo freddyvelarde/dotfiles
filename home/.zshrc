@@ -40,7 +40,6 @@ export PATH=/home/erick/.nvm/versions/node/v18.16.1/bin:/usr/condabin:/home/eric
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# export PATH="$HOME/.config/javacraft:$PATH"
 
 # Changing "ls" to "eza"
 alias ls='eza --icons --color=always --group-directories-first'
@@ -49,3 +48,5 @@ alias la='eza -a --icons --color=always --group-directories-first'
 alias l='eza -F --icons --color=always --group-directories-first'
 alias l.='eza -a | egrep "^\."'
 
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"

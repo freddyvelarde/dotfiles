@@ -22,10 +22,11 @@ return {
 				-- ensure these language parsers are installed
 				ensure_installed = {
 					"json",
+					"java",
 					"javascript",
 					"typescript",
 					"tsx",
-					-- "yaml",
+					"yaml",
 					"html",
 					"css",
 					-- "prisma",
@@ -38,6 +39,7 @@ return {
 					-- "vim",
 					"dockerfile",
 					"gitignore",
+					"php",
 				},
 				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
 				context_commentstring = {

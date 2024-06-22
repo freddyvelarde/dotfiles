@@ -37,7 +37,7 @@ set_values() {
 ## Launch Polybar with selected style
 launch_bar() {
 
-  bash "$DIR"/$RICE_NAME/launch.sh
+  bash "$DIR"/launch.sh
 }
 
 # Execute functions

@@ -259,4 +259,11 @@ keys = [
         lazy.window.toggle_floating(),
         desc="Toggle floating",
     ),
+    # polybar
+    Key(
+        [mod, "shift"],
+        "p",
+        lazy.spawn(rofi_applets + "polybar_setup --toggle"),
+        desc="kill polybar",
+    ),
 ]

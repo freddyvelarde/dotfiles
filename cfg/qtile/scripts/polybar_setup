@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+qdir="$HOME/.config/qtile"
+
+case "$1" in
+  --up)
+    "$qdir"/scripts/wallpaper
+
+    pkill -9 polybar
+    pkill -9 eww
+
+    "$qdir"/scripts/qtile_bar
+    ;;
+  --down)
+    pkill -9 polybar
+    ;;
+  --toggle)
+    if pgrep -x "polybar" > /dev/null
+      then
+        pkill -9 polybar
+      else
+        "$qdir"/scripts/wallpaper
+
+        pkill -9 polybar
+        pkill -9 eww
+
+        "$qdir"/scripts/qtile_bar
+      fi
+    ;;
+  *)
+    ;;
+esac

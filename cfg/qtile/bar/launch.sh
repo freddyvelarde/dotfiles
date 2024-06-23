@@ -30,7 +30,8 @@ launch_bar() {
   # polybar --config=~/.config/qtile/bar/pacman/config.ini secondary &
   
   # polybar --config=~/.config/qtile/bar/pacman/config.ini main &
-  polybar --config=~/.dotfiles/cfg/qtile/bar/config.ini main &
+  polybar --config=~/.config/qtile/bar/config.ini main &
+  polybar --config=~/.config/qtile/bar/config.ini secondary &
 
 }
 

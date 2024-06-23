@@ -176,6 +176,8 @@ keymap.set("n", "<leader>gd", function()
 	vim.diagnostic.show_position_diagnostics()
 end)
 
+keymap.set("n", "<leader>;", "<cmd>%bd|e#<cr>")
+
 keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
 
 -- TODO: add the keymaps for TODO plugin

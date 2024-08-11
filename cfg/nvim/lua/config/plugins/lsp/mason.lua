@@ -48,7 +48,7 @@ return {
 				"black",
 				"gofumt",
 				"clang-format",
-				-- "php-cs-fixer",
+				"php-cs-fixer",
 				"rustfmt",
 			},
 

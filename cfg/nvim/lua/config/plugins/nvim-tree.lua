@@ -23,6 +23,7 @@ return {
 			-- configure nvim-tree
 			nvimtree.setup({
 				respect_buf_cwd = false,
+
 				-- change folder arrow icons
 				renderer = {
 					highlight_git = true,
@@ -30,8 +31,9 @@ return {
 					icons = {
 						glyphs = {
 							folder = {
-								arrow_closed = "", -- arrow when folder is closed
-								arrow_open = "", -- arrow when folder is open
+								-- arrow_closed = "", -- arrow when folder is closed
+								arrow_closed = "", -- arrow when folder is closed
+								arrow_open = "", -- arrow when folder is open
 							},
 							git = {
 								unstaged = "✗",

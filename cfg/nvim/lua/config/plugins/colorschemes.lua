@@ -9,34 +9,40 @@ return {
 	--   priority = 1000, -- make sure to load this before all the other start plugins
 	--   opts = {},
 	-- },
-	{
-		"folke/tokyonight.nvim",
-		-- lazy = false,
-		-- priority = 1000,
-		-- opts = {},
-	},
-	{
-		"kaicataldo/material.vim",
-		lazy = false,
-		priority = 1000,
-	},
-	{
-		"dasupradyumna/midnight.nvim",
-		lazy = false,
-		priority = 1000,
-	},
-	{
-		"navarasu/onedark.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			-- Lua
-			require("onedark").setup({
-				style = "deep",
-			})
-			require("onedark").load()
-		end,
-	},
+	-- {
+	--   "folke/tokyonight.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	--   opts = {},
+	-- },
+	-- {
+	--   "marko-cerovac/material.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	-- },
+	-- {
+	--   "dasupradyumna/midnight.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	-- },
+	-- {
+	--   "navarasu/onedark.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	--   config = function()
+	--     -- Lua
+	--     require("onedark").setup({
+	--       style = "deep",
+	--     })
+	--     require("onedark").load()
+	--   end,
+	-- },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "decaycs/decay.nvim", as = "decay" },
+	-- { "decaycs/decay.nvim", as = "decay" },
+	-- {
+	--   "HoNamDuong/hybrid.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	--   opts = {},
+	-- },
 }

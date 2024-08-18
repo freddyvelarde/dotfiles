@@ -4,8 +4,9 @@ return {
 		require("notify").setup({
 			stages = "fade_in_slide_out",
 			background_colour = "FloatShadow",
-			timeout = 1000,
+			timeout = 500,
+			top_down = false,
 		})
-		vim.notify = require("notify")
+		-- vim.notify = require("notify")
 	end,
 }

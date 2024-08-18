@@ -27,6 +27,15 @@ notify_view () {
 		${notify_cmd_shot} "Screenshot Deleted."
 	fi
 }
+delete_pic () {
+	notify_cmd_shot='dunstify -u low -h string:x-dunst-stack-tag:obscreenshot -i /usr/share/archcraft/icons/dunst/picture.png'
+	${notify_cmd_shot} "Copied to clipboard."
+	paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
+	viewnior ${dir}/"$file"
+	if [[ -e "$dir/$file" ]]; then
+    rm "$dir/$file"
+	fi
+}
 
 # copy screenshot to clipboard
 copy_shot () {
@@ -69,6 +78,11 @@ shotarea () {
 	notify_view
 }
 
+shotarea_dontsave () {
+	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | copy_shot
+	delete_pic
+}
+
 # execute
 if [[ "$1" == "--now" ]]; then
 	shotnow
@@ -80,6 +94,8 @@ elif [[ "$1" == "--win" ]]; then
 	shotwin
 elif [[ "$1" == "--area" ]]; then
 	shotarea
+elif [[ "$1" == "--area-dont-save" ]]; then
+	shotarea_dontsave
 else
 	echo -e "Available Options : --now --in5 --in10 --win --area"
 fi

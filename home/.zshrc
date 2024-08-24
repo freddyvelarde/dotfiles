@@ -50,3 +50,10 @@ alias l.='eza -a | egrep "^\."'
 
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+# Created by `pipx` on 2024-07-07 17:54:21
+export PATH="$PATH:/home/erick/.local/bin"
+
+# vcpkg setup
+export VCPKG_ROOT=/opt/vcpkg
+export PATH=$VCPKG_ROOT:$PATH

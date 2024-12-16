@@ -179,11 +179,3 @@ end)
 keymap.set("n", "<leader>;", "<cmd>%bd|e#<cr>")
 
 keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
-
--- TODO: add the keymaps for TODO plugin
--- Todo comments:
--- keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
-
--- search in document
-
--- keymap.set("n", "/", "/\\<\\>", { silent = true })

@@ -2,7 +2,7 @@ local keymap = vim.keymap -- for conciseness
 
 local on_attach = function(_, bufnr)
 	-- keybind options
-	-- local opts = { noremap = true, silent = true, buffer = bufnr }
+	local opts = { noremap = true, silent = true, buffer = bufnr }
 
 	-- set keybinds
 	-- keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references

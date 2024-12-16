@@ -5,20 +5,19 @@ return {
 		"jayp0521/mason-null-ls.nvim",
 	},
 	config = function()
-		-- import mason plugin safely
 		local mason = require("mason")
-
-		-- import mason-lspconfig plugin safely
 		local mason_lspconfig = require("mason-lspconfig")
-
-		-- import mason-null-ls plugin safely
 		local mason_null_ls = require("mason-null-ls")
 
-		-- enable mason
 		mason.setup()
+		-- actions
+		---@diagnostic disable-next-line: undefined-global
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+		vim.keymap.set("n", "<C-c>", vim.lsp.buf.code_action, {})
+		-- vim.keymap.set("n", "<leader>d", vim.diagnostic.get_namespaces(), {})
 
 		mason_lspconfig.setup({
-			-- list of servers for mason to install
 			ensure_installed = {
 				"html",
 				-- "cssls",
@@ -35,12 +34,10 @@ return {
 				"tailwindcss",
 				"marksman",
 			},
-			-- auto-install configured servers (with lspconfig)
-			automatic_installation = true, -- not the same as ensure_installed
+			automatic_installation = true,
 		})
 
 		mason_null_ls.setup({
-			-- list of formatters & linters for mason to install
 			ensure_installed = {
 				"prettier", -- ts/js formatter
 				"stylua", -- lua formatter
@@ -50,6 +47,7 @@ return {
 				"clang-format",
 				"php-cs-fixer",
 				"rustfmt",
+				"ast_grep",
 			},
 
 			-- auto-install configured servers (with lspconfig)

@@ -181,7 +181,13 @@ keymap.set("n", "<leader>;", "<cmd>%bd|e#<cr>")
 keymap.set("n", "fy", "<cmd>Telescope neoclip a<cr>", { silent = true })
 
 -- Diagnostics
-vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "List Diagnostics in Location List" })
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to Previous Diagnostic" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to Next Diagnostic" })
-vim.keymap.set("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search Diagnostics" })
+keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "List Diagnostics in Location List" })
+keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to Previous Diagnostic" })
+keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to Next Diagnostic" })
+keymap.set("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search Diagnostics" })
+
+-- Harpoon
+keymap.set("n", "<leader>ha", '<cmd>lua require("harpoon.mark").add_file()<CR>', { desc = "Harpoon file" })
+keymap.set("n", "<leader>hl", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = "Files Harpooned" })
+keymap.set("n", "t", '<cmd>lua require("harpoon.ui").nav_next()<CR>', { desc = "Harpoon file" })
+keymap.set("n", "T", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', { desc = "Harpoon file" })

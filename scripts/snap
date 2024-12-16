@@ -1,0 +1,16 @@
+#!/bin/bash
+
+case "$VAR" in
+  --stop)
+    sudo systemctl stop snapd
+    sudo systemctl disable snapd
+
+  ;;
+  --start)
+    sudo systemctl start snapd
+    sudo systemctl enable snapd
+  ;;
+  *) echo default
+  ;;
+esac
+

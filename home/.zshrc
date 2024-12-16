@@ -57,3 +57,9 @@ export PATH="$PATH:/home/erick/.local/bin"
 # vcpkg setup
 export VCPKG_ROOT=/opt/vcpkg
 export PATH=$VCPKG_ROOT:$PATH
+
+# auditer 
+alias auditer="~/coding/projects/codeAuditerAI/auditer"
+
+# flutter
+export PATH="$HOME/.flutter_install/flutter/bin:$PATH"

@@ -1,6 +1,7 @@
 -- lazy config
 require("config.core") -- my own config
 require("config.lazy") -- plugins config
+-- java config
 -- require("config.jdtls")
 -- require("config.autocmd")
 

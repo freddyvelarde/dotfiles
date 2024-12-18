@@ -28,7 +28,9 @@ return {
 				formatting.phpcsfixer, -- php formatter
 				formatting.clang_format, -- java formatter
 				formatting.blade_formatter, -- php and blade template formatter
-				formatting.ast_grep, -- dart, flutter formatter
+				-- formatting.trivy, -- dart, flutter formatter
+				-- formatting.astGrep, -- dart, flutter formatter
+				-- formatting.dcm, -- dart, flutter formatter
 
 				diagnostics.eslint_d.with({ -- js/ts linter
 					condition = function(utils)

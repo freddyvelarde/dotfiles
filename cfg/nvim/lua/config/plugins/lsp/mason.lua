@@ -28,7 +28,7 @@ return {
 				-- "intelephense",
 				"rust_analyzer",
 				"angularls",
-				"jdtls",
+				-- "jdtls",
 				-- "gopls",
 				"dockerls",
 				"tailwindcss",

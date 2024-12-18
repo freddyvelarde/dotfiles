@@ -193,4 +193,4 @@ keymap.set("n", "t", '<cmd>lua require("harpoon.ui").nav_next()<CR>', { desc = "
 keymap.set("n", "T", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', { desc = "Harpoon file" })
 
 -- format
-keymap.set("n", "1", "<CMD> lua vim.lsp.buf.format()<CR>", { desc = "formatting code." })
+keymap.set("n", "<leader>1", "<CMD> lua vim.lsp.buf.format()<CR>", { desc = "formatting code." })

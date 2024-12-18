@@ -191,3 +191,6 @@ keymap.set("n", "<leader>ha", '<cmd>lua require("harpoon.mark").add_file()<CR>',
 keymap.set("n", "<leader>hl", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = "Files Harpooned" })
 keymap.set("n", "t", '<cmd>lua require("harpoon.ui").nav_next()<CR>', { desc = "Harpoon file" })
 keymap.set("n", "T", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', { desc = "Harpoon file" })
+
+-- format
+keymap.set("n", "1", "<CMD> lua vim.lsp.buf.format()<CR>", { desc = "formatting code." })

@@ -22,14 +22,14 @@ return {
 			sources = {
 				formatting.prettier, -- js/ts formatter
 				formatting.stylua, -- lua formatter
-				-- formatting.gofumpt, -- go formatter
+				formatting.gofumpt, -- go formatter
 				formatting.black, -- python formatter
 				formatting.rustfmt, -- rust formatter
 				formatting.phpcsfixer, -- php formatter
 				formatting.clang_format, -- java formatter
 				formatting.blade_formatter, -- php and blade template formatter
 				-- formatting.trivy, -- dart, flutter formatter
-				-- formatting.astGrep, -- dart, flutter formatter
+				formatting.ast_grep, -- dart, flutter formatter
 				-- formatting.dcm, -- dart, flutter formatter
 
 				diagnostics.eslint_d.with({ -- js/ts linter

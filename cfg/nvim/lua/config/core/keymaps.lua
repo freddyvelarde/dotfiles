@@ -143,7 +143,7 @@ keymap.set("n", "g>", ":horizontal resize +3 <CR>==", { silent = true })
 keymap.set("n", "g<", ":horizontal resize -3 <CR>==", { silent = true })
 -- alternatives
 keymap.set("n", "<A-i>", "<cmd>vertical resize +10 <CR>==", { silent = true })
-keymap.set("n", "<A-d>", "<cmd>vertical resize -10 <CR>==", { silent = true })
+keymap.set("n", "<A-s>", "<cmd>vertical resize -10 <CR>==", { silent = true })
 keymap.set("n", "<A-u>", "<cmd>horizontal resize +10 <CR>==", { silent = true })
 keymap.set("n", "<A-d>", "<cmd>horizontal resize -10 <CR>==", { silent = true })
 
@@ -191,6 +191,18 @@ keymap.set("n", "<leader>ha", '<cmd>lua require("harpoon.mark").add_file()<CR>',
 keymap.set("n", "<leader>hl", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = "Files Harpooned" })
 keymap.set("n", "t", '<cmd>lua require("harpoon.ui").nav_next()<CR>', { desc = "Harpoon file" })
 keymap.set("n", "T", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', { desc = "Harpoon file" })
+-- Harpoon
 
 -- format
-keymap.set("n", "<leader>1", "<CMD> lua vim.lsp.buf.format()<CR>", { desc = "formatting code." })
+-- keymap.set("n", "1", "<CMD> lua vim.lsp.buf.format()<CR>", { desc = "formatting code." })
+
+vim.api.nvim_set_keymap("n", "ciw", '"_ciw', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "c", '"_c', { noremap = true, silent = true })
+--
+vim.api.nvim_set_keymap("n", "d$", '"_d$', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "d$", '"_d$', { noremap = true, silent = true })
+--
+-- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "c", '"_c', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "c", '"_c', { noremap = true, silent = true })

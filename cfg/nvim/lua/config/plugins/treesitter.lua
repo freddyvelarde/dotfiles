@@ -5,6 +5,7 @@ return {
 		build = ":TSUpdate",
 		dependencies = {
 			"windwp/nvim-ts-autotag",
+			"nvim-treesitter/nvim-tree-docs",
 		},
 		config = function()
 			-- import nvim-treesitter plugin
@@ -15,6 +16,7 @@ return {
 				highlight = {
 					enable = true,
 				},
+				tree_docs = { enable = true },
 				-- enable indentation
 				indent = { enable = true },
 				-- enable autotagging (w/ nvim-ts-autotag plugin)

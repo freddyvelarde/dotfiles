@@ -38,6 +38,7 @@ return {
 	--   end,
 	-- },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	-- { "rebelot/kanagawa.nvim" },
 	-- { "decaycs/decay.nvim", as = "decay" },
 	-- {
 	--   "HoNamDuong/hybrid.nvim",

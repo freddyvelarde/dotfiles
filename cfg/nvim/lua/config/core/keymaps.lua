@@ -196,13 +196,31 @@ keymap.set("n", "T", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', { desc = "
 -- format
 -- keymap.set("n", "1", "<CMD> lua vim.lsp.buf.format()<CR>", { desc = "formatting code." })
 
-vim.api.nvim_set_keymap("n", "ciw", '"_ciw', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "c", '"_c', { noremap = true, silent = true })
+keymap.set("n", "ciw", '"_ciw', { noremap = true, silent = true })
+keymap.set("v", "c", '"_c', { noremap = true, silent = true })
 --
-vim.api.nvim_set_keymap("n", "d$", '"_d$', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "d$", '"_d$', { noremap = true, silent = true })
---
--- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
+keymap.set("n", "d$", '"_d$', { noremap = true, silent = true })
+keymap.set("v", "d$", '"_d$', { noremap = true, silent = true })
+
+-- vim.api.n_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "c", '"_c', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "c", '"_c', { noremap = true, silent = true })
+keymap.set("n", "c", '"_c', { noremap = true, silent = true })
+keymap.set("v", "c", '"_c', { noremap = true, silent = true })
+
+local function enable_focus_mode()
+	vim.opt.showtabline = 0
+	vim.opt.laststatus = 0
+
+	vim.opt.number = false
+	vim.opt.relativenumber = false
+end
+local function disable_focus_mode()
+	vim.opt.laststatus = 3
+
+	vim.opt.showtabline = 2
+	vim.opt.number = true
+	vim.opt.relativenumber = true
+end
+
+keymap.set("n", "<leader>ef", enable_focus_mode, { desc = "Disable numbers, relative numbers and bufferline" })
+keymap.set("n", "<leader>df", disable_focus_mode, { desc = "Enable numbers, relative numbers and bufferline" })

@@ -1,4 +1,23 @@
 return {
+	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+
+	{
+
+		"sainnhe/gruvbox-material",
+		enabled = true,
+		priority = 1000,
+	},
+
+	{
+		"projekt0n/github-nvim-theme",
+		name = "github-theme",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
+	},
+	-- { "Shatur/neovim-ayu", priority = 1000 },
+	--
+	-- { "rafamadriz/neon", priority = 1000 },
+
 	-- {
 	--   "mhartington/oceanic-next",
 	--   lazy = false,
@@ -25,18 +44,12 @@ return {
 	--   lazy = false,
 	--   priority = 1000,
 	-- },
-	-- {
-	--   "navarasu/onedark.nvim",
-	--   lazy = false,
-	--   priority = 1000,
-	--   config = function()
-	--     -- Lua
-	--     require("onedark").setup({
-	--       style = "deep",
-	--     })
-	--     require("onedark").load()
-	--   end,
-	-- },
+	{
+		-- "navarasu/onedark.nvim",
+		"olimorris/onedarkpro.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- { "rebelot/kanagawa.nvim" },
 	-- { "decaycs/decay.nvim", as = "decay" },

@@ -1,4 +1,5 @@
 return {
+
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
 	dependencies = {
@@ -26,13 +27,20 @@ return {
 				path_display = { "truncate" },
 				mappings = {
 					i = {
+						["<esc>"] = require("telescope.actions").close,
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
 					},
 					n = {
+						["q"] = require("telescope.actions").close,
+						["d"] = require("telescope.actions").delete_buffer,
 						-- [""] = actions.close,
 						-- ["o"] = telescope.actions.select_tab,
+						["J"] = require("telescope.actions").preview_scrolling_down,
+						["K"] = require("telescope.actions").preview_scrolling_up,
+						-- ["H"] = require("telescope.actions").preview_scrolling_left,
+						-- ["L"] = require("telescope.actions").preview_scrolling_right,
 					},
 				},
 			},
@@ -50,11 +58,27 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" }) -- find files within current working directory, respects .gitignore
+		keymap.set(
+			"n",
+			"<leader>ff",
+			"<cmd>Telescope find_files initial_mode=insert <cr>",
+			{ desc = "Fuzzy find files in cwd" }
+		) -- find files within current working directory, respects .gitignore
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" }) -- find previously opened files
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" }) -- find string in current working directory as you type
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" }) -- find string under cursor in current working directory
-		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Show open buffers" }) -- list open buffers in current neovim instance
+		keymap.set(
+			"n",
+			"<leader>fb",
+			"<cmd>Telescope buffers sort_lastused=true initial_mode=normal theme=ivy<cr>",
+			{ desc = "Show open buffers" }
+		) -- list open buffers in current neovim instance
+		-- keymap.set(
+		--   "n",
+		--   "<leader>H",
+		--   "<cmd>Telescope buffers sort_lastused=true initial_mode=normal theme=ivy<cr>",
+		--   { desc = "Show open buffers" }
+		-- ) -- list open buffers in current neovim instance
 		keymap.set("n", "<leader>hf", "<cmd>Telescope harpoon marks<cr>", { desc = "Show harpoon marks" }) -- show harpoon marks
 		keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Show git commits" }) -- list all git commits (use <cr> to checkout) ["gc" for git commits]
 		keymap.set(

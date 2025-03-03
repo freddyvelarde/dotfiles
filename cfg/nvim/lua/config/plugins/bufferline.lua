@@ -16,6 +16,7 @@ return {
 			left_trunc_marker = "",
 			right_trunc_marker = "",
 			-- numbers = "ordinal",
+			--
 			max_name_length = 15,
 			max_prefix_length = 6,
 			diagnostics = "nvim_lsp",

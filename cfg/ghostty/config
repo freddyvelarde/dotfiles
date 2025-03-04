@@ -55,3 +55,10 @@ keybind = ctrl+shift+t=new_tab
 
 keybind = ctrl+shift+]=next_tab
 keybind = ctrl+shift+[=previous_tab
+
+# keybind = ctrl+shift+z=toggle_split_zoom
+
+keybind = ctrl+shift+alt+l=resize_split:right,20
+keybind = ctrl+shift+alt+h=resize_split:left,20
+keybind = ctrl+shift+alt+k=resize_split:up,20
+keybind = ctrl+shift+alt+j=resize_split:down,20

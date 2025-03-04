@@ -63,3 +63,12 @@ alias auditer="~/coding/projects/codeAuditerAI/auditer"
 
 # flutter
 export PATH="$HOME/.flutter_install/flutter/bin:$PATH"
+
+# Android Studio
+export ANDROID_HOME=~/Android/Sdk
+export PATH=$ANDROID_HOME/cmdline-tools/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+
+export PATH="$HOME/go/bin/lazygit:$PATH"
+eval "$(fzf --zsh)"

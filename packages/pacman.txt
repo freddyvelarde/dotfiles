@@ -11,6 +11,8 @@ picom
 nitrogen
 ttf-nerd-fonts-symbols
 ttf-jetbrains-mono
+ttf-iosevka-nerd
+ghostty
 pavucontrol
 wget
 brightnessctl

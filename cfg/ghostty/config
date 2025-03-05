@@ -1,9 +1,12 @@
-font-family = JetBrainsMono
-# font-family-bold = JetBrainsMono-Bold Iosevka Nerd Font Mono
-font-family-bold = "IosevkaNerdFont-Bold"
-#font-family-italic =  "IosevkaNerdFont-Bold" JetBrainsMono-Italic
-font-family-italic = "IosevkaNerdFont-ExtraLightItalic"
-font-family-bold-italic = JetBrainsMono-BoldItalic 
+font-family = "JetBrains Mono"
+font-family-bold = "JetBrains Mono Bold"
+font-family-italic = "JetBrains Mono Italic"
+font-family-bold-italic= "JetBrains Mono Bold Italic"
+
+font-style = "JetBrains Mono"
+font-style-bold = "JetBrains Mono Bold"
+font-style-italic = "JetBrains Mono Italic"
+font-style-bold-italic= "JetBrains Mono Bold Italic"
 
 font-size = 13
 
@@ -58,7 +61,7 @@ keybind = ctrl+shift+[=previous_tab
 
 # keybind = ctrl+shift+z=toggle_split_zoom
 
-keybind = ctrl+shift+alt+l=resize_split:right,20
-keybind = ctrl+shift+alt+h=resize_split:left,20
-keybind = ctrl+shift+alt+k=resize_split:up,20
-keybind = ctrl+shift+alt+j=resize_split:down,20
+keybind = ctrl+shift+alt+l=resize_split:right,30
+keybind = ctrl+shift+alt+h=resize_split:left,30
+keybind = ctrl+shift+alt+k=resize_split:up,30
+keybind = ctrl+shift+alt+j=resize_split:down,30

@@ -1,6 +1,7 @@
-font-family = "JetBrains Mono"
-font-family-bold = "JetBrains Mono Bold"
-font-family-italic = "JetBrains Mono Italic"
+font-family = "JetBrains Mono" 
+
+font-family-bold = "JetBrains Mono Medium Bold "
+font-family-italic = "JetBrains Mono Italic "
 font-family-bold-italic= "JetBrains Mono Bold Italic"
 
 font-style = "JetBrains Mono"
@@ -44,7 +45,7 @@ gtk-titlebar=false
 bold-is-bright = true
 confirm-close-surface = false
 
-# keybind=clear
+keybind=clear
 
 keybind = ctrl+shift+o=new_split:right
 keybind = ctrl+shift+e=new_split:down
@@ -64,3 +65,12 @@ keybind = ctrl+shift+alt+h=resize_split:left,30
 keybind = ctrl+shift+alt+k=resize_split:up,30
 keybind = ctrl+shift+alt+j=resize_split:down,30
 keybind = ctrl+shift+f=toggle_split_zoom
+
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+c=copy_to_clipboard
+
+
+keybind = ctrl+shift+r=reload_config
+
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1

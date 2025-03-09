@@ -72,3 +72,4 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 export PATH="$HOME/go/bin/lazygit:$PATH"
 eval "$(fzf --zsh)"
+# bindkey -M vicmd v edit-command-line

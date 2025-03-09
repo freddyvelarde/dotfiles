@@ -74,3 +74,8 @@ keybind = ctrl+shift+r=reload_config
 
 keybind = ctrl+equal=increase_font_size:1
 keybind = ctrl+minus=decrease_font_size:1
+
+window-padding-balance = true
+
+window-padding-x = 0
+window-padding-y = 0
